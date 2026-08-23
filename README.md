@@ -1,40 +1,61 @@
-# Python Backtesting System
+# QuantLab — Backtesting & Research Infrastructure
 
-Clean, modular, and extensible stock market backtesting infrastructure built with Backtrader and Yahoo Finance data.
+A modular Python backtesting system for reproducible strategy research, market-data ingestion, portfolio simulation, metrics, and experiment output.
 
-## Structure
+## Architecture
 
-- `config/`: central configuration and defaults
-- `data/`: market data providers
-- `engine/`: backtest orchestration, plotting, and metrics
-- `strategies/`: base strategy class and strategy implementations
-- `main.py`: CLI entry point
+```text
+CLI / Configuration
+        ↓
+Market Data Provider
+        ↓
+Strategy Layer
+        ↓
+Backtest Engine
+        ↓
+Portfolio / Execution Simulation
+        ↓
+Metrics + Charts + Experiment Output
+```
 
-## Install
+## Core components
+
+- `config/` — centralized configuration and defaults
+- `data/` — market-data providers and normalization
+- `engine/` — backtest orchestration, metrics, and plotting
+- `strategies/` — strategy implementations and base abstractions
+- `main.py` — command-line entry point
+- `output/` — generated research artifacts
+
+## Run a backtest
 
 ```powershell
 py -m pip install -r requirements.txt
-```
-
-## Run
-
-```powershell
 py main.py --ticker AAPL --start 2020-01-01 --end 2024-01-01
 ```
 
-Charts are saved under `output/` by default.
+Charts are written to `output/` by default.
 
-## Stock Research Port Of v1.31
+## Stock research path
 
-This repo now also contains a separate stock-research port of the existing `v1.31` forex bot logic. The MT5 forex files remain untouched; the stock test path lives in new Python files under `strategies/stock_v131/`.
-
-Example:
+The repository also contains a separate stock-research port of the existing v1.31 strategy logic under `strategies/stock_v131/`. The original MT5/forex files remain isolated from this path.
 
 ```powershell
 py main.py --config config/backtest_stock_v131.json --ticker AAPL --start 2024-02-01 --end 2024-03-15 --no-plot
 ```
 
-Notes:
+The stock v1.31 path currently expects 15-minute data. Yahoo Finance intraday history is subject to provider retention limits, so recent date ranges may be required.
 
-- `trendflowing_stock_v131` currently expects `15m` data.
-- Yahoo Finance intraday history is limited, so use relatively recent date ranges.
+## Engineering principles
+
+- Reproducible configuration-driven experiments
+- Separation of data, strategy, execution, and reporting concerns
+- Explicit research outputs rather than opaque results
+- Extensible strategy and data-provider boundaries
+- Clear separation between research code and operational automation
+
+## Status
+
+**Active development / research infrastructure.**
+
+This repository is intended for engineering and research validation. Historical backtest results should not be interpreted as evidence of future trading performance.
