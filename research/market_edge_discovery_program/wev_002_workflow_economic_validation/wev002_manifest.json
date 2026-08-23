@@ -1,0 +1,15 @@
+{
+  "study_id": "WEV-002",
+  "study_name": "Workflow Economic Validation",
+  "status": "Completed",
+  "conclusion": "Economic Utility Partially Supported",
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "portfolio_optimization_performed": false,
+  "production_recommendation_performed": false,
+  "predefined_horizons": [
+    21,
+    63,
+    126
+  ]
+}

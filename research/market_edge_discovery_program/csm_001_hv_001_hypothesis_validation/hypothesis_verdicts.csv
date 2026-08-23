@@ -1,0 +1,5 @@
+hypothesis,status,rationale
+H1,Supported by evidence,21-day and 63-day rank persistence bootstrap median confidence intervals remain above zero.
+H2,Supported by evidence,Observed daily top-decile retention is compared with a 10% random-membership reference.
+H3,Partially supported,H3 is only partially testable without introducing external market-direction variables.
+H4,Supported by evidence,Recent 21-day movement is measured separately from the frozen 12-1 formation window using only same-date known prices.

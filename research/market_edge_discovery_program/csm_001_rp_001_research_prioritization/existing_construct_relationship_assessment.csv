@@ -1,0 +1,9 @@
+existing_construct,relationship,status,note
+MR-001,Potential regime interaction / crash-risk context,PLAUSIBLE_BUT_UNTESTED,"Momentum crash/regime sensitivity literature motivates later interaction questions, not RP conclusions."
+VOL-001,Potential volatility-state conditioning or risk-management context,PLAUSIBLE_BUT_UNTESTED,Momentum implementation risk may vary with volatility; no MEDP predictive/economic claim yet.
+BRD-001,Possible market-participation context,UNKNOWN,No completed CPP evidence establishes incremental relation.
+LIQ-001,Potential liquidity/capacity/cost relevance,PLAUSIBLE_BUT_UNTESTED,Liquidity concerns are central implementation risks; not a reason to reject prioritization.
+COR-001,Potential common-risk / crowding environment context,UNKNOWN,No completed CPP evidence establishes a mechanism.
+CRD-001,Potential stress environment context,UNKNOWN,No completed CPP evidence establishes relation.
+FUND-001,Potential funding-stress context,UNKNOWN,No completed CPP evidence establishes relation.
+OPT-001,Potential option-implied risk/crash context,PLAUSIBLE_BUT_UNTESTED,Future studies may test interaction after CSM lifecycle reaches eligible stages.

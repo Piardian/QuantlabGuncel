@@ -1,0 +1,12 @@
+{
+  "archive_id": "momentum_interaction_archive_csm_rsm",
+  "branch": "CSM-001 x RSM-001",
+  "status": "Archived for human review",
+  "final_classification": "Mostly Redundant",
+  "source_study": "CIP-003",
+  "new_analysis_performed": false,
+  "constructs_modified": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "next_action": "Human selects next CIP pair or production-control research path"
+}

@@ -1,0 +1,12 @@
+construct_id: BRD-001
+construct_name: US Equity 200-Day Moving-Average Breadth State
+universe_path: sp500_current_universe.csv
+start_date: 2010-01-01
+end_date: 2025-12-31
+sma_window: 200
+normalization_window: 252
+minimum_eligible_count: 50
+output_path: output/brd001_breadth_state.csv
+data_source: yahoo
+price_column: Close
+

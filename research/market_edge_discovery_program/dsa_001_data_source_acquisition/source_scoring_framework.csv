@@ -1,0 +1,10 @@
+criterion,weight,description
+PIT capability,20,Verifiable observation/effective dates and PIT semantics
+Survivorship/delisting,18,Active plus inactive/delisted coverage and terminal treatment
+Identifier history,14,Permanent identifiers and historical ticker/CUSIP/link history
+Blocked-program coverage,14,"Ability to unlock PEAD, PROF, VALUE, CSMxISM, CSMxTSM blockers"
+Corporate-action quality,10,Split/dividend/symbol-change provenance
+Provenance/documentation,8,Official documentation and data dictionary
+Reproducibility,8,Versionable/re-downloadable/archiveable extraction
+Licensing/access feasibility,5,Research licensing can be obtained and retained
+Implementation feasibility,3,Can be integrated without alpha logic changes

@@ -1,0 +1,17 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "PV-001",
+  "horizons": [
+    21,
+    63,
+    126
+  ],
+  "overall_classification": "Supported by evidence",
+  "horizon_verdicts": {
+    "21": "Supported by evidence",
+    "63": "Partially supported",
+    "126": "Supported by evidence"
+  },
+  "bootstrap_seed": 2001,
+  "bootstrap_iterations": 2000
+}

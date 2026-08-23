@@ -1,0 +1,5 @@
+csm_high,rsm_high,observations,share_of_common_panel
+False,False,55928,0.8459583736689255
+False,True,3788,0.05729670861568248
+True,False,3505,0.05301609390125847
+True,True,2891,0.043728823814133594

@@ -1,0 +1,19 @@
+hypothesis,horizon,target_description,metric,estimate,baseline,ci_low,ci_high,classification,beats_baseline_directionally
+H1,5,future realized market volatility,spearman_ic,0.5073621036730037,0.0,0.4839759776781664,0.5313297285308338,Supported by evidence,True
+H2,5,future drawdown risk,spearman_ic,0.15643779608906877,0.0,0.12835522525651344,0.18548721265886622,Supported by evidence,True
+H3,5,future absolute market movement,spearman_ic,0.3580396027607536,0.0,0.33244423573658494,0.38539247875801247,Supported by evidence,True
+H4,5,future directional market return,spearman_ic,0.06477486925830504,0.0,0.033304579459265675,0.0950962570965088,Partially supported,True
+H1,5,top-quintile future realized volatility,auc_top_quintile,0.8067944046079699,0.5,0.7906673850249786,0.8228624744936799,Supported by evidence,True
+H2,5,top-quintile future drawdown depth,auc_top_quintile,0.6719439605886062,0.5,0.6522674559881046,0.690962070643201,Supported by evidence,True
+H1,20,future realized market volatility,spearman_ic,0.46688733695520884,0.0,0.44172178407832524,0.4909673790949242,Supported by evidence,True
+H2,20,future drawdown risk,spearman_ic,0.17349882290686106,0.0,0.14453210497133853,0.20175251267526711,Supported by evidence,True
+H3,20,future absolute market movement,spearman_ic,0.2576951255596098,0.0,0.2303042113181744,0.28493598672923576,Supported by evidence,True
+H4,20,future directional market return,spearman_ic,0.07226331253914889,0.0,0.04083885844235831,0.0993829841750771,Partially supported,True
+H1,20,top-quintile future realized volatility,auc_top_quintile,0.8087245052580072,0.5,0.7940576117835463,0.8242067566140654,Supported by evidence,True
+H2,20,top-quintile future drawdown depth,auc_top_quintile,0.6545831676150771,0.5,0.6339776035190654,0.6734570641186078,Supported by evidence,True
+H1,60,future realized market volatility,spearman_ic,0.3783469478230048,0.0,0.351881238473158,0.40469280961794724,Supported by evidence,True
+H2,60,future drawdown risk,spearman_ic,0.13912234442893864,0.0,0.11064650720572632,0.16836768825367182,Supported by evidence,True
+H3,60,future absolute market movement,spearman_ic,0.19145602331255887,0.0,0.1612909998689605,0.21887017990268726,Supported by evidence,True
+H4,60,future directional market return,spearman_ic,0.06816626136075428,0.0,0.03816966436756808,0.09536060652068082,Partially supported,True
+H1,60,top-quintile future realized volatility,auc_top_quintile,0.7509771436617074,0.5,0.732066776987891,0.7693779745141315,Supported by evidence,True
+H2,60,top-quintile future drawdown depth,auc_top_quintile,0.6531456016019774,0.5,0.6329854585454978,0.6727588705445782,Supported by evidence,True

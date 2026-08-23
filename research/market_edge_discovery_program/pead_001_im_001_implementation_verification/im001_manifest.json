@@ -1,0 +1,11 @@
+{
+  "construct_id": "PEAD-001",
+  "stage": "IM-001",
+  "status": "Implementation incomplete",
+  "blocker": "Missing required point-in-time earnings event dataset",
+  "required_input_file": "data/pead_001/point_in_time_earnings_events.csv",
+  "implementation_package": "research/implementations/pead_001",
+  "validator": "research/implementations/pead_001/validate_pead_001.py",
+  "cv001_authorized": false,
+  "next_stage": "CV-001 blocked until compliant data is provided"
+}

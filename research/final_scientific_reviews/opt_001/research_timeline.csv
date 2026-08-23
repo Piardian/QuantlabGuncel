@@ -1,0 +1,12 @@
+stage,phase,result,classification
+RP-001,Research Prioritization,GO,Supported by evidence
+LR-001,Literature Review,Options-implied information is mature and distinct.,Supported by evidence
+CD-001,Construct Definition,Frozen as VIXCLS-based US Equity Index Option-Implied Volatility State.,Supported by evidence
+IM-001,Implementation,Successfully implemented as deterministic VIXCLS transform.,Supported by evidence
+CV-001,Construct Validation,Internally coherent and reproducible.,Supported by evidence
+MI-001,Mechanism Identification,Mechanism identified as index option-implied uncertainty / expected volatility state.,Supported by evidence
+HV-001,Hypothesis Validation,Mechanism hypotheses supported.,Supported by evidence
+PV-001,Predictive Validation,Future risk-variable predictive information supported; directional return inconclusive.,Mixed but meaningful
+EV-001,Economic Validation,Economic utility partially supported in predefined risk workflows.,Partially supported
+CC-001,Construct Classification,Classified as Options-Implied Volatility Risk Sensor.,High scientific maturity
+FSR-001,Final Scientific Review,Completed final synthesis.,Completed construct

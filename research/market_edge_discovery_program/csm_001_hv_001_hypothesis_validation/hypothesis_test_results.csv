@@ -1,0 +1,12 @@
+hypothesis,metric,observations,mean,median,bootstrap_median_ci_low,bootstrap_median_ci_high,year_positive_rate,bootstrap_mean_ci_low,bootstrap_mean_ci_high,null_reference,value,interpretation
+H1,rank_persistence_spearman_lag_1,3770.0,0.9938323642737846,0.9945555719597495,0.9944861699495676,0.9946281190690802,1.0,,,,,
+H1,rank_persistence_spearman_lag_5,3766.0,0.9710767364824995,0.9742030526723742,0.9737211381953992,0.9745402582813101,1.0,,,,,
+H1,rank_persistence_spearman_lag_21,3750.0,0.8890866647671467,0.899816734706864,0.8985849975988842,0.9013569676606257,1.0,,,,,
+H1,rank_persistence_spearman_lag_63,3708.0,0.6951855829332154,0.7162824873007934,0.712649846706439,0.7199273966813537,1.0,,,,,
+H1,rank_persistence_spearman_lag_126,3645.0,0.4266338918453202,0.44899095685940715,0.4432477330228316,0.4542625083545622,1.0,,,,,
+H2,daily_top_decile_retention_rate,3770.0,0.9376661687740518,0.9387755102040817,,,,0.936710231350139,0.9386360508497282,0.1,,
+H3,daily_top_decile_rate_std,,,,,,,,,,0.000533236562305179,Small variation supports cross-sectional normalization rather than broad-market level classification.
+H3,mean_daily_added_rate,,,,,,,,,,0.062370500092741074,Positive added rate supports ongoing leadership rotation.
+H3,mean_daily_top_set_jaccard,,,,,,,,,,0.8840456542598972,Positive Jaccard supports persistence across adjacent dates.
+H4,cross_sectional_rank_corr_12_1_vs_recent_21d,3771.0,0.007841358117286633,0.028400339028989738,0.021477545896897765,0.0368363147386007,,,,,,
+H4,production_top_overlap_with_recent_21d_top_decile,3771.0,0.16195533953710634,0.15217391304347827,0.14893617021276595,0.1590909090909091,,,,,,

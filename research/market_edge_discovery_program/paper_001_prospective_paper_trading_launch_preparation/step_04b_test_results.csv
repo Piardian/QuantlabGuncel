@@ -1,0 +1,7 @@
+test_name,expected,observed,pass,notes
+audit_append,PASS,PASS,YES,append-only check
+incident_created,PASS,PASS,YES,incident logging
+readiness_check,PASS,PASS,YES,read-only health summary
+session_id,PASS,PASS,YES,deterministic session ID
+paper_t0_not_set,NO,NO,YES,PAPER_T0 unestablished
+sci_t0_not_set,NO,NO,YES,Scientific T0 unestablished

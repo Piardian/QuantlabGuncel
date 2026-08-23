@@ -1,0 +1,12 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "CD-001",
+  "construct_name": "Canonical 12-1 Cross-Sectional Momentum State",
+  "formation_anchor_trading_days": 252,
+  "skip_period_trading_days": 21,
+  "top_decile_threshold": 0.90,
+  "minimum_eligible_securities_per_date": 50,
+  "rank_tie_method": "average",
+  "status": "Frozen",
+  "next_stage": "IM-001"
+}

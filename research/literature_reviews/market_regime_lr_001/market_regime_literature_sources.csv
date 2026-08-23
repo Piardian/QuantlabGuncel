@@ -1,0 +1,10 @@
+source_type,title,year,link,role,consensus_level
+academic,Regime Changes and Financial Markets,2012,https://ideas.repec.org/a/anr/refeco/v4y2012p313-337.html,Survey of regime switching in finance,Strong
+academic,A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle,1989,https://www.ssc.wisc.edu/~bhansen/718/Hamilton1989.pdf,Canonical regime-switching foundation,Strong
+academic,How do Regimes Affect Asset Allocation?,2003,https://ideas.repec.org/p/nbr/nberwo/10080.html,Asset allocation under regimes,Strong
+academic,Asset Allocation under Multivariate Regime Switching,2006,https://files.stlouisfed.org/files/htdocs/wp/2005/2005-002.pdf,Regime-dependent covariance and higher moments,Strong
+academic,How to Identify and Forecast Bull and Bear Markets?,2013,https://repub.eur.nl/pub/41558/ERS-2013-016-F%26A.pdf,Bull/bear identification,Moderate
+academic,Market Regime Classification Using Correlation Networks,2019,https://econ.unc.edu/wp-content/uploads/sites/1423/2019-Mayo-Zhu_Nam.pdf,Breadth/correlation based classification,Moderate
+academic,Regime-Switching Factor Investing with Hidden Markov Models,2020,https://www.mdpi.com/1911-8074/13/12/311,Applied regime-aware investing,Moderate
+practitioner,Market Regime Detection using Hidden Markov Models in QSTrader,2026,https://www.quantstart.com/articles/market-regime-detection-using-hidden-markov-models-in-qstrader/,Practitioner risk filter example,Limited
+

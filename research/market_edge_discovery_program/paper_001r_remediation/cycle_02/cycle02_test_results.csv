@@ -1,0 +1,6 @@
+command,result,tests,broker_mutation_calls,notes
+.venv\Scripts\python.exe scripts\paper_safety_tests.py,PASS,26/26,0,Cycle 1 safety/controller tests preserved.
+.venv\Scripts\python.exe scripts\paper_signal_pipeline_tests.py,PASS,7/7,0,Cycle 2 current-market-data signal pipeline tests.
+.venv\Scripts\python.exe scripts\alpaca_broker_adapter_tests.py,PASS,22/22,0,ALP-003 regression tests preserved.
+.venv\Scripts\python.exe scripts\paper_readiness_check.py,PASS,CLI,0,READY_FOR_CONTROLLED_PAPER_LAUNCH / DRY_RUN_BLOCK_EXECUTION_FLAGS_FALSE
+.venv\Scripts\python.exe scripts\paper_end_to_end_dry_run.py,PASS,CLI,0,reproducibility_pass=True

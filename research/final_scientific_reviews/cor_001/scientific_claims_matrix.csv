@@ -1,0 +1,17 @@
+claim,evidence_status,evidence_source,final_interpretation
+COR-001 is a valid market-correlation construct,Supported by evidence,CV-001,Bounded interpretable temporally varying values with sufficient coverage
+COR-001 measures broad US equity co-movement,Supported by evidence,CD-001 and CV-001,Average pairwise realized correlation directly measures synchronization
+COR-001 represents market-wide synchronization stress,Supported by evidence,MI-001 and HV-001,High states align with volatility drawdown and weak breadth conditions
+COR-001 predicts future realized volatility risk,Supported by evidence,PV-001,Supported at 20d and 60d horizons
+COR-001 predicts future breadth deterioration,Supported by evidence,PV-001,Supported at 20d and 60d horizons
+COR-001 predicts future correlation persistence,Supported by evidence,PV-001,Strongest predictive result
+COR-001 predicts future drawdown risk,Partially supported,PV-001,Pooled direction supported but cross-period stability weak
+COR-001 improves diversification-risk budgeting,Supported by evidence,EV-001,UC-1 supported
+COR-001 improves correlation-aware volatility targeting,Supported by evidence,EV-001,UC-2 supported
+COR-001 improves correlation stress control,Partially supported,EV-001,UC-3 favorable full-sample but weak robustness
+COR-001 improves portfolio de-risking support,Partially supported,EV-001,UC-4 risk improved but return penalty material
+COR-001 is an alpha signal,Not supported,CC-001,No lifecycle evidence supports alpha generation
+COR-001 is a return-enhancement construct,Not supported,EV-001 and CC-001,Utility is risk management not return enhancement
+COR-001 is production-deployment ready,Not supported,CC-001 and FSR-001,Operational validation not performed
+COR-001 is independent from all other constructs,Inconclusive,FSR-001,Incremental construct-dependency analysis remains future work
+

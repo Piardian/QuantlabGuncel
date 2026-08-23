@@ -1,0 +1,10 @@
+{
+  "study_id": "PV-001",
+  "analysis_start": "2010-01-01",
+  "analysis_end": "2026-01-01",
+  "minimum_train_trades": 100,
+  "bootstrap_iterations": 4000,
+  "permutation_iterations": 4000,
+  "input_trades": "C:\\Users\\piard\\Desktop\\backterster\\research_runs\\2026-07-20_SP500_CURRENT_DAILY_LEADERSHIP_V1_CORRECT\\merged_trades.csv",
+  "oos_trade_rows": 40366
+}

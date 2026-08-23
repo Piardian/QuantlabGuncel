@@ -1,0 +1,11 @@
+dimension,classification,evidence
+Research priority,Supported by evidence,RP-001 GO decision; options-implied market information recognized as mature and distinct.
+Literature maturity,Supported by evidence,"LR-001 found mature support for option-implied volatility, VIX, volatility risk pricing, and related options-implied constructs."
+Construct definition,Supported by evidence,CD-001 froze OPT-001 as VIXCLS-based US Equity Index Option-Implied Volatility State.
+Implementation fidelity,Supported by evidence,"IM-001 deterministic implementation produced VIXCLS level, 252-day z-score, percentile, and quality flags."
+Construct validity,Supported by evidence,"CV-001 found coherent, reproducible, and internally interpretable raw and normalized outputs."
+Mechanism identification,Supported by evidence,MI-001 identified index option-implied uncertainty / expected volatility state mechanism.
+Hypothesis validation,Supported by evidence,"HV-001 supported high-vs-low state differences in realized volatility, range, drawdown context, and calm conditions."
+Predictive validity,Mixed but meaningful,"PV-001 supported future realized volatility, future absolute movement, and future drawdown risk; directional returns were inconclusive."
+Economic utility,Partially supported,EV-001 supported risk budgeting and drawdown control; volatility targeting and hedge activation were partial.
+Production readiness,Partially supported,"Research evidence supports risk-sensor use, but live execution, governance, and deployment controls are not validated."

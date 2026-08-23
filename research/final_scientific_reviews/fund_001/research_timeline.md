@@ -1,0 +1,16 @@
+# FUND-001 / FSR-001
+
+# Research Timeline
+
+| stage | status | classification | summary |
+| --- | --- | --- | --- |
+| RP-001 | Completed | GO | Funding Stress prioritized for research. |
+| LR-001 | Completed | GO to CD-001 | Literature supports funding stress as distinct but proxy-sensitive. |
+| CD-001 | Completed | Frozen | FUND-001 defined as DCPF3M - DTB3. |
+| IM-001 | Completed | Successfully implemented | Deterministic implementation verified. |
+| CV-001 | Completed | Partially supported | Construct coherent over commercial-paper data period; limited pre-1997 coverage. |
+| MI-001 | Completed | Partially supported | Mechanism is mixed funding spread stress, not pure funding liquidity. |
+| HV-001 | Completed | Partially supported | Spread and mixed-mechanism hypotheses supported; component channels partial. |
+| PV-001 | Completed | Partially supported | Predictive information found for some future risk variables. |
+| EV-001 | Completed | Not supported | Predefined economic workflows were not supported. |
+| CC-001 | Completed | Funding Spread Risk Sensor | Research sensor; not production overlay. |

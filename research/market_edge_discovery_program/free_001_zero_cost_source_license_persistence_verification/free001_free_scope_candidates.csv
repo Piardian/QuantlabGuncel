@@ -1,0 +1,4 @@
+candidate_id,scope_description,legal_persistence,pit_integrity,survivorship_preservation,identifier_quality,universe_determinism,corporate_action_coverage,operational_feasibility,breadth,decision
+FREE-FULL-US,"NYSE + Nasdaq + NYSE American common-stock-focused prospective universe",FAIL,PARTIAL,PARTIAL,PARTIAL,PARTIAL,FAIL,PARTIAL,HIGH,REJECTED_FORMAL
+FREE-REDUCED-US,"Deterministically reduced US universe using free sources",FAIL,PARTIAL,PARTIAL,PARTIAL,PARTIAL,FAIL,PARTIAL,MEDIUM,REJECTED_FORMAL
+FREE-DEVELOPMENT-ONLY,"Free sources used for code/schema/infrastructure testing only",PARTIAL,PARTIAL,PARTIAL,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MEDIUM,SELECTED

@@ -1,0 +1,8 @@
+test_name,result,details
+test_environment_guard,PASS,Accepted paper endpoint and rejected live/unknown endpoints
+test_fail_closed_config,PASS,Defaulted trading and paper execution flags to false
+test_universe_hash_guard,PASS,Verified FUF001 universe hash integrity
+test_strategy_hash_guard,PASS,Verified deterministic strategy configuration hashing
+test_kill_switch,PASS,Enforced kill switch across flags and environment
+test_risk_guards,PASS,Verified operational risk guard ceilings for weights, exposure, notional, and count
+test_buying_power,PASS,Verified buying power sufficiency checks

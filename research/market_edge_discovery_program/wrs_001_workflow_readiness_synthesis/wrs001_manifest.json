@@ -1,0 +1,15 @@
+{
+  "study_id": "WRS-001",
+  "study_name": "Workflow Readiness Synthesis",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "new_analysis_performed": false,
+  "final_classification": "Research-Validated Workflow, Not Production Ready",
+  "scientific_workflow": "Supported",
+  "oos_reproducibility": "Reproduced",
+  "economic_utility": "Partially Supported",
+  "execution_realism": "Partially Supported",
+  "liquidity_capacity": "Partially Supported",
+  "production_readiness": "Not Supported",
+  "recommended_next_gate": "WPC-001 Workflow Portfolio Construction Protocol"
+}

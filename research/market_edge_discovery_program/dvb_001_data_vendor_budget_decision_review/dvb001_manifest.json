@@ -1,0 +1,26 @@
+{
+  "program_id": "DVB-001",
+  "program_name": "Data Vendor & Budget Decision Review",
+  "parent_decision": "SLA-001 SOURCE_STACK_UNAVAILABLE",
+  "stage_type": "OWNER_PROCUREMENT_GATE",
+  "research_execution_status": "PAUSED",
+  "alpha_logic_changed": "NO",
+  "performance_evaluation_performed": "NO",
+  "performance_peeking_detected": "NO",
+  "scientific_t0_established": "NO",
+  "candidate_vendor_stacks_reviewed": 6,
+  "verified_access_obtained": "NO",
+  "selected_stack": "NONE",
+  "overall_decision": "OWNER_ACTION_REQUIRED",
+  "required_owner_decision": [
+    "APPROVE_VENDOR_BUDGET",
+    "APPROVE_EXPLORATORY_LOW_COST_STACK",
+    "DEFER_VENDOR_DECISION",
+    "REJECT_VENDOR_SPEND"
+  ],
+  "recommended_next_gate_after_owner_action": "SLA-002 Acquired Source Verification",
+  "pdc001_refreeze_authorized": "NO",
+  "pdc002_authorized": "NO",
+  "rvp_authorized": "NO",
+  "production_authorized": "NO"
+}

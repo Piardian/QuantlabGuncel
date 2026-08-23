@@ -1,0 +1,4 @@
+study_id,study_type,primary_question,result,evidence_status,allowed_inference,forbidden_inference
+CIP-001,Interaction Study,Do CSM-001 and TSM-001 contain complementary interaction information?,Partially Complementary,Supported by evidence,Nested partial complementarity,Production deployment or alpha
+CWP-001,Protocol Registration,How should the composite workflow be evaluated?,Completed,Supported by documentation,Preregistered evaluation protocol,Statistical or economic conclusion
+CWS-001,Scientific Evaluation,Does the preregistered composite workflow provide meaningful scientific information?,Workflow Supported,Supported by evidence,Nested workflow support,New construct or trading rule

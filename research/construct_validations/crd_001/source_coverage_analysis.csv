@@ -1,0 +1,13 @@
+metric,value
+rows,781
+start_date,2023-07-31
+end_date,2026-07-27
+raw_observations,781
+normalized_observations,530
+raw_coverage_ratio,1.0
+normalized_coverage_ratio,0.678617157490397
+source_missing_flags,0
+max_days_since_last_observation,3.0
+deterministic_repeated_transform,True
+input_snapshot_sha256,6132fd84cdd0220586642775694cb2b1423c66a1f051b1733f8c1433a11c1dda
+output_sha256,572b37694f289dd35c665ae31c84711e6e8dbf7c038cbd91e4612cc8a851b8ba

@@ -1,0 +1,9 @@
+# Implementation Risk Review
+
+| risk | source | implication |
+| --- | --- | --- |
+| Data snooping and factor zoo | Harvey-Liu-Zhu; Hou-Xue-Zhang | Future CSM validation must use strict preregistration and multiple-testing discipline. |
+| Post-publication decay | McLean-Pontiff | Future PV must separate in-sample, OOS, and post-publication periods where possible. |
+| Crash risk | Daniel-Moskowitz | Future HV/PV/EV must explicitly evaluate downside states and rebound periods. |
+| Cost/capacity sensitivity | Momentum implementation literature | EV cannot be skipped; turnover and liquidity must be measured. |
+| Definition proliferation | Novy-Marx and variant literature | CD must freeze one definition before empirical testing. |

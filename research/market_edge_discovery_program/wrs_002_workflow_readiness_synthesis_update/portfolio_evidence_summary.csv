@@ -1,0 +1,7 @@
+metric,value
+wpc002_rebalance_periods,179
+wpc002_accounting_checks_passed,True
+wpc002_gross_mean_spread,0.005946163918105332
+wpc002_positive_spread_rate,0.6201117318435754
+wpc002_workflow_compound_return_gross,20.20672767936188
+wpc002_benchmark_compound_return_gross,7.246704001585176

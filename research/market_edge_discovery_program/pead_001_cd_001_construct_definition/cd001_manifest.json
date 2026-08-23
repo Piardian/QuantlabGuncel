@@ -1,0 +1,12 @@
+{
+  "construct_id": "PEAD-001",
+  "stage": "CD-001",
+  "construct_name": "Point-in-Time Analyst Surprise Post-Earnings Announcement Drift State",
+  "status": "Construct frozen",
+  "primary_input": "Point-in-time analyst EPS surprise",
+  "surprise_formula": "(actual_eps - consensus_expected_eps) / abs(price_reference)",
+  "state_definition": "POSITIVE if surprise > 0, NEGATIVE if surprise < 0, NEUTRAL if surprise = 0",
+  "timing_policy": "State available only after public announcement; after-close and unknown-time events use next trading day's open",
+  "data_availability_in_repository": "Required point-in-time earnings data not found",
+  "next_stage": "IM-001"
+}

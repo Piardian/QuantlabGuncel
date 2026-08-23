@@ -1,0 +1,6 @@
+analysis_id,stage,analysis,required,observed,status,reason
+A8,CPP-005,Complementarity and Multivariate Information,N >= 756 common aligned observations,188,NOT_ELIGIBLE,All-construct common sample fails preregistered multivariate threshold.
+A9,CPP-006,Lead-Lag Temporal Association,N >= 756 after lagging,128,NOT_ELIGIBLE,Common sample fails threshold before and after 60-day lag buffer.
+A10,CPP-007,Information Architecture Synthesis,Prior eligible outputs,CPP-002 eligible; CPP-003/005/006 unavailable,LIMITED_SYNTHESIS_ONLY,Architecture synthesis can only summarize limited pairwise evidence and unavailable higher-order evidence.
+A11,CPP-007.5,Scientific Interpretation Review,Completed prior outputs,Available,ELIGIBLE,Quality-control review can proceed to audit overclaim risk and methodological consistency.
+A12,CPP-008,Final Construct Ecosystem Review,Completed CPP evidence body,Limited evidence body,ELIGIBLE_WITH_SCOPE_LIMITATION,"Final review can close CPP v1 with explicit limitations, not a complete information architecture."

@@ -1,0 +1,28 @@
+{
+  "overall_classification": "Not supported",
+  "observations": 3433,
+  "date_start": "2010-01-05",
+  "date_end": "2025-12-30",
+  "use_case_classifications": [
+    {
+      "use_case": "UC-1",
+      "policy": "UC1_FUND_RISK_BUDGET",
+      "classification": "Not supported"
+    },
+    {
+      "use_case": "UC-2",
+      "policy": "UC2_FUND_VOL_TARGET",
+      "classification": "Not supported"
+    },
+    {
+      "use_case": "UC-3",
+      "policy": "UC3_FUND_HEDGE_ACTIVATION",
+      "classification": "Not supported"
+    },
+    {
+      "use_case": "UC-4",
+      "policy": "UC4_FUND_PORTFOLIO_RISK_CONTROL",
+      "classification": "Not supported"
+    }
+  ]
+}

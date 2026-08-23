@@ -1,0 +1,258 @@
+# Professional Backtesting Framework Upgrade
+
+## Current State Summary
+
+The existing system is a **working but basic** backtesting framework. Here's what we have:
+
+### ✅ What EXISTS Today
+
+| Module | File | Status |
+|--------|------|--------|
+| CLI Interface | `main.py` | ✅ Working — argparse + config merge |
+| Config System | `config/settings.py` | ✅ Working — JSON + CLI overrides |
+| Data Layer | `data/yahoo_data.py` | ✅ Working — Yahoo Finance with retry |
+| Strategy Registry | `main.py` | ✅ SMA Crossover + TrendFlowing ICT |
+| Base Strategy | `strategies/base.py` | ✅ Bracket exits, risk sizing |
+| ICT Strategy | `strategies/stock_v131/` | ✅ Full pipeline (OB→Sweep→Disp→FVG) |
+| ICT Detectors | `strategies/stock_v131/detectors.py` | ✅ TrendDetector + SetupDetector |
+| Multi-Timeframe | `main.py` (resample) | ✅ 15m→1H→4H |
+| Basic Metrics | `engine/metrics.py` | ✅ Return, win rate, drawdown, Sharpe |
+| Basic Plotting | `engine/plotting.py` | ✅ Equity curve + trade chart |
+| Basic Risk Guards | `stock_v131/strategy.py` | ✅ Daily loss + drawdown halt |
+
+### ❌ What is MISSING (7 Phases)
+
+| Phase | Feature | Status |
+|-------|---------|--------|
+| **Phase 1** | Trade-Level Intelligence (per-trade DataFrame with R-multiple, exit reason, etc.) | ❌ Not started |
+| **Phase 2** | Advanced Metrics (expectancy, profit factor, consec wins/losses, drawdown curve) | ❌ Not started |
+| **Phase 3** | Simple Trend Model (EMA50 baseline strategy for edge comparison) | ❌ Not started |
+| **Phase 4** | Regime Filter (ADX+ATR → TREND/RANGE/LOW_VOL classification) | ❌ Not started |
+| **Phase 5** | Strategy Diagnostics (per-trade condition logging: which OB/Sweep/Disp/FVG fired) | ❌ Not started |
+| **Phase 6** | Multi-Asset Backtesting (multiple tickers in one run) | ❌ Not started |
+| **Phase 7** | Safety Controls (kill-switch + trade frequency limiter) | ❌ Not started |
+
+---
+
+## Proposed Changes
+
+### Phase 1 — Trade-Level Intelligence
+
+#### [NEW] [trade_logger.py](file:///c:/Users/Piardian/Desktop/backterster/engine/trade_logger.py)
+
+A `TradeLogger` class that hooks into Backtrader's `notify_trade` and `notify_order` to capture every trade with:
+
+```
+entry_time, exit_time, direction, entry_price, exit_price,
+stop_loss, take_profit, position_size, pnl_dollar, pnl_pct,
+R_multiple, trade_duration_bars, exit_reason (TP/SL/TIME/MANUAL)
+```
+
+- Stored as a list of `TradeRecord` dataclasses
+- Exportable to DataFrame and CSV via `to_dataframe()` / `to_csv()`
+- Injected into strategies via a mixin or Backtrader observer
+
+#### [MODIFY] [base.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/base.py)
+
+- Add `TradeLogger` integration in `notify_order` and `notify_trade`
+- Track entry bar index for duration calculation
+- Track exit_reason based on which order triggered the exit
+
+#### [MODIFY] [strategy.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/stock_v131/strategy.py)
+
+- Same `TradeLogger` integration
+- Map exit reasons: TP1 hit → "TP", stop hit → "SL", pending expiry → "TIME"
+
+---
+
+### Phase 2 — Advanced Metrics
+
+#### [MODIFY] [metrics.py](file:///c:/Users/Piardian/Desktop/backterster/engine/metrics.py)
+
+Extend `BacktestMetrics` with:
+
+- `expectancy` — average R-multiple per trade
+- `avg_win` / `avg_loss` — dollar amounts
+- `profit_factor` — gross profit / gross loss
+- `max_consecutive_wins` / `max_consecutive_losses`
+- `equity_curve_array` — full equity series
+- `drawdown_curve` — peak-to-trough series
+
+New function `build_advanced_metrics(trade_log: pd.DataFrame, equity_curve: pd.Series)` that computes all of the above from the Phase 1 trade log.
+
+#### [MODIFY] [backtest_engine.py](file:///c:/Users/Piardian/Desktop/backterster/engine/backtest_engine.py)
+
+- Extract trade log from strategy after run
+- Pass to `build_advanced_metrics`
+- Include in `BacktestRunResult`
+
+#### [MODIFY] [plotting.py](file:///c:/Users/Piardian/Desktop/backterster/engine/plotting.py)
+
+- Add drawdown curve plot
+- Add trade P&L distribution histogram
+
+---
+
+### Phase 3 — Edge Isolation Mode (Simple Trend Model)
+
+#### [NEW] [simple_trend.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/simple_trend.py)
+
+A minimal trend-following strategy as baseline:
+
+- **Trend Filter**: EMA(50) — only LONG when price > EMA
+- **Entry**: Pullback to EMA (close touches or crosses below then recovers)
+- **Stop Loss**: Recent swing low (lookback configurable)
+- **Take Profit**: Fixed R:R (1:2 default)
+- Extends `BaseStrategy`
+- Registered in `STRATEGY_REGISTRY` as `"simple_trend_model"`
+
+#### [MODIFY] [main.py](file:///c:/Users/Piardian/Desktop/backterster/main.py)
+
+- Register new strategy
+- Add strategy params routing
+
+#### [MODIFY] [settings.py](file:///c:/Users/Piardian/Desktop/backterster/config/settings.py)
+
+- Add `simple_trend_ema_period`, `simple_trend_rr_ratio`, `simple_trend_swing_lookback` fields
+
+---
+
+### Phase 4 — Regime Filter
+
+#### [NEW] [regime_filter.py](file:///c:/Users/Piardian/Desktop/backterster/engine/regime_filter.py)
+
+A `RegimeClassifier` that classifies market state:
+
+```python
+class MarketRegime(Enum):
+    TREND = "TREND"
+    RANGE = "RANGE"
+    LOW_VOLATILITY = "LOW_VOLATILITY"
+```
+
+Logic:
+- **TREND**: ADX > 25 AND ATR > ATR_SMA(20)
+- **LOW_VOLATILITY**: ATR < ATR_SMA(20) * 0.5
+- **RANGE**: everything else
+
+Callable from any strategy's `next()` method.
+
+#### [MODIFY] [strategy.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/stock_v131/strategy.py)
+
+- Import and use `RegimeClassifier`
+- Skip trade entry if regime ≠ TREND
+
+#### [MODIFY] [simple_trend.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/simple_trend.py)
+
+- Same regime gate
+
+---
+
+### Phase 5 — Strategy Diagnostics
+
+#### [NEW] [diagnostics.py](file:///c:/Users/Piardian/Desktop/backterster/engine/diagnostics.py)
+
+A `TradeDiagnostics` class that logs per-trade:
+
+```
+ob_detected: bool
+sweep_detected: bool
+displacement_detected: bool
+fvg_detected: bool
+regime: MarketRegime
+trend_direction: TrendDirection
+adx_value: float
+atr_value: float
+```
+
+#### [MODIFY] [trade_logger.py](file:///c:/Users/Piardian/Desktop/backterster/engine/trade_logger.py)
+
+- Extend `TradeRecord` with optional diagnostics dict
+- Strategy can attach condition flags at entry time
+
+#### [MODIFY] [strategy.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/stock_v131/strategy.py)
+
+- At entry, snapshot which conditions were met and attach to trade log
+
+---
+
+### Phase 6 — Multi-Asset Backtesting
+
+#### [NEW] [multi_asset_runner.py](file:///c:/Users/Piardian/Desktop/backterster/engine/multi_asset_runner.py)
+
+Orchestrator that:
+- Takes a list of tickers
+- Runs backtests sequentially (one Cerebro per ticker for simplicity)
+- Supports allocation modes: `EQUAL` or `RISK_BASED`
+- Aggregates results into a portfolio-level summary
+
+#### [MODIFY] [main.py](file:///c:/Users/Piardian/Desktop/backterster/main.py)
+
+- Add `--tickers` CLI arg (comma-separated)
+- Add `--allocation` CLI arg (equal/risk_based)
+- Route to `MultiAssetRunner` when multiple tickers specified
+
+#### [NEW] [backtest_multi.json](file:///c:/Users/Piardian/Desktop/backterster/config/backtest_multi.json)
+
+Default config for multi-asset runs with SPY, QQQ, AAPL universe.
+
+---
+
+### Phase 7 — Safety Controls
+
+#### [MODIFY] [strategy.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/stock_v131/strategy.py)
+
+Strategy already has basic risk guards (`_risk_halted`). Enhance with:
+
+- **Kill-switch**: If drawdown > threshold, disable strategy for rest of backtest (not just daily)
+- **Trade frequency control**: max N trades per day, min bars between trades
+
+#### [MODIFY] [base.py](file:///c:/Users/Piardian/Desktop/backterster/strategies/base.py)
+
+- Add same safety controls to base strategy so all strategies inherit them
+
+#### [MODIFY] [settings.py](file:///c:/Users/Piardian/Desktop/backterster/config/settings.py)
+
+- Add `kill_switch_drawdown_pct`, `max_trades_per_day`, `min_bars_between_trades` config fields
+
+---
+
+## Implementation Order
+
+```mermaid
+graph LR
+    P1["Phase 1<br/>Trade Logger"] --> P2["Phase 2<br/>Advanced Metrics"]
+    P2 --> P5["Phase 5<br/>Diagnostics"]
+    P1 --> P3["Phase 3<br/>Simple Trend"]
+    P3 --> P4["Phase 4<br/>Regime Filter"]
+    P4 --> P6["Phase 6<br/>Multi-Asset"]
+    P1 --> P7["Phase 7<br/>Safety Controls"]
+```
+
+> [!IMPORTANT]
+> Phase 1 (Trade Logger) is the foundation — Phases 2, 5, and 7 all depend on it.
+> Phase 3 (Simple Trend) must exist before Phase 4 can be properly tested.
+
+---
+
+## Open Questions
+
+> [!IMPORTANT]
+> 1. **Short selling**: Should the simple_trend_model be LONG-only (as specified), or should we also support SHORT for completeness?
+> 2. **Multi-asset mode**: Should we run tickers in parallel (faster but more memory) or sequential (simpler)?
+> 3. **Trade log export**: CSV only, or also want a SQLite database for querying?
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Run SMA crossover on AAPL 2020-2024 and verify trade log CSV is generated with all required fields
+- Run simple_trend_model on same data and compare metrics vs ICT strategy
+- Run regime filter and verify trade count drops (no trades in LOW_VOL)
+- Run multi-asset with SPY/QQQ/AAPL and verify aggregated results
+
+### Manual Verification
+- Visual inspection of drawdown curve plot
+- Verify kill-switch halts trading when drawdown threshold exceeded
+- Compare trade diagnostics output to identify which ICT component drives edge

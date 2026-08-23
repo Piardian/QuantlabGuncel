@@ -1,0 +1,42 @@
+{
+  "program_id": "PDC-001",
+  "program_name": "Prospective Data Capture Specification & Freeze",
+  "parent_scope": "RSR-D",
+  "creation_date_utc": "2026-08-11T13:42:00.100279+00:00",
+  "specification_id": "NONE",
+  "schema_version": "PDC_SCHEMA_V1_DRAFT",
+  "scientific_t0_status": "NOT_ESTABLISHED",
+  "market": "US equities",
+  "exchange_scope": "NYSE, Nasdaq, NYSE American",
+  "security_type_scope": "Draft: include US common stocks; conditionally REITs and multiple share classes; exclude funds, derivatives, ADRs and non-common structures",
+  "universe_rule": "Draft deterministic active/tradable listed security rule using records captured at or before T",
+  "selected_sources": {
+    "raw_market_data_source": "UNRESOLVED",
+    "security_master_source": "UNRESOLVED",
+    "corporate_action_source": "UNRESOLVED"
+  },
+  "timestamp_standard": "UTC storage with event/source/available/ingestion distinction where available",
+  "capture_cadence": "Draft daily post-close by domain; exact source finalization unresolved",
+  "identifier_policy": "Partial hierarchy plus internal fallback; source permanent ID unresolved",
+  "license_state": "UNRESOLVED",
+  "alpha_logic_changed": "NO",
+  "performance_evaluation_performed": "NO",
+  "performance_peeking_detected": "NO",
+  "critical_blockers": 7,
+  "unresolved_blockers": [
+    "Raw market data source unresolved",
+    "Security-master source unresolved",
+    "Corporate-action source unresolved",
+    "License unresolved",
+    "Immutable/write-once enforcement not implemented",
+    "Calendar source not frozen",
+    "Source finalization timestamps unresolved"
+  ],
+  "dry_run_result": "PARTIAL",
+  "artifact_hashes": "pdc001_artifact_hashes.csv",
+  "final_decision": "PDC_SPECIFICATION_NOT_READY",
+  "pdc002_authorized": "NO",
+  "rvp_authorized": "NO",
+  "production_authorized": "NO",
+  "authorized_next_action": "PDC-001 REMEDIATION"
+}

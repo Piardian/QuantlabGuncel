@@ -1,0 +1,10 @@
+analysis_id,stage,analysis,eligibility,sample_basis,required_min_n,observed_n,notes
+A1,CPP-001,Data inventory and alignment audit,ELIGIBLE,Frozen outputs located and audited,N/A,N/A,Descriptive readiness audit only.
+A2,CPP-002,Pairwise Pearson dependence mapping,ELIGIBLE,Minimum pairwise exact-date overlap,252,262,Eligibility only; no correlations computed in CPP-001.
+A3,CPP-002,Pairwise rank dependence mapping,ELIGIBLE,Minimum pairwise exact-date overlap,252,262,Eligibility only; no rank statistics computed in CPP-001.
+A4,CPP-002,Nonlinear dependence mapping,ELIGIBLE,Minimum pairwise exact-date overlap,252,262,Eligibility only; no mutual information or distance correlation computed in CPP-001.
+A5,CPP-003,Incremental information analysis,NOT_ELIGIBLE,Common sample across all constructs,756,188,Requires common aligned multivariate panel.
+A6,CPP-003.5,Robustness and sensitivity analysis,PARTIALLY_ELIGIBLE,Common sample across all constructs,756,188,Window-specific feasibility must be checked inside CPP-003.5.
+A7,CPP-004,Redundancy and orthogonality classification,ELIGIBLE,Minimum pairwise exact-date overlap,252,262,Classification deferred; CPP-001 only verifies sample readiness.
+A8,CPP-005,Complementarity and multivariate information structure,NOT_ELIGIBLE,Common sample across all constructs,756,188,Requires common aligned multivariate panel.
+A9,CPP-006,Lead-lag relationship mapping,NOT_ELIGIBLE,Common sample less preregistered maximum lag buffer,756,128,Eligibility only; no lead-lag statistics computed in CPP-001.

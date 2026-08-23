@@ -1,0 +1,9 @@
+hypothesis,target,horizon_days,difference_high_minus_low,rank_corr,auc_for_risk_event,classification
+H1,Future realized market volatility,20,0.09212370832854666,0.31756277373970576,0.7369894283052539,Supported by evidence
+H2,Future drawdown risk,20,-0.011720277213055057,-0.04825835203760122,0.5723522734875793,Partially supported
+H3,Future market breadth deterioration,20,-0.27218557515977826,-0.40357546892614704,0.7611017178150936,Supported by evidence
+H4,Future market correlation persistence,20,0.23180404760856604,0.6863623403158919,0.8800999457310018,Supported by evidence
+H1,Future realized market volatility,60,0.058237101026992005,0.24131009058340244,0.7222197562529317,Supported by evidence
+H2,Future drawdown risk,60,-0.0092659770108552,-0.0009761809823964458,0.5368217867986933,Partially supported
+H3,Future market breadth deterioration,60,-0.21375029767548992,-0.27654748168022825,0.7273349827252447,Supported by evidence
+H4,Future market correlation persistence,60,0.1845830429879764,0.5684784379239136,0.8109296690895814,Supported by evidence

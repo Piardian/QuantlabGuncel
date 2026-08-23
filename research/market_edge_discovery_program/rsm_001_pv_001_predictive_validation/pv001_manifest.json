@@ -1,0 +1,14 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "PV-001",
+  "overall_conclusion": "Not supported",
+  "horizon_classifications": {
+    "1": "Not supported",
+    "3": "Not supported",
+    "6": "Not supported",
+    "12": "Not supported"
+  },
+  "valid_rows_with_any_future_outcome": 65619,
+  "unique_tickers": 493,
+  "next_stage": "Human review"
+}

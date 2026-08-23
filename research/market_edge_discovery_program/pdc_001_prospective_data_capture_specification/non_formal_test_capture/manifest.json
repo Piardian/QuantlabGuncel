@@ -1,0 +1,14 @@
+{
+  "capture_label": "NON_FORMAL_TEST_CAPTURE",
+  "formal_t0": false,
+  "schema_version": "PDC_SCHEMA_V1_DRAFT",
+  "file_inventory": [
+    {
+      "file": "security_master_sample.csv",
+      "sha256": "2f1de93aa19b950ce487cce2fe4a698ae1492cd9f4f480cba533f6a7691eecd1",
+      "row_count": 1
+    }
+  ],
+  "status": "SUCCESS_NON_FORMAL",
+  "warning": "Dry run validates local file/hash/manifest mechanics only. It is not source access validation."
+}

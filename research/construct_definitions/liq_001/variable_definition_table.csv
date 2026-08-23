@@ -1,0 +1,17 @@
+variable,include,source_series,frequency,definition,role,notes
+Security close,yes,Daily adjusted close or normalized close,daily,Close price for each universe security,primary input,Used for returns and dollar volume
+Security volume,yes,Daily volume,daily,Reported share volume for each universe security,primary input,Used for dollar volume
+Daily log return,yes,Security close,daily,ln(close_t / close_t-1),derived input,Absolute value enters illiquidity proxy
+Dollar volume,yes,Security close and volume,daily,close_t * volume_t,derived input,Must be positive
+Security illiquidity,yes,Daily log return and dollar volume,daily,abs(log_return_t) / dollar_volume_t,security-level construct input,Amihud-style price impact proxy
+Aggregate illiquidity,yes,Security illiquidity panel,daily,Cross-sectional median of eligible security illiquidity values,market-level output,Median used for robustness to outliers
+20-day illiquidity,yes,Aggregate illiquidity,daily,Trailing 20-day rolling mean,smoothed output,Reduces daily noise
+Liquidity z-score,yes,20-day illiquidity,daily,Trailing 252-day z-score,normalized output,Higher means worse liquidity
+Eligible security count,yes,Security eligibility flags,daily,Number of securities with valid close volume return and dollar volume,diagnostic output,Must be at least 50
+Coverage ratio,yes,Eligible count and universe size,daily,Eligible securities divided by universe size,diagnostic output,Used for validation
+Bid-ask spread,no,Quote data,n/a,Quoted or effective spread,excluded,Requires quote data not guaranteed in current project
+Order-book depth,no,Order book,n/a,Displayed liquidity near best bid and ask,excluded,Requires order-book data
+Intraday resiliency,no,Intraday quote/order data,n/a,Recovery speed after liquidity shock,excluded,Not available from daily OHLCV
+Funding liquidity,no,Macro/funding variables,n/a,Balance sheet or funding constraint proxy,excluded,Different construct family
+Pastor-Stambaugh factor,no,Panel return reversal model,n/a,Systematic liquidity factor,excluded,More model-intensive and deferred from first frozen LIQ construct
+

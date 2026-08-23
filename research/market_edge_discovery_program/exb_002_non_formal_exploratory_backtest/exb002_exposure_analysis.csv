@@ -1,0 +1,3 @@
+strategy,average_holdings,minimum_holdings,maximum_holdings,average_gross_exposure,maximum_gross_exposure,average_cash_allocation,time_invested_pct,max_single_position_weight
+CSM-001,1.9211438474870017,0,6,0.3292894280762565,1.0,0.6707105719237435,0.3292894280762565,0.2
+CSM-001xTSM-001,1.8639514731369151,0,6,0.3292894280762565,1.0,0.6707105719237435,0.3292894280762565,0.2

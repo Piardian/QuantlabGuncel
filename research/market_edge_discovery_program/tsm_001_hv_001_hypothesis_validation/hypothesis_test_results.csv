@@ -1,0 +1,5 @@
+hypothesis,description,primary_metric,metric_value,secondary_metric,secondary_value,mean_effect,ci_95_low,ci_95_high,classification
+H1,POSITIVE states represent positive intermediate-horizon own-trend behavior.,positive_return_consistency,1.0,positive_years_with_positive_median,15/15,0.2934988940173003,0.29291624070825867,0.294055129482223,Supported by evidence
+H2,NEGATIVE states represent negative intermediate-horizon own-trend behavior.,negative_return_consistency,1.0,negative_years_with_negative_median,15/15,-0.15225975843280354,-0.15262205134590454,-0.15188223128326644,Supported by evidence
+H3,Aggregate positive breadth represents market-wide prevalence of positive own-trend states.,zero_state_accounting_error_rate,1.0,positive_breadth_mean,0.725449,0.7254487933758486,0.33620279048377694,0.9506172839506173,Supported by evidence
+H4,State transitions represent sign changes in intermediate-horizon own-trend rather than short-horizon price reversals.,transition_zero_crossing_rate,1.0,directional_transition_count,45534,0.0116153615644746,0.0004919739560280876,0.0737272650617935,Supported by evidence

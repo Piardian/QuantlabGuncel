@@ -1,0 +1,7 @@
+evidence_stage,evidence_type,availability,fsr_use,limitation
+CPP-001,Data inventory and alignment,AVAILABLE,Used for bounded final synthesis,Establishes frozen output availability and pairwise/common sample eligibility.
+CPP-002,Pairwise dependence metrics,AVAILABLE,Used for bounded final synthesis,Supports bounded pairwise association observations only.
+CPP-004,Limited pairwise evidence labels,AVAILABLE,Used for bounded final synthesis,Organizes pairwise association strength while keeping final relationships inconclusive.
+CPP-003,Incremental information,UNAVAILABLE,Not used for relationship classification,Common sample N=188 below N>=756 threshold.
+CPP-005,Complementarity and multivariate information,UNAVAILABLE,Not used for relationship classification,Common sample N=188 below N>=756 threshold.
+CPP-006,Lead-lag temporal association,UNAVAILABLE,Not used for relationship classification,Lag-adjusted common sample N=128 below N>=756 threshold.

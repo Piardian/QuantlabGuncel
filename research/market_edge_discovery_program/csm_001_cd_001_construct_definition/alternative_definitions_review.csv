@@ -1,0 +1,6 @@
+alternative,decision,reason
+3-12 month broad family,REJECTED_FOR_CD001,Too broad for frozen construct; would leave too many degrees of freedom.
+Intermediate-horizon momentum,DEFERRED,"Important definition challenge, but less canonical as first baseline construct than 12-1."
+Industry-relative momentum,DEFERRED,Requires industry classification governance and adds extra construct layer.
+Residual / risk-adjusted momentum,DEFERRED,"Requires risk-model choices, regression choices, and additional implementation complexity."
+Long-only top-decile strategy,REJECTED_FOR_CD001,"This would define a trading rule; CD-001 freezes a construct/signal state, not a strategy."

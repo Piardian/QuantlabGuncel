@@ -1,0 +1,25 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "HV-001",
+  "overall_classification": "Partially supported",
+  "verdicts": {
+    "H1": {
+      "status": "Supported by evidence",
+      "rationale": "21-day and 63-day rank persistence bootstrap median confidence intervals remain above zero."
+    },
+    "H2": {
+      "status": "Supported by evidence",
+      "rationale": "Observed daily top-decile retention is compared with a 10% random-membership reference."
+    },
+    "H3": {
+      "status": "Partially supported",
+      "rationale": "H3 is only partially testable without introducing external market-direction variables."
+    },
+    "H4": {
+      "status": "Supported by evidence",
+      "rationale": "Recent 21-day movement is measured separately from the frozen 12-1 formation window using only same-date known prices."
+    }
+  },
+  "bootstrap_seed": 1001,
+  "bootstrap_iterations": 2000
+}

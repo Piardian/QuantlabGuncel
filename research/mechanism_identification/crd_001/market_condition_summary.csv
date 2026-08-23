@@ -1,0 +1,8 @@
+condition,value
+available_sample_start,2023-07-31
+available_sample_end,2026-07-27
+valid_state_rows,530
+high_credit_stress_rows,55
+low_credit_stress_rows,183
+max_hy_oas,4.61
+min_hy_oas,2.59

@@ -1,0 +1,17 @@
+metric,value
+observations,1768840.0
+csm_high_count,178612.0
+tsm_high_count,1278445.0
+overlap_count,178612.0
+union_count,1278445.0
+neither_count,490395.0
+jaccard_similarity,0.13971035124702275
+precision_tsm_high_given_csm_high,1.0
+recall_csm_high_given_tsm_high,0.13971035124702275
+coverage_csm_high,0.10097691142217498
+coverage_tsm_high,0.7227589832884829
+phi_binary_association,0.20756666666533707
+count_CSM_HIGH_x_TSM_HIGH,178612.0
+count_CSM_HIGH_x_TSM_LOW,0.0
+count_CSM_NOT_HIGH_x_TSM_HIGH,1099833.0
+count_CSM_NOT_HIGH_x_TSM_LOW,490395.0

@@ -1,0 +1,9 @@
+construct_id,rows,alignment_column,missing_alignment_values,missing_alignment_pct,quality_column,quality_flag_values
+MR-001,4509,posterior_state_0,0,0.0,,
+LIQ-001,4023,liq001_zscore,270,0.067114,,
+VOL-001,4024,vol001_zscore,271,0.067346,vol001_valid_observation,True:4023 | False:1
+BRD-001,4023,brd001_zscore,450,0.111857,brd001_valid_observation,True:3824 | False:199
+COR-001,4023,cor001_zscore_252d,311,0.077305,,
+CRD-001,781,crd001_zscore_252d,251,0.321383,crd001_data_quality_flag,VALID:530 | RAW_ONLY:251
+FUND-001,18931,fund001_zscore_252d,12468,0.658602,fund001_data_quality_flag,MISSING_INPUT:12217 | OK:6463 | INSUFFICIENT_LOOKBACK:251
+OPT-001,9541,opt001_zscore_252d,553,0.05796,opt001_data_quality_flag,OK:8988 | MISSING_INPUT:302 | INSUFFICIENT_LOOKBACK:251

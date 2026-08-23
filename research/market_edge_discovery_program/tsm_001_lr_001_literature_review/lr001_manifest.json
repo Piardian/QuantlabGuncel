@@ -1,0 +1,10 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "LR-001",
+  "construct_name": "Time-Series Momentum",
+  "conclusion": "Proceed to CD-001",
+  "literature_maturity": "High",
+  "primary_evidence_domain": "Diversified futures and trend-following literature",
+  "main_methodological_risk": "Volatility scaling and portfolio construction can be confused with raw TSM signal contribution",
+  "next_stage": "CD-001"
+}

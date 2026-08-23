@@ -1,0 +1,15 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "CD-001",
+  "construct_name": "Fama-French 3-Factor Standardized 12-1 Residual Momentum Rank",
+  "status": "Construct frozen",
+  "factor_model": "Fama-French 3-factor",
+  "return_frequency": "Monthly",
+  "regression_window_months": 36,
+  "minimum_observations": 24,
+  "formation_window": "12-1",
+  "standardization": "Residual volatility over 36 months",
+  "construct_type": "Cross-sectional ranking construct",
+  "factor_data_availability_in_repository": "Not found locally",
+  "next_stage": "IM-001"
+}

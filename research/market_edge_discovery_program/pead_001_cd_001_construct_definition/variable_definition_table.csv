@@ -1,0 +1,13 @@
+variable_name,required,definition,point_in_time_requirement
+security_id,true,"Permanent security identifier or ticker mapping at event time","Must identify tradable security at announcement time"
+ticker,true,"Ticker symbol","Must be valid for event date"
+announcement_date,true,"Public earnings announcement date","Must be actual announcement date, not fiscal period end date"
+announcement_time_or_session,true,"Timestamp or before-open/during-market/after-close/unknown classification","Must describe information availability"
+fiscal_period_end,true,"Fiscal quarter end date","Used for event identity only"
+actual_eps,true,"Actual reported earnings per share","Must be value released at announcement"
+consensus_expected_eps,true,"Analyst consensus EPS expectation","Must be known before announcement"
+consensus_timestamp,true,"Timestamp/date proving expectation availability","Must be before announcement"
+price_reference,true,"Split-adjusted pre-announcement price reference","Must be known before announcement"
+standardized_earnings_surprise,true,"(actual_eps - consensus_expected_eps) / abs(price_reference)","Calculated only from available-at-event data"
+pead_state,true,"POSITIVE, NEGATIVE or NEUTRAL surprise state","Available only after announcement public time"
+first_valid_decision_timestamp,true,"Earliest safe timestamp at which state can be used","Must respect announcement timing rule"

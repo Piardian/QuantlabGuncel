@@ -1,0 +1,11 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "LR-001",
+  "construct_name": "Residual Momentum",
+  "literature_maturity": "Moderate-High",
+  "mechanism_clarity": "Moderate-High",
+  "data_integrity_risk": "Moderate",
+  "primary_literature_finding": "Residual Momentum is a recognized momentum variant that measures prior residual returns after common factor exposure removal.",
+  "primary_methodological_warning": "CD-001 must freeze the factor model, regression window and residual aggregation method before implementation.",
+  "next_stage": "CD-001"
+}

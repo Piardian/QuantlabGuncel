@@ -1,0 +1,19 @@
+{
+  "study_id": "CWF-001",
+  "study_name": "Final Composite Workflow Review",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "included_studies": [
+    "CIP-001",
+    "CWP-001",
+    "CWS-001"
+  ],
+  "new_analysis_performed": false,
+  "final_classification": "Scientifically Supported Nested Composite Workflow",
+  "construct_status": "Not a standalone construct",
+  "production_readiness": "Not supported",
+  "economic_utility": "Not evaluated",
+  "alpha_claim": "Not supported",
+  "program_status": "Composite workflow review closed",
+  "future_work_requires_preregistration": true
+}

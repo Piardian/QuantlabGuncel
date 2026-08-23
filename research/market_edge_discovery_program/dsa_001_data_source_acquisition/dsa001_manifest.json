@@ -1,0 +1,31 @@
+{
+  "stage_id": "DSA-001",
+  "stage_name": "Point-in-Time & Survivorship Data Source Acquisition",
+  "status": "Completed",
+  "final_decision": "PARTIAL_SOURCE_APPROVED",
+  "scientifically_acceptable_institutional_stack": [
+    "CRSP",
+    "Compustat PIT",
+    "CCM",
+    "I/B/E/S",
+    "GICS History"
+  ],
+  "partial_accessible_candidate": "Sharadar / Nasdaq Data Link / QuantRocket",
+  "local_dataset_available": false,
+  "performance_evaluation_performed": false,
+  "alpha_logic_changed": false,
+  "bfl002_authorized": false,
+  "rvp_authorized": false,
+  "production_authorized": false,
+  "next_authorized_stage": "DSA-002 Access Verification & Sample Schema Inspection",
+  "sources_used": [
+    "https://indexes.morningstar.com/research-data-products/crsp-us-stock-databases",
+    "https://wrds-www.wharton.upenn.edu/pages/about/data-vendors/sp-global-market-intelligence/",
+    "https://wrds-www.wharton.upenn.edu/pages/wrds-research/database-linking-matrix/linking-crsp-with-compustat/",
+    "https://wrds-www.wharton.upenn.edu/pages/grid-items/ibes-wrds-101-introduction-and-research-guide/",
+    "https://www.marketplace.spglobal.com/en/datasets/gics-%2890%29",
+    "https://sharadar.com/",
+    "https://www.quantrocket.com/sharadar/",
+    "https://data.nasdaq.com/databases/SEP"
+  ]
+}

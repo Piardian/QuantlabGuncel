@@ -1,0 +1,16 @@
+{
+  "construct_id": "CRD-001",
+  "overall_classification": "Partially supported",
+  "supported_hypotheses": 4,
+  "partially_supported_hypotheses": 0,
+  "not_supported_hypotheses": 0,
+  "valid_rows": 530,
+  "low_state_rows": 183,
+  "high_state_rows": 55,
+  "h1_mean_difference": 0.8704679582712371,
+  "h1_cohens_d": 3.7826871444878236,
+  "h2_mean_difference": 0.5026289873688716,
+  "h2_cohens_d": 1.565443724998924,
+  "cross_period_periods_with_both_states": 3,
+  "primary_limitation": "Short available sample and construct-internal state definitions limit external mechanism validation."
+}

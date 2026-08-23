@@ -1,0 +1,5 @@
+item,status,reason,required,observed
+CPP-003 incremental information analysis,NOT_ELIGIBLE,Common aligned sample is below preregistered minimum.,N >= 756 common aligned observations,188
+Regression / nested model analysis,FORBIDDEN_UNTIL_ELIGIBLE,Would violate CPP-000.5 sample threshold.,Valid preregistered common sample,188
+Conditional mutual information,FORBIDDEN_UNTIL_ELIGIBLE,Classified under CPP-003 incremental information; same common-sample threshold applies.,N >= 756 common aligned observations,188
+Pairwise dependence outputs from CPP-002,AVAILABLE_FOR_LATER_SYNTHESIS,Pairwise analyses met threshold but cannot substitute for multivariate incremental evidence.,N >= 252 pairwise observations,262

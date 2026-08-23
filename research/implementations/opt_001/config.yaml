@@ -1,0 +1,4 @@
+construct_id: OPT-001
+source_series: VIXCLS
+normalization_window: 252
+output_dir: output/opt_001_validation

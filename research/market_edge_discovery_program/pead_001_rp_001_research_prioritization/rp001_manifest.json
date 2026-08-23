@@ -1,0 +1,13 @@
+{
+  "construct_id": "PEAD-001",
+  "stage": "RP-001",
+  "construct_name": "Post-Earnings Announcement Drift",
+  "decision": "GO",
+  "scientific_importance": "High",
+  "literature_maturity": "High",
+  "construct_independence": "High",
+  "expected_research_value": "High",
+  "data_feasibility_risk": "Very High",
+  "primary_risk": "Point-in-time earnings announcement and surprise data integrity",
+  "next_stage": "LR-001"
+}

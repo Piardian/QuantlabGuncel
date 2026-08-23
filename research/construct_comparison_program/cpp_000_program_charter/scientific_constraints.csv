@@ -1,0 +1,7 @@
+rule,status,description
+No construct modification,ACTIVE,"CPP may not redesign, reparameterize, or revalidate any completed construct."
+No optimization,ACTIVE,"No thresholds, parameters, workflows, or comparison methods may be optimized after observing results."
+No alpha discovery,ACTIVE,"CPP does not search for alpha, trading signals, entries, exits, or portfolio strategies."
+No causal claims,ACTIVE,Lead-lag or hierarchy evidence may be described as temporal association only unless causal identification is explicitly established.
+Frozen FSR evidence,ACTIVE,Previous FSR conclusions are immutable inputs throughout CPP.
+Pre-registration before statistics,ACTIVE,No statistical comparison may begin before CPP-000.5 is complete and approved.

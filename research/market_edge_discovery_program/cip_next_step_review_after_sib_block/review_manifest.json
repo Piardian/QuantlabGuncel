@@ -1,0 +1,9 @@
+{
+  "review_id": "cip_next_step_review_after_sib_block",
+  "status": "Completed",
+  "new_empirical_analysis_performed": false,
+  "recommended_next_study": "CIP-003 CSM-001 x RSM-001 Construct Interaction Study",
+  "reason": "CSM-001 and RSM-001 are stock-level momentum-family constructs and avoid the CSM x ISM stock-to-industry bridge blocker.",
+  "execution_authorized": false,
+  "human_goal_required": true
+}

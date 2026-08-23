@@ -1,0 +1,38 @@
+.env
+.env.*
+!.env.example
+secrets/
+config/telegram_config.json
+config/*secret*
+config/*credential*
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+*.pyc
+
+# Local runtimes and caches
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# Local/private chat exports
+chat_history/
+.ai_chat_history/
+
+# Generated backtest/output artifacts
+output/
+output_*/
+research_runs/
+daily_logs/
+signals/
+paper_portfolio.csv
+external_review_package/
+external_review_package.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

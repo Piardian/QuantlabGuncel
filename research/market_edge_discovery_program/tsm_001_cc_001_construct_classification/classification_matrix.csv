@@ -1,0 +1,10 @@
+dimension,classification,evidence_status,summary
+Primary Category,Risk-State / Own-Trend Construct,Supported by evidence,"TSM-001 represents signed intermediate-horizon own-trend state behavior."
+Mechanism Validity,Supported,Supported by evidence,"MI-001 and HV-001 supported the own-trend direction mechanism."
+Construct Validity,Partially supported,Partially supported,"CV-001 showed reproducibility and coherence, limited by current-constituent data."
+Predictive Returns,Not supported,Not supported,"PV-001 found zero supported horizons for future return prediction."
+Predictive Volatility,Supported,Supported by evidence,"PV-001 supported future realized volatility information at 21d, 63d and 126d."
+Predictive Drawdown,Supported,Supported by evidence,"PV-001 supported future drawdown-risk information at 21d, 63d and 126d."
+Economic Utility,Partially supported,Partially supported,"EV-001 showed risk reduction but not superior risk-adjusted utility versus static benchmark."
+Engineering Maturity,Implemented,Supported by evidence,"IM-001 produced deterministic implementation and validation scripts."
+Production Readiness,Not classified as ready,Not supported,"No production deployment validation was performed."

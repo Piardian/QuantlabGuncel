@@ -1,0 +1,14 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "FSR-001",
+  "final_classification": "Mechanistically valid but predictively unsupported residual momentum construct",
+  "scientific_maturity": "Moderate",
+  "mechanism_validity": "Supported by evidence",
+  "predictive_validity": "Not supported",
+  "economic_validity": "Not evaluated",
+  "production_readiness": "Not supported",
+  "ev001_authorized": false,
+  "lifecycle_status": "Stopped after PV-001 / Human Review",
+  "completed": true
+}
+

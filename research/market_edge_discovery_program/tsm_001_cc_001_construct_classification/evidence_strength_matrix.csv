@@ -1,0 +1,10 @@
+stage,evidence_type,conclusion,confidence,limitation
+RP-001,Research prioritization,GO,High,"Prioritization only; no construct definition."
+LR-001,Literature review,Scientifically mature construct,High,"Literature strongest outside this exact equity implementation."
+CD-001,Construct definition,Frozen raw 12-1 own-trend state,High,"Excludes volatility scaling and cross-sectional ranking by design."
+IM-001,Implementation,Successfully implemented,High,"Implementation fidelity only; no empirical validity."
+CV-001,Construct validation,Partially supported,Moderate,"Current-constituent source panel is not survivorship-free."
+MI-001,Mechanism identification,Supported by evidence,High,"Descriptive mechanism only."
+HV-001,Hypothesis validation,Supported by evidence,High,"Validates explanatory mechanism, not prediction."
+PV-001,Predictive validation,Partially supported,Moderate,"Risk outcomes supported; future returns not supported."
+EV-001,Economic validation,Partially supported,Moderate-Low,"Simplified fixed workflows; no costs or production constraints."

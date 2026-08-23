@@ -1,0 +1,10 @@
+stage,result,classification
+RP-001,GO,Supported by evidence
+LR-001,Options-implied information is literature-supported and distinct.,Supported by evidence
+CD-001,Frozen construct: VIXCLS-based option-implied volatility state.,Supported by evidence
+IM-001,Successfully implemented.,Supported by evidence
+CV-001,Construct validity supported.,Supported by evidence
+MI-001,Mechanism identified as index option-implied uncertainty / expected volatility state.,Supported by evidence
+HV-001,Mechanism hypotheses supported.,Supported by evidence
+PV-001,Risk-variable predictive information supported; directional return evidence inconclusive.,Mixed but meaningful
+EV-001,Economic utility partially supported in predefined risk workflows.,Partially supported

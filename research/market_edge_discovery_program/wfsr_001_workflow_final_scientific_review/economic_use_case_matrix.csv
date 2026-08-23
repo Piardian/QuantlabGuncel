@@ -1,0 +1,5 @@
+use_case,reference_result,oos_result,final_status,interpretation
+UC-1,Not Supported,Not Supported,Not Supported,CSM gated by TSM does not change selection because CSM_HIGH is nested in TSM_HIGH
+UC-2,Not Supported,Not Supported,Not Supported,CSM weighted by TSM does not change selection under registered weights
+UC-3,Supported,Supported,Supported,CSM leadership subset inside TSM_HIGH shows favorable economic evidence versus broad TSM-positive non-CSM region
+UC-4,Inconclusive,Inconclusive,Inconclusive,Conflict region absent or insufficient

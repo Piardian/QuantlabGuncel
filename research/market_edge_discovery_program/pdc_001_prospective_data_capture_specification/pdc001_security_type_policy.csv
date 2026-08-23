@@ -1,0 +1,15 @@
+security_type,decision,rationale
+US common stocks,INCLUDE,Comparable operating-company equity instrument; primary target for CSM x TSM.
+REITs,CONDITIONAL,Equity-like but structurally distinct; include only if source tags reliably and policy accepts REIT comparability before launch.
+Foreign ordinary shares,EXCLUDE,"May introduce country, currency, and listing structure differences not required for initial US equity capture."
+ADRs,EXCLUDE,Different issuer/listing structure; avoid complexity in initial prospective scope.
+ETFs,EXCLUDE,Funds are not operating-company equities.
+Closed-end funds,EXCLUDE,Funds are not comparable to operating-company equities.
+Preferred stocks,EXCLUDE,Hybrid security; not comparable to common equity.
+Units,EXCLUDE,Composite/temporary structures create lifecycle ambiguity.
+Warrants,EXCLUDE,Derivative-like instrument.
+SPACs,EXCLUDE,Pre-combination shell structure differs from ordinary operating companies.
+Rights,EXCLUDE,Temporary corporate-action instrument.
+Limited partnerships,EXCLUDE,Different legal/economic structure.
+Tracking stocks,EXCLUDE,Non-standard claim on business segment.
+Multiple share classes,CONDITIONAL,Allowed only if each share class has stable security ID and is not merged by ticker/company alone.

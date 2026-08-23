@@ -1,0 +1,7 @@
+component,role,classification,reason
+Composite Trend,Primary explanatory candidate,SUPPORTED_BY_EVIDENCE,Highest Jaccard and highest recall among trend subconstructs
+Trend Strength,Competing explanatory candidate,SUPPORTED_BY_EVIDENCE,Higher mean daily Spearman than Composite Trend and only slightly lower overlap
+Trend Smoothness,Supporting component,PLAUSIBLE_BUT_UNTESTED,Moderate overlap but clearly below top two candidates
+Trend Persistence,Supporting component,PLAUSIBLE_BUT_UNTESTED,Moderate overlap but below Smoothness and far below top two candidates
+Trend Direction,Weak supporting component,NOT_SUPPORTED_BY_EVIDENCE,Lowest overlap among tested trend subconstructs
+

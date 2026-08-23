@@ -1,0 +1,6 @@
+candidate,primary_risks,risk_level,mitigation_in_later_lifecycle
+Cross-Sectional Momentum,"Crash risk, turnover/cost sensitivity, universe construction, crowding, implementation convention dependence.",MODERATE,LR must separate canonical long-short literature from long-only construct definition; CD must freeze universe/ranking/rebalance/skip-month logic before validation.
+Time-Series Momentum,"Asset-class mismatch if applied only to equities, long-only ambiguity, trend/regime confounding.",MODERATE,LR must define target market and distinguish futures evidence from equity implementation.
+Value,"Point-in-time fundamentals, restatements, accounting lag, sector effects, long decay horizon.",HIGH,Requires data governance stage before CD/IM.
+Profitability / Quality,"Point-in-time accounting data, definition proliferation, sector and size confounding.",HIGH,Requires accounting-data validation and strict publication lag handling.
+PEAD,"Earnings timestamp accuracy, surprise definition, after-hours timing, analyst expectation data availability.",VERY_HIGH,Requires dedicated event-data and timestamp integrity framework before CD.

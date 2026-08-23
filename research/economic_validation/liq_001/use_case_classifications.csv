@@ -1,0 +1,5 @@
+use_case,policy,classification
+UC-1,LIQ001_RISK_BUDGET,Partially supported
+UC-2,LIQ001_VOL_TARGET,Partially supported
+UC-3,LIQ001_HEDGE_ACTIVATION,Partially supported
+UC-4,LIQ001_PORTFOLIO_RISK_CONTROL,Supported by evidence

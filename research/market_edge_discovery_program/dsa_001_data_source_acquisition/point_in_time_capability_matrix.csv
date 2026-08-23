@@ -1,0 +1,8 @@
+source_id,source_name,historical_security_existence,historical_universe_membership,historical_industry_classification,historical_financial_statement_availability,historical_earnings_announcement_timing,historical_analyst_expectation_timing,overall_pit_status
+SRC-001,CRSP US Stock Databases,YES,PARTIAL,NO,NO,NO,NO,PARTIAL: strong historical security/time-series identifiers; universe membership must be separately specified unless using CRSP index/constituent products
+SRC-002,Compustat Point in Time / Preliminary History / Unrestated Quarterly,PARTIAL,NO,PARTIAL,YES,NO,NO,"YES for PIT financial statements per WRDS/S&P documentation, subject to licensed field validation"
+SRC-003,CRSP/Compustat Merged Database (CCM),PARTIAL,NO,NO,NO,NO,NO,YES/PARTIAL: designed to map relationships over time; exact link date handling must be validated
+SRC-004,I/B/E/S on WRDS,NO,NO,NO,NO,PARTIAL,YES/PARTIAL,YES/PARTIAL: forecast timeline data exists; exact timestamp/announcement ordering must be verified
+SRC-005,GICS History,PARTIAL,YES/PARTIAL,YES,NO,NO,NO,YES/PARTIAL: historical classifications; effective-date fields must be validated
+SRC-006,Sharadar Core US Equities / Nasdaq Data Link,YES,YES/PARTIAL,PARTIAL,PARTIAL,PARTIAL,NO,PARTIAL: vendor states point-in-time readiness for active/delisted fundamentals; must verify local schema and timestamps
+SRC-007,Current Yahoo/current metadata/manual mappings,NO,NO,NO,NO,NO,NO,NO

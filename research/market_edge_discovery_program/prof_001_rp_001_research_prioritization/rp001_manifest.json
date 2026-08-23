@@ -1,0 +1,13 @@
+{
+  "construct_id": "PROF-001",
+  "stage": "RP-001",
+  "construct_name": "Profitability / Quality",
+  "decision": "GO",
+  "scientific_importance": "High",
+  "literature_maturity": "High",
+  "construct_independence": "High",
+  "expected_research_value": "High",
+  "data_feasibility_risk": "High",
+  "primary_risk": "Point-in-time accounting data and publication-lag integrity",
+  "next_stage": "LR-001"
+}

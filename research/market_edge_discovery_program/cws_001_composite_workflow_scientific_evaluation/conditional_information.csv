@@ -1,0 +1,13 @@
+horizon_days,condition_type,condition,comparison,comparison_observations,reference_observations,mean_difference,sample_adequate
+21,within_tsm_state,TSM_HIGH,CSM_HIGH_minus_CSM_NOT_HIGH,177562,1095258,0.008019762234359545,True
+21,within_tsm_state,TSM_LOW,CSM_HIGH_minus_CSM_NOT_HIGH,0,485541,,False
+21,within_csm_state,CSM_HIGH,TSM_HIGH_minus_TSM_LOW,177562,0,,False
+21,within_csm_state,CSM_NOT_HIGH,TSM_HIGH_minus_TSM_LOW,1095258,485541,-0.006860258817519421,True
+63,within_tsm_state,TSM_HIGH,CSM_HIGH_minus_CSM_NOT_HIGH,175462,1085222,0.022089647372840138,True
+63,within_tsm_state,TSM_LOW,CSM_HIGH_minus_CSM_NOT_HIGH,0,476719,,False
+63,within_csm_state,CSM_HIGH,TSM_HIGH_minus_TSM_LOW,175462,0,,False
+63,within_csm_state,CSM_NOT_HIGH,TSM_HIGH_minus_TSM_LOW,1085222,476719,-0.01812027855801516,True
+126,within_tsm_state,TSM_HIGH,CSM_HIGH_minus_CSM_NOT_HIGH,172312,1067944,0.046306798503925314,True
+126,within_tsm_state,TSM_LOW,CSM_HIGH_minus_CSM_NOT_HIGH,0,465710,,False
+126,within_csm_state,CSM_HIGH,TSM_HIGH_minus_TSM_LOW,172312,0,,False
+126,within_csm_state,CSM_NOT_HIGH,TSM_HIGH_minus_TSM_LOW,1067944,465710,-0.03029690819753897,True

@@ -1,0 +1,5 @@
+sample,use_case,horizons_evaluated,positive_spread_horizons,mean_spread_average,classification
+oos,UC-1,3,0,0.0,Not Supported
+oos,UC-2,3,0,0.0,Not Supported
+oos,UC-3,3,3,0.13758565522587274,Supported
+oos,UC-4,3,0,,Inconclusive: conflict region absent or insufficient

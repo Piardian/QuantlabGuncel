@@ -1,0 +1,5 @@
+candidate_universe_id,candidate_universe_size,rebalance_dates_analyzed,dates_eligible_count_ge_50,dates_eligible_count_lt_50,percentage_ge_50,minimum_eligible_count,median_eligible_count,maximum_eligible_count,first_date_ge_50,longest_starvation_streak
+RRV002_FREE_US_EQUITY_ALL_CAPABLE,4734,56,56,0,1.0,3128,3400.5,4010,2022-01-31,0
+RRV002_FREE_US_EQUITY_1000,1000,56,56,0,1.0,999,1000.0,1000,2022-01-31,0
+RRV002_FREE_US_EQUITY_500,500,56,56,0,1.0,500,500.0,500,2022-01-31,0
+RRV002_FREE_US_EQUITY_250,250,56,56,0,1.0,250,250.0,250,2022-01-31,0

@@ -1,0 +1,2 @@
+total_csm_candidates,total_tsm_accepted,total_tsm_rejected,total_rejection_pct,rebalance_dates_with_zero_tsm_rejection,maximum_rejection_pct,tsm_exposure_impact
+117,114,3,0.02564102564102564,53,0.1666666666666666,MINOR

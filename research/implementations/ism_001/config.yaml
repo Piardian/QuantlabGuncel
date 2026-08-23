@@ -1,0 +1,20 @@
+construct_id: ISM-001
+construct_name: Ken French 49 Industry Portfolio 12-1 Cross-Sectional Momentum Rank
+data_source: Ken French 49 Industry Portfolios
+data_url: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/49_Industry_Portfolios_CSV.zip
+return_frequency: monthly
+return_type: value_weighted
+industry_universe: Ken French 49 industry portfolios
+formation_start_lag_months: 12
+formation_end_lag_months: 2
+minimum_valid_industries: 30
+top_decile_threshold: 0.90
+bottom_decile_threshold: 0.10
+tie_method: average_rank
+forbidden:
+  - stock_level_membership_assignment
+  - portfolio_construction
+  - return_prediction
+  - trading_backtests
+  - alpha_claims
+  - threshold_optimization

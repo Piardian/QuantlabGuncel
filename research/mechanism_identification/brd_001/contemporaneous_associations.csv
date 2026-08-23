@@ -1,0 +1,7 @@
+variable,correlation_with_breadth,observations
+spy_return_20d,0.42638722837918797,3824
+spy_return_60d,0.6727018219595433,3824
+spy_distance_sma200,0.8803903694805962,3824
+spy_realized_vol_20d,-0.6825249874356023,3824
+spy_drawdown_52w,0.8306337573877106,3824
+spy_trend_spread_50_200,0.7165168565270857,3824

@@ -1,0 +1,11 @@
+{
+  "construct_id": "PROF-001",
+  "stage": "IM-001",
+  "status": "Implementation incomplete",
+  "blocker": "Missing required accounting statement dataset",
+  "required_input_file": "data/prof_001/accounting_statements.csv",
+  "implementation_package": "research/implementations/prof_001",
+  "validator": "research/implementations/prof_001/validate_prof_001.py",
+  "cv001_authorized": false,
+  "next_stage": "CV-001 blocked until compliant data is provided"
+}

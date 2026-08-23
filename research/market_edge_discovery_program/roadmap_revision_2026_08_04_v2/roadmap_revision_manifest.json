@@ -1,0 +1,22 @@
+{
+  "roadmap_revision_id": "roadmap_revision_2026_08_04_v2",
+  "status": "Completed",
+  "supersedes": "roadmap_update_2026_08_04 ordering",
+  "classification_update": "Provisionally research-supported momentum leadership workflow + risk construct library",
+  "new_mandatory_first_gate": "BFL-001 Baseline Freeze & Research Ledger",
+  "recommended_next_stage": "BFL-001",
+  "dba001_position": "After BFL-001",
+  "added_gates": [
+    "BFL-001",
+    "RVP-001",
+    "CAP-001",
+    "OPS-001",
+    "PRM-001",
+    "LVP-001",
+    "SCL-001"
+  ],
+  "constructs_modified": false,
+  "workflow_modified": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false
+}

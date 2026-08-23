@@ -1,0 +1,488 @@
+{
+  "program_id": "ALP-002",
+  "execution_timestamp_utc": "2026-08-12T11:06:35.768089+00:00",
+  "environment": "PAPER",
+  "authentication": "PASS",
+  "order_mutation_calls": 0,
+  "alpha_execution_performed": "NO",
+  "backtest_performed": "NO",
+  "performance_evaluation_performed": "NO",
+  "scientific_t0_established": "NO",
+  "checks": {
+    "account": {
+      "http_result": "PASS",
+      "verification_result": "PASS",
+      "record_count": 1,
+      "schema": [
+        {
+          "field": "account_blocked",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "account_number",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "accrued_fees",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "admin_configurations",
+          "type": "object",
+          "nullable_observed": false
+        },
+        {
+          "field": "balance_asof",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "buying_power",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "cash",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "created_at",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "crypto_status",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "crypto_tier",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "currency",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "effective_buying_power",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "equity",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "id",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "initial_margin",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "intraday_adjustments",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "last_equity",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "last_maintenance_margin",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "long_market_value",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "maintenance_margin",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "multiplier",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "non_marginable_buying_power",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "options_approved_level",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "options_buying_power",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "options_trading_level",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "pending_reg_taf_fees",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "portfolio_value",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "position_market_value",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "regt_buying_power",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "short_market_value",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "shorting_enabled",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "sma",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "status",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "trade_suspended_by_user",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "trading_blocked",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "transfers_blocked",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "user_configurations",
+          "type": "null",
+          "nullable_observed": true
+        }
+      ],
+      "notes": "safe account metadata only"
+    },
+    "assets": {
+      "http_result": "PASS",
+      "verification_result": "PASS",
+      "record_count": 14226,
+      "schema": [
+        {
+          "field": "attributes",
+          "type": "list",
+          "nullable_observed": false
+        },
+        {
+          "field": "borrow_status",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "class",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "easy_to_borrow",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "exchange",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "fractionable",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "id",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "maintenance_margin_requirement",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "margin_requirement_long",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "margin_requirement_short",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "marginable",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "name",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "shortable",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "status",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "symbol",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "tradable",
+          "type": "bool",
+          "nullable_observed": false
+        }
+      ],
+      "notes": "active us_equity list"
+    },
+    "single_asset": {
+      "http_result": "PASS",
+      "verification_result": "PASS",
+      "record_count": 1,
+      "schema": [
+        {
+          "field": "attributes",
+          "type": "list",
+          "nullable_observed": false
+        },
+        {
+          "field": "borrow_status",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "class",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "easy_to_borrow",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "exchange",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "fractionable",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "id",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "maintenance_margin_requirement",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "margin_requirement_long",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "margin_requirement_short",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "marginable",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "name",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "shortable",
+          "type": "bool",
+          "nullable_observed": false
+        },
+        {
+          "field": "status",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "symbol",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "tradable",
+          "type": "bool",
+          "nullable_observed": false
+        }
+      ],
+      "notes": "AAPL"
+    },
+    "calendar": {
+      "http_result": "PASS",
+      "verification_result": "PASS",
+      "record_count": 5,
+      "schema": [
+        {
+          "field": "close",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "date",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "open",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "session_close",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "session_open",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "settlement_date",
+          "type": "str",
+          "nullable_observed": false
+        }
+      ],
+      "notes": "frozen date range"
+    },
+    "historical_bars": {
+      "http_result": "PASS",
+      "verification_result": "PASS",
+      "record_count": 10,
+      "schema": [
+        {
+          "field": "c",
+          "type": "float",
+          "nullable_observed": false
+        },
+        {
+          "field": "h",
+          "type": "float",
+          "nullable_observed": false
+        },
+        {
+          "field": "l",
+          "type": "float",
+          "nullable_observed": false
+        },
+        {
+          "field": "n",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "o",
+          "type": "float",
+          "nullable_observed": false
+        },
+        {
+          "field": "t",
+          "type": "str",
+          "nullable_observed": false
+        },
+        {
+          "field": "v",
+          "type": "int",
+          "nullable_observed": false
+        },
+        {
+          "field": "vw",
+          "type": "float",
+          "nullable_observed": false
+        }
+      ],
+      "notes": "non-formal integration schema/count only"
+    },
+    "positions": {
+      "http_result": "PASS",
+      "verification_result": "PASS",
+      "record_count": 0,
+      "schema": [],
+      "notes": "zero positions acceptable"
+    },
+    "corporate_actions": {
+      "http_result": "HTTP_404",
+      "verification_result": "NOT_ENTITLED",
+      "record_count": 1,
+      "schema": [
+        {
+          "field": "error",
+          "type": "str",
+          "nullable_observed": false
+        }
+      ],
+      "notes": "optional/non-blocking; paper endpoint returned 404"
+    }
+  }
+}

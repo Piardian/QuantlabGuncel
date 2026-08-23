@@ -1,0 +1,49 @@
+{
+  "experiment_id": "example_ablate_breakout_v1",
+  "description": "Research-only single-component ablation example.",
+  "strategy_version": "leadership_expansion_v1",
+  "version": "1",
+  "creation_timestamp_utc": "2026-07-22T08:29:25.824535+00:00",
+  "research_notes": "Example manifest only; no backtest is run by this command.",
+  "component_overrides": {
+    "enable_breakout_confirmation": false
+  },
+  "expected_baseline": false,
+  "random_seed": null,
+  "configuration_hash": "639785abd06972a3491f4bbdb8d3addda4217af6344f79feb80ff58711478ab3",
+  "enabled_components": [],
+  "disabled_components": [
+    "enable_breakout_confirmation"
+  ],
+  "dataset": "master_dataset",
+  "universe": "sp500_current",
+  "time_range": "2010-01-01:2025-12-31",
+  "python_version": "3.12.10",
+  "strategy_parameters": {
+    "risk_per_trade": 0.01,
+    "ema_trend_period": 200,
+    "ema_quality_period": 50,
+    "atr_period": 14,
+    "relative_strength_lookback": 60,
+    "relative_strength_threshold": 0.05,
+    "expansion_atr_multiple": 1.5,
+    "breakout_lookback": 20,
+    "initial_stop_atr_multiple": 1.5,
+    "trailing_stop_atr_multiple": 2.0,
+    "max_holding_bars": 40,
+    "max_positions": 3,
+    "skip_relative_strength_filter": false,
+    "enable_leadership_quality": true,
+    "enable_relative_strength_filter": true,
+    "enable_ema200_filter": true,
+    "enable_ema200_slope_filter": true,
+    "enable_ema50_filter": true,
+    "enable_expansion_filter": true,
+    "enable_breakout_confirmation": false,
+    "enable_protective_stop_exit": true,
+    "enable_atr_trailing_exit": true,
+    "enable_ema_exit": true,
+    "enable_time_exit": true,
+    "enable_risk_position_sizing": true
+  }
+}

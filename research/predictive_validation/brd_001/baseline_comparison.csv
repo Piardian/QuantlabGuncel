@@ -1,0 +1,9 @@
+hypothesis,target,horizon_days,model,spearman_corr,null_model,permutation_p_two_sided,classification
+H1_VOL,future_realized_vol_20d,20,BRD001_continuous,-0.4158048359737725,permuted_no_association,0.0004997501249375,Supported by evidence
+H2_DRAWDOWN,future_drawdown_20d,20,BRD001_continuous,0.0712447563186995,permuted_no_association,0.0004997501249375,Partially supported
+H3_TREND_DETERIORATION,future_trend_deterioration_20d,20,BRD001_continuous,-0.6396095262665247,permuted_no_association,0.0004997501249375,Supported by evidence
+H4_RETURNS,future_return_20d,20,BRD001_continuous,-0.1666710896390109,permuted_no_association,0.0004997501249375,Not supported
+H1_VOL,future_realized_vol_60d,60,BRD001_continuous,-0.363273220011003,permuted_no_association,0.0004997501249375,Supported by evidence
+H2_DRAWDOWN,future_drawdown_60d,60,BRD001_continuous,0.0727978259098379,permuted_no_association,0.0004997501249375,Partially supported
+H3_TREND_DETERIORATION,future_trend_deterioration_60d,60,BRD001_continuous,-0.5322295400413573,permuted_no_association,0.0004997501249375,Supported by evidence
+H4_RETURNS,future_return_60d,60,BRD001_continuous,-0.1973323699005503,permuted_no_association,0.0004997501249375,Not supported

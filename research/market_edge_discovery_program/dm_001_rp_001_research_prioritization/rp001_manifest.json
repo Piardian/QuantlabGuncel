@@ -1,0 +1,22 @@
+{
+  "construct_id": "DM-001",
+  "stage": "RP-001",
+  "construct_name": "Dual Momentum",
+  "decision": "NO-GO",
+  "scientific_importance": "Moderate-High",
+  "academic_maturity": "Moderate",
+  "component_literature_maturity": "High",
+  "construct_independence": "Low",
+  "practical_relevance": "High",
+  "data_availability": "High",
+  "rule_based_constructability": "High",
+  "reproducibility_potential": "High",
+  "incremental_information": "Unproven",
+  "primary_reason": "Candidate is a composite of completed cross-sectional and time-series momentum information families rather than a supported independent mechanism",
+  "lifecycle_status": "Terminated at RP-001",
+  "next_stage": null,
+  "lr001_authorized": false,
+  "predictive_claim": "Not evaluated",
+  "economic_claim": "Not evaluated",
+  "production_claim": "Not supported"
+}

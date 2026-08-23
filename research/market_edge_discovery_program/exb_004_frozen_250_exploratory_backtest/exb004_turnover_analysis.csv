@@ -1,0 +1,3 @@
+strategy,average_turnover_per_rebalance,annualized_turnover,maximum_rebalance_turnover,total_turnover,estimated_cost_drag_total_return_difference
+CSM-001,0.5519999999999999,6.600589285714286,1.0,30.36,0.025236685478947196
+CSM-001xTSM-001,0.5519999999999999,6.600589285714286,1.0,30.36,0.025236685478947196

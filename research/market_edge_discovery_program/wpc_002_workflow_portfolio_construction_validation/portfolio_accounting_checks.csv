@@ -1,0 +1,10 @@
+check,passed
+calendar_non_empty,True
+entry_after_signal,True
+exit_after_entry,True
+lookahead_ok,True
+workflow_holdings_exist,True
+benchmark_holdings_exist,True
+workflow_missing_return_rate_lt_1pct,True
+benchmark_missing_return_rate_lt_1pct,True
+returns_generated,True

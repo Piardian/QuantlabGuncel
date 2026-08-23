@@ -1,0 +1,22 @@
+{
+  "run_id": "EXB002_20260812T191425Z",
+  "evidence_classification": "NON_FORMAL_EXPLORATORY_EVIDENCE",
+  "dataset_spec_hash": "21974E54AE1DA524E5C94EE8EAC4A524AE44D2BAA6F05E8448128BD402AE411E",
+  "exb001_manifest_hash": "38AD5EAF179CF0691F2744D630933B0847918680FCE0220FD8EAEED928702C51",
+  "csm_model_hash": "2E4E109BB4F1272F0013ABFF9569D8957260B92221C5DDFF1699EC71127647AE",
+  "csm_feature_pipeline_hash": "4F0BBE6B4AB5E0E3E1C769258CD77C5E6564A73498FEC2C41A21E66B26B54F10",
+  "tsm_model_hash": "0826AC56ACE07E13F2F64CB40147094630657F638180C1C4DFFE09945BF17492",
+  "tsm_feature_pipeline_hash": "6F80E3E143944BB42ACA31A9BAE0C841FEF9A2C643645CA1949875F302782079",
+  "alpha_logic_changed": "NO",
+  "parameter_optimization": "NO",
+  "broker_mode": "DRY_RUN",
+  "trading_enabled": false,
+  "broker_mutation_calls": 0,
+  "universe_count": 100,
+  "first_valid_signal_date": "2022-01-03",
+  "first_execution_date": "2022-01-04",
+  "backtest_end_date": "2026-08-11",
+  "rebalance_events": 56,
+  "cost_model_one_way_bps": 5,
+  "decision": "EXPLORATORY_EVIDENCE_UNPROMISING"
+}

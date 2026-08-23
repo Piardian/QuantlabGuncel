@@ -1,0 +1,18 @@
+{
+  "program": "Controlled Data/Bias Remediation",
+  "stage": "Controlled remediation before BFL-002",
+  "status": "Completed",
+  "parent_baseline": "CSMxTSM_GROSS_RESEARCH_BASELINE_V1",
+  "alpha_logic_changed": "NO",
+  "performance_peeking_detected": "NO",
+  "critical_findings_closed": "0 / 2",
+  "major_findings_closed": "0 / 2",
+  "unresolved_blockers": 5,
+  "v1_preserved": "YES",
+  "v2_candidate_reproducible": "NO",
+  "bfl002_readiness": "NOT_READY_FOR_BFL002",
+  "alpha_status": "UNEVALUATED_AFTER_REMEDIATION",
+  "authorized_next_action": "REMEDIATION CONTINUES",
+  "rvp_authorized": false,
+  "production_authorized": false
+}

@@ -1,0 +1,18 @@
+criterion,status,evidence
+exchange scope frozen,PASS,"NYSE, Nasdaq, NYSE American included; OTC/non-US excluded."
+security type scope frozen,PARTIAL,"Policy drafted, source tags unverified."
+universe rules frozen,PARTIAL,"Rule drafted, active/tradable/listing fields unverified."
+identifier policy frozen,PARTIAL,"Hierarchy/fallback drafted, source permanent ID unverified."
+lifecycle handling frozen,PARTIAL,"Policy drafted, source unresolved."
+corporate-action handling frozen,PARTIAL,"Event schema drafted, source unresolved."
+raw/adjusted data policy frozen,PASS,Raw and adjusted storage policy separated.
+timestamp policy frozen,PARTIAL,"UTC/source/ingestion semantics drafted, source semantics unresolved."
+snapshot cadence frozen,PARTIAL,"Daily post-close cadence drafted, source finalization unresolved."
+missing/stale rules frozen,PASS,Freshness statuses and no silent fill policy defined.
+immutable storage design frozen,PARTIAL,"Layout drafted, write-once enforcement not implemented."
+hash policy operational,PASS,Dry-run SHA256 hash generated.
+manifest policy operational,PASS,Dry-run manifest generated.
+schema version frozen,NO,Draft schema exists but source schemas unresolved.
+source access real,FAIL,No real source access verified.
+licensing sufficient,FAIL,License unresolved.
+reproducibility dry-run succeeds,PARTIAL,Local mechanics only; no real source.

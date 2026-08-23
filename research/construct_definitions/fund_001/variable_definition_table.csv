@@ -1,0 +1,8 @@
+variable_name,role,source,fred_series,frequency,formula,units,interpretation,missing_rule
+fund001_cp_rate,input,FRED / Board of Governors of the Federal Reserve System,DCPF3M,Daily,raw value,Percent,90-day AA financial commercial paper rate,Missing if source value unavailable
+fund001_tbill_rate,input,FRED / Board of Governors of the Federal Reserve System,DTB3,Daily,raw value,Percent,3-month Treasury bill secondary market rate discount basis,Missing if source value unavailable
+fund001_cp_tbill_spread,primary_construct,Derived,N/A,Daily,fund001_cp_rate - fund001_tbill_rate,Percentage points,Short-term private financial funding premium over Treasury bills,Missing if either input is unavailable
+fund001_zscore_252d,normalized_state,Derived,N/A,Daily,(spread - trailing_252_valid_mean) / trailing_252_valid_std,Standard deviations,Funding stress relative to trailing one-year history,Missing until 252 valid observations and if rolling std is zero
+fund001_percentile_252d,normalized_state,Derived,N/A,Daily,percentile_rank(spread within trailing 252 valid observations),Percentile,Higher percentile means higher funding stress versus trailing history,Missing until 252 valid observations
+fund001_valid_observation_count_252d,diagnostic,Derived,N/A,Daily,count valid spread observations in trailing window,Count,Lookback sufficiency diagnostic,Always reported when date exists
+fund001_data_quality_flag,diagnostic,Derived,N/A,Daily,rule-based flag,Category,Data quality status,Always reported

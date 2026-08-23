@@ -1,0 +1,52 @@
+{
+  "program_id": "ALP-002",
+  "program_name": "Alpaca Read-Only Integration Verification",
+  "created_before_response_inspection": "YES",
+  "environment": "PAPER",
+  "paper_base_url": "https://paper-api.alpaca.markets",
+  "market_data_base_url": "https://data.alpaca.markets",
+  "test_symbols": ["AAPL", "MSFT"],
+  "single_asset_symbol": "AAPL",
+  "unknown_asset_symbol": "ZZZZ_UNKNOWN_TEST_SYMBOL",
+  "historical_bars": {
+    "symbols": ["AAPL", "MSFT"],
+    "timeframe": "1Day",
+    "start": "2026-08-03T00:00:00Z",
+    "end": "2026-08-07T23:59:59Z",
+    "feed": "iex",
+    "adjustment": "raw"
+  },
+  "calendar": {
+    "start": "2026-08-10",
+    "end": "2026-08-14"
+  },
+  "corporate_actions": {
+    "ca_types": ["dividend", "split", "merger", "spinoff"],
+    "since": "2026-01-01",
+    "until": "2026-08-12",
+    "symbols": ["AAPL", "MSFT"]
+  },
+  "expected_endpoints": [
+    "GET /v2/account",
+    "GET /v2/assets",
+    "GET /v2/assets/{symbol}",
+    "GET /v2/calendar",
+    "GET /v2/positions",
+    "GET /v2/stocks/bars",
+    "GET /v2/corporate_actions"
+  ],
+  "forbidden_endpoints": [
+    "POST /v2/orders",
+    "PATCH /v2/orders/{order_id}",
+    "DELETE /v2/orders/{order_id}",
+    "DELETE /v2/orders",
+    "DELETE /v2/positions",
+    "DELETE /v2/positions/{symbol_or_asset_id}"
+  ],
+  "labels": {
+    "data_label": "NON_FORMAL_INTEGRATION_TEST_DATA",
+    "scientific_t0": "NOT_ESTABLISHED",
+    "alpha_execution": "NO",
+    "performance_evaluation": "NO"
+  }
+}

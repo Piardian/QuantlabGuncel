@@ -1,0 +1,6 @@
+scope_id,universe_membership_pit,security_status_pit,metadata_pit,pit_status,evidence
+RSR-A,NO,NO,NO,FAIL,Later start date does not fix missing delisted securities or PIT membership.
+RSR-B,NO,NO,NO,FAIL,A current known list cannot become historical membership.
+RSR-C,NO,NO,NO,FAIL,No local security master exists.
+RSR-D,CAN_BE_CAPTURED_FROM_T0,CAN_BE_CAPTURED_FROM_T0,CAN_BE_CAPTURED_FROM_T0,PARTIAL,No retrospective historical validation; evidence accumulates only after T0.
+RSR-E,NO,NO,NO,FAIL,"Only for hypothesis generation, debugging, pipeline testing and lineage."

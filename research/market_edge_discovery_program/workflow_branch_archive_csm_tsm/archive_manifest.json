@@ -1,0 +1,11 @@
+{
+  "archive_id": "workflow_branch_archive_csm_tsm",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Archived for human review",
+  "final_classification": "Research-Validated Portfolio Workflow, Not Production Ready",
+  "new_analysis_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "included_final_stage": "WRS-002",
+  "next_action": "Wait for human-approved CIP-002 goal or production-control research goal"
+}

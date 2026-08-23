@@ -1,0 +1,23 @@
+{
+  "program_id": "EXB-004",
+  "run_id": "EXB004_20260813T115755Z",
+  "evidence_classification": "NON_FORMAL_EXPLORATORY_EVIDENCE",
+  "universe": "FUF001_FREE_US_EQUITY_250_V1",
+  "universe_sha256": "BC7879B3830C7327EB0A5779625A347C06826C47488F64326C7D0B2884CC741D",
+  "run_spec_sha256": "8B9D4C3213A3709043D9724023F2E40DF4A5AA44ED2849B89CF64731C78D3320",
+  "usable_securities": 250,
+  "backtest_start": "2022-01-04",
+  "first_valid_signal": "2022-01-03",
+  "backtest_end": "2026-08-11",
+  "rebalance_events": 56,
+  "overall_decision": "EXPLORATORY_EVIDENCE_PROMISING",
+  "paper001_authorized": "YES",
+  "real_money_trading_authorized": "NO",
+  "production_authorized": "NO",
+  "alpha_logic_changed": "NO",
+  "parameter_optimization_performed": "NO",
+  "broker_mutation_calls": 0,
+  "scientific_t0_established": "NO",
+  "formal_alpha_validated": "NO",
+  "authorized_next_action": "PAPER-001 PROSPECTIVE PAPER TRADING LAUNCH PREPARATION"
+}

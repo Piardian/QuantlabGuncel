@@ -1,0 +1,16 @@
+{
+  "study_id": "WOR-002",
+  "study_name": "Workflow Out-of-Sample Reproducibility Audit",
+  "status": "Completed",
+  "conclusion": "Reproduced",
+  "oos_non_overlap_verified": true,
+  "oos_start_after": "2025-12-30",
+  "oos_observations": 72969,
+  "oos_dates": 146,
+  "oos_tickers": 500,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "trading_performance_evaluated": false,
+  "economic_utility_evaluated": false,
+  "production_recommendation_performed": false
+}

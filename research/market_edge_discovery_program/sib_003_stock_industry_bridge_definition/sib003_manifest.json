@@ -1,0 +1,14 @@
+{
+  "study_id": "SIB-003",
+  "study_name": "Stock-to-Industry Bridge Definition",
+  "status": "Completed",
+  "decision": "Bridge Definition Blocked",
+  "blocking_reason": "No valid point-in-time stock-level SIC/security master or equivalent classification source is available in the repository.",
+  "bridge_definition_frozen": false,
+  "bridge_implemented": false,
+  "constructs_modified": false,
+  "performance_analysis_performed": false,
+  "optimization_performed": false,
+  "implementation_authorized": false,
+  "next_action": "Acquire valid point-in-time stock-level industry classification data before resuming bridge program"
+}

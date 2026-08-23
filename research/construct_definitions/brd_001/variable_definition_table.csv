@@ -1,0 +1,16 @@
+variable_name,level,type,formula_or_definition,required,notes
+date,market,date,Trading date,yes,Shared market date
+ticker,security,string,Security identifier from fixed universe,yes,Used internally for security-level calculations
+close_i_t,security,float,Adjusted or normalized close for security i on date t,yes,Must be positive and finite
+sma200_i_t,security,float,Mean of trailing 200 valid closes ending at t,yes,Requires 200 valid closes
+above_sma200_i_t,security,binary,1 if close_i_t > sma200_i_t else 0,yes,Equality is treated as not above
+brd001_pct_above_sma200,market,float,Sum of above_sma200_i_t divided by eligible securities,yes,Primary BRD-001 construct value
+brd001_zscore,market,float,"(brd001_pct_above_sma200 - trailing 252 mean) / trailing 252 std",no,Requires 252 valid raw breadth observations
+brd001_percentile,market,float,Count of trailing 252 values <= current value divided by 252,no,Requires 252 valid raw breadth observations
+brd001_count_above_sma200,market,integer,Count of eligible securities above SMA200,yes,Coverage diagnostic
+brd001_count_not_above_sma200,market,integer,Eligible count minus count above SMA200,yes,Coverage diagnostic
+brd001_eligible_count,market,integer,Number of securities eligible on date t,yes,Must be at least 50 for raw output
+brd001_total_universe_count,market,integer,Number of tickers in frozen universe file,yes,Fixed universe size
+brd001_coverage_ratio,market,float,Eligible count divided by total universe count,yes,Coverage diagnostic
+brd001_valid_observation,market,boolean,True when raw breadth value is valid,yes,False if minimum eligibility fails
+

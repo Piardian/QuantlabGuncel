@@ -1,0 +1,11 @@
+{
+  "construct_id": "PROF-001",
+  "stage": "LR-001",
+  "construct_name": "Profitability / Quality",
+  "literature_maturity": "High",
+  "mechanism_clarity": "Moderate-High",
+  "data_integrity_risk": "High",
+  "primary_literature_finding": "Profitability and quality are mature firm-characteristic families, but gross profitability, operating profitability and quality composites are distinct constructs.",
+  "primary_methodological_warning": "CD-001 must freeze one narrow definition and explicit accounting publication-lag policy before implementation.",
+  "next_stage": "CD-001"
+}

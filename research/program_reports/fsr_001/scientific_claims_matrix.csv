@@ -1,0 +1,13 @@
+stage,claim,status,evidence_basis,boundary
+LR-001,Market regimes exist as persistent states in financial data,Supported by evidence,Literature review of regime-switching and hidden-state finance papers,Descriptive literature claim only
+CD-001,MR-001 is a two-state latent regime from SPY daily log returns and 20-day realized volatility,Supported by evidence,Preregistered construct definition,No predictive claim
+IM-001,The MR-001 implementation faithfully reproduces the frozen construct,Supported by evidence,Deterministic implementation verification,Engineering fidelity only
+CV-001,MR-001 is internally coherent and reproducible,Supported by evidence,Latent-state validation and reproducibility tests,Temporal variation still exists
+MI-001,MR-001 represents low-volatility expansion and high-volatility stress states,Supported by evidence,State profiling and transition analysis,Explanatory only
+HV-001,The mechanism hypotheses from MI-001 are empirically supported,Supported by evidence,Formal hypothesis validation,No predictive or economic claim
+PV-001,MR-001 has meaningful predictive information for future realized volatility,Supported by evidence,Walk-forward predictive validation,Risk-state prediction only
+PV-001,MR-001 has robust predictive power for future returns,Not supported,Return prediction tests,Direct return forecasting not established
+PV-001,MR-001 has partial predictive information for drawdown risk,Partially supported,Drawdown-oriented predictive validation,Not uniformly strong
+EV-001,MR-001 provides measurable utility in predefined risk-management workflows,Supported by evidence,Economic validation across fixed use cases,Utility only; no alpha claim
+CC-001,MR-001 is best classified as a risk forecasting construct,Supported by evidence,Integrated synthesis of all completed phases,Classification only
+

@@ -1,0 +1,12 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "LR-001",
+  "construct_name": "Industry Momentum",
+  "literature_maturity": "Moderate-High",
+  "mechanism_clarity": "Moderate",
+  "data_integrity_risk": "High",
+  "primary_literature_finding": "Industry Momentum is a recognized momentum-family construct, but its interpretation and implementation are not universally settled.",
+  "primary_methodological_warning": "CD-001 must freeze industry taxonomy, membership policy, weighting scheme and formation window before implementation.",
+  "next_stage": "CD-001"
+}
+

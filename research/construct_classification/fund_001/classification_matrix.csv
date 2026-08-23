@@ -1,0 +1,11 @@
+dimension,classification,evidence
+Research priority,Supported by evidence,RP-001 GO decision; funding stress recognized as distinct research construct.
+Literature maturity,Supported by evidence,"LR-001 found mature theory around funding liquidity, funding-market liquidity spirals, and short-term funding stress."
+Construct definition,Supported by evidence,CD-001 froze FUND-001 as DCPF3M - DTB3.
+Implementation fidelity,Supported by evidence,IM-001 deterministic implementation passed verification and manual tests.
+Construct validity,Partially supported,CV-001 found coherent output over available DCPF3M period but not complete pre-1997 history.
+Mechanism identification,Partially supported,"MI-001 identified mixed short-term funding spread mechanism, not pure funding liquidity."
+Hypothesis validation,Partially supported,HV-001 supported spread and mixed-mechanism hypotheses; CP-only and T-bill channels were partial.
+Predictive validity,Partially supported,"PV-001 supported future volatility, drawdown, liquidity stress; credit stress partial."
+Economic utility,Not supported,EV-001 found all four predefined risk-management workflows not supported.
+Production readiness,Not supported,Economic utility failed under predefined workflows and no live validation exists.

@@ -1,0 +1,3 @@
+source_id,source_name,stable_security_reference,ticker,exchange,security_type,active_tradable_state,first_seen_date,later_inactive_state,ticker_changes,source_permanent_security_id,security_master_status
+FREE-S01,Alpaca Basic/free access,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,FAIL_NOT_AUTHENTICATED
+FREE-S02,Nasdaq Trader Symbol Directory,PARTIAL_SYMBOL_BASED,YES,YES,PARTIAL_BY_FIELDS,PARTIAL_BY_CURRENT_FILE,LOCAL_CAPTURE_ONLY,PARTIAL_BY_DISAPPEARANCE_OR_STATUS,NO_EXPLICIT_HISTORY,NO,PARTIAL

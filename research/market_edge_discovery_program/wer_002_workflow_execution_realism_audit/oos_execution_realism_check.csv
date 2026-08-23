@@ -1,0 +1,4 @@
+horizon_days,low_medium_scenarios,survives_low_medium,min_low_medium_net_spread,all_scenarios_survival_rate
+21,4,True,0.035684567585817874,1.0
+63,4,True,0.18245359228947278,1.0
+126,4,True,0.19449666500219762,1.0

@@ -1,0 +1,5 @@
+csm_state,tsm_state,observations,share_of_total,relationship_type
+CSM_HIGH,TSM_HIGH,178612,0.10097691142217498,agreement
+CSM_HIGH,TSM_LOW,0,0.0,disagreement
+CSM_NOT_HIGH,TSM_HIGH,1099833,0.6217820718663079,agreement
+CSM_NOT_HIGH,TSM_LOW,490395,0.27724101671151713,agreement

@@ -1,0 +1,11 @@
+metric,value
+signal_as_of_session,2026-08-13
+frozen_universe_count,250
+symbols_requested,250
+symbols_received,250
+fresh_symbol_count,250
+stale_symbol_count,0
+insufficient_history_count,0
+eligible_count,250
+freshness_state,PASS
+eligibility_state,PASS

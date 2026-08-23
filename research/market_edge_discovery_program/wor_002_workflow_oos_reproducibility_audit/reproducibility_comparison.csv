@@ -1,0 +1,5 @@
+metric,cws001_reference,wor002_oos
+jaccard,0.13971035124702275,0.15251227410425153
+p_tsm_high_given_csm_high,1.0,1.0
+p_csm_high_given_tsm_high,0.13971035124702275,0.15251227410425153
+csm_high_tsm_low_count,0.0,0.0

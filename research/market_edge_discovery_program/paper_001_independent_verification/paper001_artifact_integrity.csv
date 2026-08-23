@@ -1,0 +1,11 @@
+Artifact,Exists,Claimed Hash,Actual Hash,Integrity Status,Notes
+paper001_final_decision.md,YES,DUMMY,A2EF06986217C8CFA05832CD69CC96E722F457D24BBF2CA09CDAF6EC610FA35E,FAIL,Claimed hash is placeholder
+paper001_launch_preparation_report.md,YES,DUMMY,48DE66F366C4AFA479AFD2C85DBCA12B2383BF08350593D16F76C28E851F6DE8,FAIL,Claimed hash is placeholder
+paper001_manifest.json,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Manifest contains only program_id/status/decision and no full artifact inventory
+paper001_code_change_audit.csv,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file
+paper001_protocol_incidents.md,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file
+paper001_open_limitations.md,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file
+step_01_repository_discovery.md,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file
+step_02_test_results.csv,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file
+step_04b_test_results.csv,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file
+step_05a_test_results.csv,YES,NOT_LISTED,NOT_COMPUTED,PARTIAL,Exists but not included in final hash file

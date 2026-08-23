@@ -1,0 +1,8 @@
+dimension,evidence_source,status,interpretation
+Scientific workflow,CIP/CWP/CWS/CWF,Supported,Composite workflow is scientifically supported as a nested CSM x TSM workflow.
+OOS reproducibility,WOR-002,Reproduced,Workflow structure reproduced on unseen OOS observations.
+Economic utility,WEV-002,Partially Supported,UC-3 received support; other predefined use cases did not receive broad support.
+Execution realism,WER-002,Partially Supported,Cost and slippage robustness were partially supported; live execution remains unvalidated.
+Liquidity capacity,WLC-002,Partially Supported,Liquidity was partially supported under predefined notional and ADV constraints.
+Portfolio construction,WPC-002,Portfolio Construction Supported,Monthly equal-weight gross portfolio accounting was deterministic and auditable.
+Production readiness,Integrated review,Not Supported,"No live, broker, tax, operational, or production monitoring validation has been completed."

@@ -1,0 +1,11 @@
+construct_id: CSM-001
+construct_name: Canonical 12-1 Cross-Sectional Momentum State
+formation_anchor_trading_days: 252
+skip_period_trading_days: 21
+top_decile_threshold: 0.90
+minimum_eligible_count: 50
+price_column: Adj Close
+universe_path: data/csm001_universe.csv
+close_panel_path: data/csm001_close_panel.csv
+output_path: output/csm_001_validation/csm001_momentum_state.csv
+

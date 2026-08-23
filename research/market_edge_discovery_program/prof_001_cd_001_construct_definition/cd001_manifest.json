@@ -1,0 +1,12 @@
+{
+  "construct_id": "PROF-001",
+  "stage": "CD-001",
+  "construct_name": "Conservative-Lag Gross Profitability State",
+  "status": "Construct frozen",
+  "construct_family_decision": "Narrow profitability, not broad quality",
+  "profitability_formula": "(revenue - cost_of_goods_sold) / total_assets",
+  "state_definition": "PROFITABLE if > 0, UNPROFITABLE if < 0, NEUTRAL if = 0, INVALID if required fields are unavailable",
+  "publication_lag_policy": "Filing date plus next trading day if available; otherwise fiscal_period_end plus 180 calendar days",
+  "data_availability_in_repository": "Required accounting statement data not found",
+  "next_stage": "IM-001"
+}

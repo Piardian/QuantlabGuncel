@@ -1,0 +1,12 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "CD-001",
+  "construct_name": "Raw 12-1 Time-Series Momentum State",
+  "formation_anchor_trading_days": 252,
+  "skip_period_trading_days": 21,
+  "price_input": "adjusted_close",
+  "volatility_scaling": "excluded",
+  "direction_threshold": 0.0,
+  "status": "Frozen",
+  "next_stage": "IM-001"
+}

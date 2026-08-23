@@ -1,0 +1,16 @@
+stage,status,result
+CSM-001,Completed lifecycle,Supported edge construct with limitations
+TSM-001,Completed lifecycle,Supported own-trend/state construct
+CIP-001,Completed,CSM x TSM partially complementary
+CWP-001,Completed,Composite workflow protocol registered
+CWS-001,Completed,Workflow supported
+CWF-001,Completed,Scientifically supported nested composite workflow
+WOR-002,Completed,OOS reproduced
+WEV-002,Completed,Economic utility partially supported
+WER-002,Completed,Execution realism partially supported
+WLC-002,Completed,Liquidity/capacity partially supported
+WPC-002,Completed,Gross portfolio construction supported
+WRS-002,Completed,"Research-validated portfolio workflow, not production ready"
+CIP-002,Completed,CSM x ISM inconclusive due no stock-to-industry bridge
+SIB-003,Completed,Stock-to-industry bridge definition blocked
+CIP-003,Completed,CSM x RSM mostly redundant

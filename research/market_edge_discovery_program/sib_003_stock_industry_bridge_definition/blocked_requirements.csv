@@ -1,0 +1,9 @@
+requirement,status,blocking_reason
+source_data,BLOCKED,No point-in-time stock-level SIC/security master available
+security_identifier,BLOCKED,No PERMNO/GVKEY/CUSIP-style historical identifier source available
+classification_field,BLOCKED,No historical SIC/GICS/NAICS field available
+date_alignment,BLOCKED,Cannot define without source temporal granularity
+sic_to_ff49_mapping,PARTIALLY_AVAILABLE,Ken French taxonomy exists but stock-level SIC source missing
+missing_data_policy,BLOCKED,Cannot define coverage treatment without source data
+delisting_symbol_policy,BLOCKED,No historical security master available
+output_schema,PARTIALLY_AVAILABLE,Can propose fields but cannot freeze without source

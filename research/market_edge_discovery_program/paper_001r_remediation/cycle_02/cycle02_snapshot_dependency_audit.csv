@@ -1,0 +1,5 @@
+search_term,path,classification,production_dependency,notes
+EXB003 / EXB-003 target snapshot,engine/paper_trading_controller.py,REGRESSION_REFERENCE,NO,EXB003_DIR and target_path remain only for optional fixture/regression loading; PaperControllerConfig.target_path defaults to None.
+load_target_frame / validate_target_frame,engine/paper_trading_controller.py,REGRESSION_REFERENCE,NO,Not called by run_dry_run production signal path; retained for tests/diagnostics only.
+exb003_target_portfolio_instructions.csv,scripts/paper_safety_tests.py,TEST_FIXTURE,NO,Used by legacy invariant tests only; production Cycle 2 tests run with target_path=None.
+paper001r_current_signal_snapshot.csv,research/market_edge_discovery_program/paper_001r_remediation/,AUDIT_OUTPUT,NO,Generated from current bars after frozen CSM/TSM path; not used as target input.

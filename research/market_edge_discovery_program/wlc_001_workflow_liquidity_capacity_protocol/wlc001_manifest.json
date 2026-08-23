@@ -1,0 +1,21 @@
+{
+  "study_id": "WLC-001",
+  "study_name": "Workflow Liquidity and Capacity Protocol",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "stage_type": "Protocol Registration",
+  "prior_study": "WER-002",
+  "prior_conclusion": "Execution Realism Partially Supported",
+  "scope": "UC-3 only",
+  "empirical_analysis_performed": false,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "WLC-002",
+  "allowed_next_stage_conclusions": [
+    "Liquidity Capacity Supported",
+    "Liquidity Capacity Partially Supported",
+    "Liquidity Capacity Not Supported",
+    "Inconclusive"
+  ]
+}

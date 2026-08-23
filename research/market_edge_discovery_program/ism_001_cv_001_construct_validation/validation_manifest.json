@@ -1,0 +1,15 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "CV-001",
+  "classification": "Partially supported",
+  "rows": 58751,
+  "valid_observations": 55285,
+  "unique_industries": 49,
+  "first_valid_month": "1927-07-31",
+  "last_valid_month": "2026-05-31",
+  "rank_consistency_status": "PASSED",
+  "reproducibility_status": "PASSED",
+  "post_warmup_full_coverage": false,
+  "state_hash": "fb492d61a7aa6e279564b658a08cf764f642b8d43f482c0a33801584cfa645e7",
+  "next_stage": "MI-001"
+}

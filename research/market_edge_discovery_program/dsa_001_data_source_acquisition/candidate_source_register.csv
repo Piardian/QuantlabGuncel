@@ -1,0 +1,2 @@
+source_id,source_name,source_type,status,pit_universe_membership,survivorship_delisting_coverage,corporate_actions,price_volume,licensing_status,cost_status,notes
+SRC-001,TBD,Paid/Free/Manual,NOT_EVALUATED,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,"Candidate sources must be evaluated under DSA-001 without performance inspection."

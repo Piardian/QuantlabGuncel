@@ -1,0 +1,12 @@
+{
+  "classifications": {
+    "UC-1": "Supported by evidence",
+    "UC-2": "Supported by evidence",
+    "UC-3": "Partially supported",
+    "UC-4": "Partially supported"
+  },
+  "not_supported_use_cases": 0,
+  "partially_supported_use_cases": 2,
+  "supported_use_cases": 2,
+  "use_cases": 4
+}

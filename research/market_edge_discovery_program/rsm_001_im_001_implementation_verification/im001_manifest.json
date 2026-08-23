@@ -1,0 +1,20 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "IM-001",
+  "construct_name": "Fama-French 3-Factor Standardized 12-1 Residual Momentum Rank",
+  "implementation_status": "Successfully implemented",
+  "synthetic_verification": "PASSED",
+  "python_compile_check": "PASSED",
+  "pytest_status": "UNAVAILABLE_IN_ENVIRONMENT",
+  "repository_data_status": "AVAILABLE",
+  "data_preparation_status": "COMPLETE",
+  "empirical_generation_status": "COMPLETE",
+  "empirical_rows": 96073,
+  "empirical_valid_rows": 66112,
+  "empirical_unique_tickers": 503,
+  "empirical_first_valid_month": "2014-02-28",
+  "empirical_last_valid_month": "2025-12-31",
+  "empirical_in_memory_deterministic_hash": "ef4a622647d1931ff1fe8e34522fa2119cdca2d3f1d66381e6f073c7d3459ef7",
+  "empirical_persisted_artifact_hash": "217cc97a31084547845e2d970467e059ff8df0a161e7db6708950f89537e5bba",
+  "next_stage": "CV-001"
+}

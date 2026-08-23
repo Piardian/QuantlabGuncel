@@ -1,0 +1,11 @@
+metric,value,note
+normalized_observations,3573.0,Rows with zscore and percentile
+zscore_mean,-0.12916329567530696,Mean normalized zscore
+zscore_median,0.1871881753,Median normalized zscore
+zscore_std,1.3120083288475386,Std normalized zscore
+percentile_mean,0.49148374715096,Mean rolling percentile
+percentile_median,0.4920634921,Median rolling percentile
+percentile_min,0.003968253968,Minimum rolling percentile
+percentile_max,1.0,Maximum rolling percentile
+zscore_missing_valid_rows,251.0,Expected warmup missing rows
+percentile_missing_valid_rows,251.0,Expected warmup missing rows

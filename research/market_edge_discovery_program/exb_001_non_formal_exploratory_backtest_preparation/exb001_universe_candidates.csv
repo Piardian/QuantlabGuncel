@@ -1,0 +1,101 @@
+symbol,asset_id,name,exchange,normalized_exchange,asset_class,status,tradable,fractionable,shortable,attributes
+A,7595a8d2-68a6-46d7-910c-6b1958491f5c,Agilent Technologies Inc.,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AA,3ca0202f-01f4-41a0-bb0c-c8864e767ebd,Alcoa Corporation,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAAP,32f78e1d-a2ce-4f8e-b03b-5c9f7e341bb4,Pacer Funds Trust Pacer Barings CLO Market Flex ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+AAC.U,5e821b41-5e6e-4870-86ff-0de4b2a88bdf,"Ares Acquisition Corporation III Units, each consisting of one Class A ordinary share and one-tenth of one redeemable warrant",NYSE,NYSE,us_equity,active,True,False,False,overnight_halted
+AACB,94a40e74-7e95-44e1-8c3d-8a9b0d208503,Artius II Acquisition Inc. Class A Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACBR,36bf6f81-18e3-4eb6-abba-87341d991f22,Artius II Acquisition Inc. Rights,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACBU,eaa62d1d-4ff8-4df6-8b0a-80387c77f6b3,Artius II Acquisition Inc. Units,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACG,013c1653-577e-4267-8956-3c9d0aa0eca2,ATA Creativity Global American Depositary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACI,57e8d33e-1cbc-4715-9159-5688cba1ef19,Armada Acquisition Corp. III Class A Ordinary Share,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACIU,163944b9-0e5d-4b60-b058-c6130f290392,Armada Acquisition Corp. III Units,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACIW,1cdc1672-d622-4634-91d1-5db1c9b773ec,Armada Acquisition Corp. III Warrant,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACO,ba73c5ed-0016-45d1-a7c8-62a0381b963b,Abony Acquisition Corp. I Class A Ordinary Share,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACOU,1703e0ab-23e9-4c37-b81b-e45de437b87f,Abony Acquisition Corp. I Units,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACOW,f1c89c4d-6e47-4e9c-9190-83d977406a0e,Abony Acquisition Corp. I Warrants,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACP,7a30d695-761d-48ad-8e84-8e6948468c49,Apogee Acquisition Corp Class A Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|overnight_halted
+AACPR,f94540b2-8143-41a5-b93f-192f82775edd,Apogee Acquisition Corp Rights,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACPU,1d4b38db-1d49-4f61-9c66-70ce08b79c12,Apogee Acquisition Corp Units,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AACPW,c685fd74-bd17-4620-9619-36dea227f027,Apogee Acquisition Corp Warrant,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AADR,8649a606-050b-42ef-b8ad-8c5060827c29,AdvisorShares Dorsey Wright ADR ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+AADX,c7c1a847-5c4f-4839-a7b2-a945df9bf88e,"Applied Aerospace & Defense, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAEQ,e4e6c618-f764-4ac7-a171-1e5077e65a75,EA Series Trust Alpha Architect US Equity 2 ETF,NASDAQ,NASDAQ,us_equity,active,True,False,True,overnight_tradable
+AAL,41b54729-8470-4593-be38-b3a681871f81,American Airlines Group Inc. Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AALG,227be1da-df6d-4fa2-8cb7-a6bb381faa43,Themes ETF Trust Leverage Shares 2X Long AAL Daily ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+AAME,66120c4a-e8d8-46d9-a044-efb573abbc7a,Atlantic American Corporation Common Stock,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+AAMI,d13ff42b-699a-448a-b744-5bb2d170b9c2,Acadian Asset Management Inc.,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAOI,16a4a26f-e78e-4e9f-8438-b6fe63aa861d,"Applied Optoelectronics, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAON,85e18d9a-652b-49f6-87fd-841d571602df,"AAON, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAP,8c14dacf-c722-437a-b798-4b00842e7072,ADVANCE AUTO PARTS INC,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAPB,f31a5d3d-c320-465f-a7e5-1e56f698b8de,GraniteShares ETF Trust GraniteShares 2x Long AAPL Daily ETF,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|has_options|overnight_tradable
+AAPD,07d175d3-4549-4540-87d0-dbb325789c7e,Direxion Shares ETF Trust Direxion Daily AAPL Bear 1X ETF,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAPG,5f2f64bf-844c-4b5a-849b-e1b302a9db6d,Ascentage Pharma Group International American Depository Shares,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|overnight_tradable
+AAPL,b0b6dd9d-8b9b-48a9-ba46-b9d54906e415,Apple Inc. Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAPU,8bcc1a2e-d6ba-4baa-a984-402e6ac86cf1,Direxion Shares ETF Trust Direxion Daily AAPL Bull 2X ETF,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|has_options|overnight_tradable
+AARD,91a4d574-32bc-4b1e-a88f-c5b8ec9e6ca7,"Aardvark Therapeutics, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_halted
+AAT,f8ec3897-1bc8-4cba-9a68-fd7d85782d02,"AMERICAN ASSETS TRUST, INC.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AAUB,eeedb9c6-7626-484f-a99e-d24eeadd2705,EA Series Trust Alpha Architect US Equity 4 ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+AAUC,33a1e434-1d33-4e0f-989f-ceabbc9592ac,Allied Gold Corporation,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|overnight_tradable
+AAUS,9788d43a-1090-4987-b6ab-ab93a781f9d7,EA Series Trust Alpha Architect US Equity ETF,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|overnight_tradable
+AAVM,2cc5c0d5-87bc-49e7-a53a-709131f26bfa,EA Series Trust Alpha Architect Global Factor Equity ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+AAXJ,df913064-06d2-40c3-99ad-b91d96465c8b,iShares MSCI All Country Asia ex Japan ETF,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+AB,50b58aef-2843-4a52-8a21-60b9f23cf5da,"AllianceBernstein Holding, L.P.",NYSE,NYSE,us_equity,active,True,True,True,ptp_no_exception|fractional_eh_enabled|has_options|overnight_tradable
+ABAT,f4c872be-0acf-49c1-b1b1-41255309ce11,American Battery Technology Company Common Stock,NASDAQ,NASDAQ,us_equity,active,True,False,True,has_options|overnight_tradable
+ABBV,09a51104-980a-47b6-ad4d-e4f04059be4a,ABBVIE INC.,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABCB,0b666f8b-ad53-4c8e-b200-a47693ab24bf,Ameris Bancorp,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABCL,2652df43-e5bd-4504-80f2-4d4d672090bd,AbCellera Biologics Inc. Common Shares,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|has_options|overnight_tradable
+ABCS,d5e18231-f73b-4288-8792-909d659f7977,EA Series Trust Alpha Blue Capital US Small-Mid Cap Dynamic ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+ABEO,6d35b483-0aee-4113-9724-8af3157cb72f,Abeona Therapeutics Inc. Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABEV,38515140-4e0e-4ec4-bb1b-0c2994491efc,AMBEV S.A.,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABG,fd7ecda8-13ff-43e3-81cd-50a95a5f3bc9,"Asbury Automotive Group, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABI,d36bfb47-104b-4dd7-b3a7-a223993fd52d,Victory Portfolios II VictoryShares Pioneer Asset-Based Income ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+ABIG,c9cb320e-f919-4ed3-a7d1-7e26471a07d5,EA Series Trust Argent Large Cap ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+ABLV,70836657-1936-415a-86c3-648aad919b47,Able View Global Inc. Class B Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ABLVW,73111bdf-aac2-493c-bbf5-4507e8115bb2,Able View Global Inc. Warrant,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ABM,6b84cb5b-cd55-4951-bc51-2adc2929571d,"ABM Industries, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABNB,403113aa-7838-4345-dd32-d63a5f9da70b,"Airbnb, Inc. Class A Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABOS,25419c82-8fd5-44b7-a6c5-a29c292c8f1b,"Acumen Pharmaceuticals, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,False,True,has_options|overnight_tradable
+ABR,8eac17c1-3373-4a13-b935-bd59da5d5d8e,"Arbor Realty Trust, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABR.PRD,ffaf81e6-4488-4e58-9e22-8088a4e4e4b1,"Arbor Realty Trust, Inc. 6.375% Series D Cumulative Redeemable Preferred Stock, Liquidation Preference $25.00 per Share",NYSE,NYSE,us_equity,active,True,False,False,overnight_halted
+ABR.PRE,b70c0a27-bf9e-4817-b23b-56a5def56e62,"Arbor Realty Trust, Inc. 6.25% Series E Cumulative Redeemable Preferred Stock",NYSE,NYSE,us_equity,active,True,False,False,overnight_halted
+ABR.PRF,ff8f69a9-bc90-446d-af1e-2d10fc5a693f,"Arbor Realty Trust, Inc. 6.25% Series F Fixed-to-Floating Rate Cumulative Redeemable Preferred Stock, Liquidation Preference $25.00 per share",NYSE,NYSE,us_equity,active,True,False,False,overnight_halted
+ABSI,ddc3a7ce-23a9-4d94-8042-22b6b5fac1f5,Absci Corporation Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABT,a097c03a-7ebe-4de6-b729-a82370cd2a6e,Abbott Laboratories,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABTC,d30b2bee-298c-4f5c-b4bc-1cb58fe47fcb,American Bitcoin Corp. Class A Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|has_options|overnight_halted
+ABTS,ac93c119-c43a-4fa4-9e84-e6357756edc4,Abits Group Inc Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,has_options|overnight_halted
+ABUS,0f148c0c-7f48-4453-ad89-379f25c3cfea,Arbutus Biopharma Corporation Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABVC,0925232d-fb28-467e-8c08-c1a83578408f,"ABVC BioPharma, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,False,False,has_options|overnight_halted
+ABVX,850c9c12-b475-4b8d-bf4a-6254a146204c,Abivax SA American Depositary Shares,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABX,bfea535d-14c9-4fbb-b0bb-bf16f5415d76,"Abacus Global Management, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ABXL,360bdbcd-70a9-4414-9680-23f310beb653,"Abacus Global Management, Inc. 9.875% Fixed Rate Senior Notes due 2028",NYSE,NYSE,us_equity,active,True,False,False,overnight_halted
+ACA,34413a95-ef4a-4a33-97cb-7a852a93dac6,"Arcosa, Inc. Common Stock",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACAA,22eb4901-41cc-4a8d-bc44-43669f226b36,Averin Capital Acquisition Corp. Class A Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACAAU,715b73cd-a88b-4fa3-a67a-3d209e0ee537,Averin Capital Acquisition Corp. Units,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACAAW,36bddec5-3dcf-4a82-af4b-f3aa024593c9,Averin Capital Acquisition Corp. Warrants,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACAD,739b64f4-2873-48f9-99a8-fcc2977cd19a,ACADIA Pharmaceuticals Inc. Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACB,ae2ee160-8d1f-4eb4-b294-11fb7b75d927,Aurora Cannabis Inc. Common Shares,NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|has_options|overnight_tradable
+ACCL,c5b34343-856a-4ba9-acfb-4fbbe796d6f3,Acco Group Holdings Limited Class A Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACCO,681115d1-0667-442c-aa0b-c46e79ec5424,Acco Brands Corporation,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACCS,4302f6f9-a8b0-4dbe-9f6b-72a6e4b38723,ACCESS Newswire Inc.,AMEX,NYSE_AMERICAN,us_equity,active,True,False,False,overnight_halted
+ACDC,2ebe720d-f179-4855-8c03-0eca71c13030,ProFrac Holding Corp. Class A Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACEL,ca05c7af-bccb-4818-9c4f-3d1947b04cd9,"Accel Entertainment, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACEP,5da4c89d-4483-4e01-bd44-02367fba788b,EA Series Trust ARS Core Equity Portfolio ETF,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_tradable
+ACET,2072901a-ab82-4531-bb92-596cd420a40b,"Adicet Bio, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_halted
+ACFN,6e7cf729-a99c-43df-bf93-642e98bc3359,"Acorn Energy, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|overnight_halted
+ACGC,a9872106-e623-4dc7-9c19-725086353459,ACP Holdings Acquisition Corp. Class A Ordinary Shares,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACGCU,a16a9521-5368-41ab-9579-95ed1c758cff,ACP Holdings Acquisition Corp. Units,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACGCW,b35146c2-d979-41b7-8f25-4f46acd85367,ACP Holdings Acquisition Corp. Warrants,NASDAQ,NASDAQ,us_equity,active,True,False,False,overnight_halted
+ACGL,c42feb70-c4a1-48a3-869b-d94eb3998f6e,Arch Capital Group Ltd. Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACGLN,b8d1a541-d41d-4e3c-bd74-34cd8043ea45,"Arch Capital Group Ltd. Depositary Shares, each Representing a 1/1,000th Interest in a 4.550% Non-Cumulative Preferred Share, Series G",NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|overnight_halted
+ACGLO,add2d2c9-fce7-4155-a232-5ae7470e7178,"Arch Capital Group Ltd. Depositary Shares Each Representing 1/1,000th Interest in a Share of 5.45% Non-Cumulative Preferred Shares, Series F",NASDAQ,NASDAQ,us_equity,active,True,True,False,fractional_eh_enabled|overnight_halted
+ACH,928a9ce6-11ec-4692-9b71-3c6a06f5f2ff,"Accendra Health, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACHC,ab41d7a3-9cb3-47a3-bd32-3db84a6d4806,"Acadia Healthcare Company, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACHR,7137e75b-df3b-48d3-9f1c-5750ae9dfb93,Archer Aviation Inc.,NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACHR.WS,ebe46076-3be7-48cd-8b9c-749f42850142,"Archer Aviation Inc. Redeemable Warrants, each whole warrant exercisable for one Class A common stock at an exercise price of $11.50",NYSE,NYSE,us_equity,active,True,False,False,overnight_halted
+ACHV,7b73b6ff-3413-46ce-91cc-79f886694810,"Achieve Life Sciences, Inc. Common Shares",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACI,e6afb8f5-64ff-4a09-8bf7-e2ba891e0ae8,"Albertsons Companies, Inc.",NYSE,NYSE,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACIC,fbe1444b-7cab-4445-b587-41ee33a1612f,American Coastal Insurance Corporation Common Stock,NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACIU,ca10bf40-6b75-4e5f-9301-e753876c9b9f,AC Immune SA Common Stock,NASDAQ,NASDAQ,us_equity,active,True,False,True,has_options|overnight_tradable
+ACIW,0f0cb890-5126-41a8-8755-b6ee60b6bb0e,"ACI Worldwide, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable
+ACLO,81470e5a-a7e1-4482-a8f2-c03efb11a561,TCW AAA CLO ETF,NYSE,NYSE,us_equity,active,True,False,False,overnight_tradable
+ACLS,82ea58a2-4bf9-424d-b00a-c718f7e07836,"Axcelis Technologies, Inc. Common Stock",NASDAQ,NASDAQ,us_equity,active,True,True,True,fractional_eh_enabled|has_options|overnight_tradable

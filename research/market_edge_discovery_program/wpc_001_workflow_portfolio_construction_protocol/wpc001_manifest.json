@@ -1,0 +1,21 @@
+{
+  "study_id": "WPC-001",
+  "study_name": "Workflow Portfolio Construction Protocol",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "stage_type": "Protocol Registration",
+  "prior_synthesis": "WRS-001",
+  "prior_classification": "Research-Validated Workflow, Not Production Ready",
+  "scope": "UC-3 only",
+  "empirical_analysis_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "WPC-002",
+  "portfolio_rule": "Monthly equal-weight long-only research portfolio",
+  "allowed_next_stage_conclusions": [
+    "Portfolio Construction Supported",
+    "Portfolio Construction Partially Supported",
+    "Portfolio Construction Not Supported",
+    "Inconclusive"
+  ]
+}

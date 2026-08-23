@@ -1,0 +1,5 @@
+hypothesis,variable,mean_difference_a_minus_b,cohens_d,classification
+H1,crd001_hy_oas,0.8704679582712371,3.7826871444878236,Supported by evidence
+H2,spread_change_20d,0.5026289873688716,1.565443724998924,Supported by evidence
+H3,crd001_zscore_252d,2.4349269068747117,3.1722821825442375,Supported by evidence
+H4,crd001_hy_oas,-0.3291061558085704,-1.166673180279447,Supported by evidence

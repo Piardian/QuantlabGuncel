@@ -1,0 +1,5 @@
+dba_finding,required_data_capability,candidate_source,actual_evidence,status
+DBA-001-F001,PIT universe reconstruction,Institutional stack; Accessible commercial stack,Public documentation only; no authenticated schema/sample access,UNSATISFIED
+DBA-001-F002,Delisted securities and survivorship handling,Institutional stack; Accessible commercial stack,Public documentation only; no local sample case verification,UNSATISFIED
+DBA-001-F003,Point-in-time eligibility metadata,Institutional stack; Accessible commercial stack,No local effective-date membership fields inspected,UNSATISFIED
+DBA-001-F005,Corporate-action source/provenance,Institutional stack; Accessible commercial stack,No local corporate-action schema or adjustment factor sample inspected,UNSATISFIED

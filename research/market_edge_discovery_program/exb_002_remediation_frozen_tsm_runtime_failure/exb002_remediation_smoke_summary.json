@@ -1,0 +1,18 @@
+{
+  "unit_tests_total": 11,
+  "unit_tests_passed": 11,
+  "unit_tests_failed": 0,
+  "golden_test": "PASS",
+  "exb_input_shape_rows": 1407,
+  "exb_input_shape_symbols": 100,
+  "tsm_rows": 140700,
+  "tsm_valid_observations": 53080,
+  "tsm_positive_observations": 24979,
+  "tsm_reproducibility": "PASS",
+  "csm_tsm_interface_rows": 140700,
+  "csm_tsm_selected_state_count": 2321,
+  "pipeline_smoke_test": "PASS",
+  "performance_generated": "NO",
+  "broker_mutation_calls": 0,
+  "alpha_logic_changed": "NO"
+}

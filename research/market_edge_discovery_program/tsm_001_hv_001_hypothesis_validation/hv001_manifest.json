@@ -1,0 +1,16 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "HV-001",
+  "source_state_file": "output/tsm_001_cv001/tsm001_construct_state.csv",
+  "observations": 1768840,
+  "unique_tickers": 499,
+  "first_date": "2011-01-03",
+  "last_date": "2025-12-30",
+  "hypothesis_classifications": {
+    "H1": "Supported by evidence",
+    "H2": "Supported by evidence",
+    "H3": "Supported by evidence",
+    "H4": "Supported by evidence"
+  },
+  "overall_conclusion": "Supported by evidence"
+}

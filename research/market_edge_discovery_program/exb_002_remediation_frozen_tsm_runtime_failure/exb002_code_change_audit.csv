@@ -1,0 +1,3 @@
+file_path,function_or_class,old_behavior,new_behavior,reason,classification,alpha_change
+research/implementations/tsm_001/feature_pipeline.py,TSM001FeaturePipeline.build_features,DataFrame.replace used to map numeric direction scores to text states,Explicit object DataFrame masks assign the same text states,Repair Pandas runtime failure on EXB-002 frozen input shape,TECHNICAL_FIX,NO
+scripts/exb002_remediation_verify.py,main,No remediation verification runner existed,Added unit/golden/interface/determinism/smoke verification without performance metrics,Verify remediation under performance blackout,TEST_ONLY,NO

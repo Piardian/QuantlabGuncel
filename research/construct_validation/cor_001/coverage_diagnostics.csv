@@ -1,0 +1,9 @@
+metric,value
+mean_eligible_count,468.5470603078476
+min_eligible_count,419.0
+max_eligible_count,498.0
+mean_coverage_ratio,0.9315050900757759
+min_coverage_ratio,0.8330019881
+max_coverage_ratio,0.9900596421
+min_pair_count,87571.0
+max_pair_count,123753.0

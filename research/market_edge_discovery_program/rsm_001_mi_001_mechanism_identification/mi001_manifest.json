@@ -1,0 +1,12 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "MI-001",
+  "classification": "Mechanism identified",
+  "primary_mechanism": "Factor-residual cross-sectional leadership / residual winner-loser state",
+  "valid_observations": 66112,
+  "unique_tickers": 493,
+  "median_monthly_spearman_rsm_vs_raw_momentum": 0.7503972706744247,
+  "top_decile_retention": 0.6788354201236989,
+  "bottom_decile_retention": 0.6830592849600241,
+  "next_stage": "HV-001"
+}

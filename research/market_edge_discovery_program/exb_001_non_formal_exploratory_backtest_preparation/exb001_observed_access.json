@@ -1,0 +1,43 @@
+{
+  "program_id": "EXB-001",
+  "execution_timestamp_utc": "2026-08-12T18:42:33.053857+00:00",
+  "historical_bars_access": "PASS",
+  "assets_access": "PASS",
+  "calendar_access": "PASS",
+  "probe_access": "PASS",
+  "dataset_access": "PASS",
+  "earliest_verified_date": "2020-07-27",
+  "latest_verified_date": "2026-08-11",
+  "verified_history_years": 6.04,
+  "candidate_assets_after_filter": 100,
+  "dataset_inventory": {
+    "dataset_id": "EXB001_ALPACA_IEX_DAILY_REDUCED",
+    "label": "NON_FORMAL_EXPLORATORY_EVIDENCE",
+    "source": "Alpaca Market Data API",
+    "feed": "iex",
+    "adjustment": "raw",
+    "timeframe": "1Day",
+    "symbol_count_requested": 100,
+    "symbol_count_with_rows": 100,
+    "row_count": 91986,
+    "start": "2021-01-01T00:00:00Z",
+    "end": "2026-08-11T23:59:59Z",
+    "raw_market_data_stored": "NO",
+    "metadata_only": "YES",
+    "performance_evaluation": "NO"
+  },
+  "quality_counts": {
+    "rows": 91986,
+    "symbols_with_rows": 100,
+    "duplicate_symbol_dates": 0,
+    "invalid_ohlc_relationships": 0,
+    "negative_or_zero_prices": 0,
+    "zero_or_negative_volume": 17393,
+    "missing_symbol_trading_dates_total": 48714
+  },
+  "alpha_logic_changed": "NO",
+  "backtest_performed": "NO",
+  "performance_evaluation_performed": "NO",
+  "broker_mutation_calls": 0,
+  "scientific_t0_established": "NO"
+}

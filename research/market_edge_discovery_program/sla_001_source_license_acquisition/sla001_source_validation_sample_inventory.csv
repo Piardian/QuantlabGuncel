@@ -1,0 +1,2 @@
+sample_id,source_id,vendor,sample_type,stored_locally,purpose,status,notes
+NONE,NONE,NONE,NONE,NO,SOURCE_VALIDATION_ONLY,NO_SAMPLE_RETRIEVED,No legal and authenticated source access was available for sample retrieval.

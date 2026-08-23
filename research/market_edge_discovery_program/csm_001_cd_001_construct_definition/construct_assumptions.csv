@@ -1,0 +1,6 @@
+assumption,risk
+Adjusted close prices correctly reflect splits and dividends where available.,Corporate-action adjustment errors can distort prior returns.
+Universe eligibility is predefined and not selected after observing outcomes.,Survivorship or look-ahead bias if current constituents are used historically without documentation.
+A 252-trading-day formation anchor and 21-trading-day skip month represent the canonical 12-1 convention.,Calendar/trading-day mapping can vary across studies.
+"Percentile score is descriptive construct output, not a trading recommendation.",Users may incorrectly interpret top-decile flag as production entry signal.
+Security must have sufficient price history for both t-252 and t-21.,New listings and missing data reduce coverage and may bias sample composition.

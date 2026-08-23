@@ -1,0 +1,12 @@
+claim,evidence_status,supporting_stage,notes
+Residual Momentum is a recognized construct,Supported by evidence,LR-001,Recognized in academic literature as factor-residual prior return momentum
+RSM-001 definition is frozen and reproducible,Supported by evidence,CD-001,FF3 monthly 36-month rolling residualization with 12-1 formation
+RSM-001 implementation is deterministic,Supported by evidence,IM-001,Synthetic and empirical artifact generation completed
+RSM-001 construct is internally coherent,Partially supported,CV-001,Rank consistency and reproducibility passed; survivorship-free universe unavailable
+RSM-001 mechanism is residual winner-loser state,Supported by evidence,MI-001/HV-001,TOP and BOTTOM deciles separate residual momentum states
+RSM-001 differs from raw momentum,Supported by evidence,HV-001,Median raw-vs-RSM top-decile Jaccard 0.3425
+Residual volatility standardization matters,Supported by evidence,HV-001,Standardized-vs-unstandardized top-decile Jaccard 0.5932
+RSM-001 predicts future security returns,Not supported,PV-001,All tested horizons classified Not supported
+RSM-001 is economically useful,Inconclusive,Not evaluated,EV-001 not authorized
+RSM-001 is production-ready,Not supported,FSR-001,No economic validation or production validation
+

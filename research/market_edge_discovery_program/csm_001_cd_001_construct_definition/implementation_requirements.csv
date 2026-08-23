@@ -1,0 +1,8 @@
+requirement,description
+Deterministic universe loader,Load date-specific or explicitly fixed research universe without future leakage.
+Adjusted close panel,Provide daily adjusted close data by ticker and date.
+Return calculator,Compute return_12_1 using t-252 and t-21 prices only.
+Cross-sectional ranker,Rank eligible securities independently on each date.
+Output serializer,"Write date, ticker, return_12_1, rank, percentile, top_decile_flag, and diagnostics."
+Data-quality diagnostics,"Report missing price history, eligible count, excluded count, and universe coverage by date."
+Reproducibility controls,No random process; identical inputs must produce identical outputs.

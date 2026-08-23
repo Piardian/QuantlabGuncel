@@ -1,0 +1,14 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "RP-001",
+  "construct_name": "Industry Momentum",
+  "decision": "GO",
+  "scientific_importance": "High",
+  "literature_maturity": "Moderate-High",
+  "construct_independence": "High",
+  "expected_research_value": "High",
+  "data_feasibility_risk": "Moderate-High",
+  "primary_risk": "Industry taxonomy and point-in-time membership integrity",
+  "next_stage": "LR-001"
+}
+

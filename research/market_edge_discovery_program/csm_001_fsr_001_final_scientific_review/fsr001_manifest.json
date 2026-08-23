@@ -1,0 +1,16 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "FSR-001",
+  "final_status": "Completed scientific construct",
+  "primary_category": "Edge Construct",
+  "subcategory": "Cross-sectional relative leadership / intermediate-horizon winner-state construct",
+  "scientific_maturity": "High, with limitations",
+  "evidence_strength": "Moderate to strong",
+  "construct_validity": "Partially supported",
+  "mechanism_validity": "Partially supported",
+  "predictive_validity": "Supported",
+  "economic_utility": "Partially supported",
+  "production_readiness": "Not supported",
+  "eligible_for_construct_library": true,
+  "eligible_for_production_deployment": false
+}

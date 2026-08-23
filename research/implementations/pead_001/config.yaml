@@ -1,0 +1,15 @@
+construct_id: PEAD-001
+construct_name: Point-in-Time Analyst Surprise Post-Earnings Announcement Drift State
+required_input_file: data/pead_001/point_in_time_earnings_events.csv
+surprise_formula: (actual_eps - consensus_expected_eps) / abs(price_reference)
+timing_policy:
+  before_market_open: same_trading_day_open
+  during_market: next_intraday_bar_or_next_trading_day_open
+  after_market_close: next_trading_day_open
+  unknown: next_trading_day_open
+forbidden:
+  - revised_estimates
+  - fiscal_period_end_as_announcement_date
+  - same_close_tradability_for_after_close_announcements
+  - backtesting
+  - profitability_claims

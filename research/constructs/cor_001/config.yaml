@@ -1,0 +1,12 @@
+construct_id: COR-001
+construct_name: US Equity Market Average Pairwise Correlation State
+universe_path: sp500_current_universe.csv
+start_date: 2010-01-01
+end_date: 2025-12-31
+correlation_window: 60
+normalization_window: 252
+minimum_eligible_count: 50
+output_path: output/cor001_correlation_state.csv
+data_source: yahoo
+price_column: Close
+

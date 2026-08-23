@@ -1,0 +1,24 @@
+variable,include,source_series,frequency,definition,role,notes
+SPY open,yes,Daily adjusted or normalized open,daily,Opening price for SPY,primary input,Must be adjusted consistently with high low close
+SPY high,yes,Daily adjusted or normalized high,daily,Highest price for SPY,primary input,Must be adjusted consistently with open low close
+SPY low,yes,Daily adjusted or normalized low,daily,Lowest price for SPY,primary input,Must be adjusted consistently with open high close
+SPY close,yes,Daily adjusted or normalized close,daily,Closing price for SPY,primary input,Used for previous close and return components
+Previous close,yes,SPY close,daily,Close price from previous trading day,derived input,Required for overnight return
+Overnight return,yes,SPY open and previous close,daily,ln(open_t / close_t-1),derived input,Yang-Zhang overnight component
+Open-to-close return,yes,SPY open and close,daily,ln(close_t / open_t),derived input,Yang-Zhang open-to-close component
+High-open return,yes,SPY high and open,daily,ln(high_t / open_t),derived input,Rogers-Satchell component
+High-close return,yes,SPY high and close,daily,ln(high_t / close_t),derived input,Rogers-Satchell component
+Low-open return,yes,SPY low and open,daily,ln(low_t / open_t),derived input,Rogers-Satchell component
+Low-close return,yes,SPY low and close,daily,ln(low_t / close_t),derived input,Rogers-Satchell component
+Rogers-Satchell daily value,yes,Derived OHLC returns,daily,"high_open_return * high_close_return + low_open_return * low_close_return",derived input,Intraday range component
+Yang-Zhang variance 20d,yes,Derived return components,daily,"sigma_o2 + k*sigma_c2 + (1-k)*sigma_rs",core output,Trailing 20 valid observations
+Yang-Zhang volatility 20d,yes,Yang-Zhang variance,daily,"sqrt(max(yz_variance,0) * 252)",core output,Annualized volatility
+Volatility z-score,yes,Yang-Zhang volatility 20d,daily,"(vol - rolling_mean(vol,252)) / rolling_std(vol,252)",state output,Higher means higher volatility state
+Volatility percentile,yes,Yang-Zhang volatility 20d,daily,Count of trailing 252 valid volatility values less than or equal to current value divided by 252,state output,0 to 1 scale with deterministic tie handling
+Valid observation flag,yes,Eligibility rules,daily,Boolean validity flag,diagnostic output,True when OHLC and derived returns are valid
+Implied volatility,no,Options data,n/a,VIX or option-implied volatility,excluded,Different forward-looking construct
+GARCH conditional variance,no,Return model,n/a,Model-estimated conditional variance,excluded,Requires model fitting and estimation assumptions
+High-frequency realized variance,no,Intraday prices,n/a,Sum of intraday squared returns,excluded,Requires intraday data
+ATR,no,OHLC,n/a,Average True Range,excluded,Not a formal variance estimator for VOL-001
+Cross-sectional dispersion,no,Panel returns,n/a,Dispersion across securities,excluded,Different construct family
+Volume,no,Daily volume,n/a,Trading volume,excluded,Not required for volatility estimator

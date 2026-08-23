@@ -1,0 +1,7 @@
+comparison,status,value,evaluable,reason
+signal_overlap,NOT_EVALUATED,,False,CSM ticker-date states cannot be matched to ISM industry-month states
+jaccard_similarity,NOT_EVALUATED,,False,No common binary state universe exists
+precision,NOT_EVALUATED,,False,No common binary state universe exists
+recall,NOT_EVALUATED,,False,No common binary state universe exists
+disagreement_region_count,NOT_EVALUATED,,False,No frozen stock-level ISM assignment exists
+conflict_state_count,NOT_EVALUATED,,False,No frozen stock-level ISM assignment exists

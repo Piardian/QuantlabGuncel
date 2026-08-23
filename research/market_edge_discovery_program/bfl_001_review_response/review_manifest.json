@@ -1,0 +1,8 @@
+{
+  "review_id": "bfl_001_review_response",
+  "status": "Completed",
+  "bfl001_verdict": "PASS - Baseline Frozen",
+  "accepted_baseline": "CSMxTSM_GROSS_RESEARCH_BASELINE_V1",
+  "baseline_edit_policy": "Do not silently edit V1 after DBA findings; create controlled V2 baseline if remediation is required.",
+  "authorized_next_stage": "DBA-001 Data & Bias Audit"
+}

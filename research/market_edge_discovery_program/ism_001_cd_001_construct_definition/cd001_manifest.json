@@ -1,0 +1,16 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "CD-001",
+  "construct_name": "Ken French 49 Industry Portfolio 12-1 Cross-Sectional Momentum Rank",
+  "status": "Construct frozen",
+  "data_source": "Ken French 49 Industry Portfolios",
+  "return_frequency": "Monthly",
+  "industry_universe": "49 Ken French industry portfolios",
+  "weighting": "Value-weighted",
+  "formation_window": "12-1",
+  "minimum_valid_industries": 30,
+  "construct_type": "Industry-level cross-sectional ranking construct",
+  "stock_level_membership_required": false,
+  "next_stage": "IM-001"
+}
+

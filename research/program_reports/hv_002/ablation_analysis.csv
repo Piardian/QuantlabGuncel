@@ -1,0 +1,6 @@
+comparison,delta_jaccard,delta_precision_pct,delta_recall_pct,delta_mean_daily_spearman,interpretation
+Composite_vs_TrendStrength,0.009498226532097975,0.7202750453633939,2.033476052327927,-0.03989871750639677,Composite slightly higher on overlap; Trend Strength higher on daily Spearman
+Composite_vs_Smoothness,0.1024040621036019,8.348008786171338,23.56804676293909,0.2339900765943631,Composite clearly stronger than Smoothness
+Composite_vs_Persistence,0.1352809854250017,10.946423455257385,34.85012467255578,0.14663564000922455,Composite clearly stronger than Persistence
+Composite_vs_Direction,0.1724985192206016,14.58237035622195,44.50444365661064,0.23390580243088172,Composite clearly stronger than Direction
+

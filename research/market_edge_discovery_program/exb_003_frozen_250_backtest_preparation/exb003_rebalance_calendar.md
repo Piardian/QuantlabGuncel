@@ -1,0 +1,7 @@
+# EXB-003 Rebalance Calendar
+
+Rebalance events: 56
+
+REBALANCE_DATE_SET_SHA256 = 17D3A60C1B8E409DE8A854C2F8B86D1A0FA50AAC4CB93E1E9A0A7E09429CA014
+
+Monthly last trading day convention preserved.

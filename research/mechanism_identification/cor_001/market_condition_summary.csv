@@ -1,0 +1,6 @@
+metric,value
+high_minus_low_mean_corr,0.23985252151105171
+high_minus_low_spy_abs_return,0.007525073515324469
+high_minus_low_spy_realized_vol_20d,0.15393550619039073
+high_minus_low_spy_drawdown_52w,-0.08083396712263767
+high_minus_low_breadth,-0.2814800785829607

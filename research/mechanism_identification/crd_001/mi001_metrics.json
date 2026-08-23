@@ -1,0 +1,16 @@
+{
+  "construct_id": "CRD-001",
+  "valid_rows": 530,
+  "low_state_observations": 183,
+  "mid_state_observations": 292,
+  "high_state_observations": 55,
+  "low_mean_hy_oas": 2.772622950819672,
+  "mid_mean_hy_oas": 2.9997602739726026,
+  "high_mean_hy_oas": 3.643090909090909,
+  "high_low_spread_difference": 0.8704679582712371,
+  "widening_episode_threshold_20d": 0.3110000000000003,
+  "widening_episode_count": 51,
+  "final_mechanism": "High-yield credit spread stress / speculative-grade credit risk compensation state",
+  "evidence_classification": "Partially supported by evidence",
+  "primary_limitation": "Short available validation sample limits crisis-cycle mechanism identification."
+}

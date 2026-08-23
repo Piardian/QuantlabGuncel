@@ -1,0 +1,5 @@
+hypothesis,variable,trimmed_high_n,trimmed_low_n,trimmed_difference_high_minus_low,expected_direction_met
+H1,spy_realized_vol_20d,686,965,0.14849569207334085,True
+H2,spy_drawdown_52w,694,975,-0.07995886436375736,True
+H3,brd001_pct_above_sma200,686,967,-0.28304683095805944,True
+H4,cor001_avg_pairwise_corr_60d,686,965,0.23923000149314846,True

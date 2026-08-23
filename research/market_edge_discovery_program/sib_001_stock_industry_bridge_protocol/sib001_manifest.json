@@ -1,0 +1,14 @@
+{
+  "study_id": "SIB-001",
+  "study_name": "Stock-to-Industry Bridge Protocol",
+  "status": "Completed",
+  "stage_type": "Protocol Registration",
+  "triggering_prior_study": "CIP-002",
+  "reason": "CIP-002 could not evaluate CSM-001 x ISM-001 interaction without a frozen point-in-time stock-to-industry bridge.",
+  "mapping_created": false,
+  "data_source_selected": false,
+  "constructs_modified": false,
+  "performance_analysis_performed": false,
+  "optimization_performed": false,
+  "authorized_next_stage": "SIB-002 Stock-to-Industry Bridge Data Source Review"
+}

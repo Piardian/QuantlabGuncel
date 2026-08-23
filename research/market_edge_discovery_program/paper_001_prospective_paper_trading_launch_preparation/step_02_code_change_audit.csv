@@ -1,0 +1,8 @@
+file,function_or_class,change_type,reason,classification
+engine/paper_risk_guards.py,PaperSafetyManager,NEW_MODULE,Implement safety manager, environment guard, fail-closed checks, universe hash, strategy hash, risk guards, and buying power checks,SAFETY_GUARD
+scripts/paper_safety_tests.py,TestPaperSafetyAndRiskGuards,NEW_MODULE,Add unit tests for safety and risk guards,TEST
+research/.../step_02_safety_integrity_report.md,REPORT,NEW_ARTIFACT,Document STEP-2 verification results,DOCUMENTATION
+research/.../step_02_strategy_hash_spec.md,SPEC,NEW_ARTIFACT,Document strategy hashing specification,DOCUMENTATION
+research/.../step_02_risk_guard_policy.md,POLICY,NEW_ARTIFACT,Document operational risk ceilings,DOCUMENTATION
+research/.../step_02_test_results.csv,DATA,NEW_ARTIFACT,Record test execution results,TEST
+research/.../step_02_code_change_audit.csv,AUDIT,NEW_ARTIFACT,Record code change audit,DOCUMENTATION

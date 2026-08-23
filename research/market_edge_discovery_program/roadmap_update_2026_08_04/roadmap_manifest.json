@@ -1,0 +1,13 @@
+{
+  "roadmap_update_id": "roadmap_update_2026_08_04",
+  "status": "Completed",
+  "current_project_classification": "Research-validated momentum leadership workflow + risk construct library",
+  "not_yet_supported": "Production-ready trading bot",
+  "primary_validated_workflow": "CSM-001 x TSM-001",
+  "main_roadmap_change": "Prioritize data/bias audit, net-of-cost validation, benchmark race, portfolio sizing, execution realism and shadow trading before new alpha expansion.",
+  "recommended_next_stage": "DBA-001 Data & Bias Audit",
+  "constructs_modified": false,
+  "strategy_modified": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false
+}

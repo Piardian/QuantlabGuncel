@@ -1,0 +1,9 @@
+{
+  "rows": 91986,
+  "symbols_with_rows": 100,
+  "duplicate_symbol_dates": 0,
+  "invalid_ohlc_relationships": 0,
+  "negative_or_zero_prices": 0,
+  "zero_or_negative_volume": 17393,
+  "missing_symbol_trading_dates_total": 48714
+}

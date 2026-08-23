@@ -1,0 +1,11 @@
+dimension,status,evidence_basis,limitation
+"Scientific relevance","Supported","RP-001 and LR-001 recognized industry momentum as an independent and literature-backed research construct","Scientific relevance alone does not establish predictive or economic validity"
+"Construct definition","Supported","CD-001 froze one precise Ken French 49 Industry Portfolio 12-1 rank definition","Only the selected value-weighted monthly taxonomy was evaluated"
+"Implementation readiness","Supported","IM-001 produced deterministic output and passed standalone synthetic verification","pytest was unavailable in the execution environment"
+"Construct validity","Partially supported","CV-001 rank consistency and reproducibility passed","Full 49-industry coverage was not available in every historical post-warmup month"
+"Mechanism validity","Supported","MI-001 identified leadership and laggard states and HV-001 supported all four mechanism hypotheses","The evidence is descriptive and does not establish causality"
+"Predictive validity","Supported","PV-001 supported predictive information at predefined 1 3 6 and 12-month horizons","Limited to the evaluated Ken French industry portfolios and horizons"
+"Economic utility","Supported","EV-001 supported fixed industry-level workflows after fixed 10 bps turnover costs","The long-short workflow had severe drawdown and the long-only workflow was only partially supported"
+"Stock-level applicability","Not supported","No stock-to-industry mapping or stock-level workflow was defined or evaluated","Requires a separate frozen implementation and validation program"
+"Production readiness","Not supported","No live execution investable instrument mapping capacity or market-impact study was completed","Requires a separate production-readiness program"
+"Scientific maturity","High within evaluated domain","The lifecycle from RP-001 through EV-001 is complete and internally consistent","FSR-001 is still required for scientific closure"

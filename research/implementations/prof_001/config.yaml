@@ -1,0 +1,13 @@
+construct_id: PROF-001
+construct_name: Conservative-Lag Gross Profitability State
+required_input_file: data/prof_001/accounting_statements.csv
+profitability_formula: (revenue - cost_of_goods_sold) / total_assets
+publication_lag_policy:
+  if_filing_date_exists: first_trading_day_after_filing_date
+  if_filing_date_missing: fiscal_period_end_plus_180_calendar_days
+forbidden:
+  - fiscal_period_end_as_availability_date
+  - unsafe_restatement_use
+  - backtesting
+  - profitability_claims
+  - parameter_optimization

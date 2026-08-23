@@ -1,0 +1,14 @@
+{
+  "review_id": "DRM-001-review",
+  "status": "Completed",
+  "verdict": "PASS",
+  "accepted_stage": "DRM-001",
+  "authorized_work": "Controlled remediation",
+  "next_gate": "BFL-002",
+  "required_following_gate": "DBA-002",
+  "alpha_tuning_allowed": false,
+  "performance_peeking_allowed": false,
+  "rvp_authorized": false,
+  "production_authorized": false,
+  "required_new_file": "v1_to_v2_remediation_delta.md"
+}

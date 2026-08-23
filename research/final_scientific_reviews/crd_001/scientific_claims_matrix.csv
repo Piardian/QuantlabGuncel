@@ -1,0 +1,15 @@
+claim,evidence_status,source_stage,summary
+Credit Stress is research-worthy,Supported by evidence,RP-001,Research prioritization concluded GO for a dedicated Credit Stress construct.
+Credit Stress is mature in literature,Supported by evidence,LR-001,Literature supports credit stress as a distinct market construct.
+CRD-001 definition is frozen and reproducible,Supported by evidence,CD-001,Construct defined as US High-Yield Credit Spread Stress using BAMLH0A0HYM2.
+CRD-001 implementation is deterministic,Supported by evidence,IM-001,Implementation reproduced identical outputs from frozen input.
+CRD-001 construct validity,Partially supported,CV-001,Internal coherence supported but historical coverage is limited.
+CRD-001 mechanism validity,Partially supported,MI-001/HV-001,High-yield spread stress mechanism supported within available sample.
+Future realized volatility information,Partially supported,PV-001,Positive at shorter horizons but not stable across all horizons.
+Future drawdown-risk prediction,Not supported,PV-001,Preregistered drawdown hypothesis was not supported.
+Future credit spread-widening prediction,Not supported,PV-001,Preregistered widening hypothesis was not supported.
+Future equity return association,Supported by evidence,PV-001,Association observed within available sample; no alpha claim.
+Risk-management economic utility,Partially supported,EV-001,Several predefined risk-management workflows improved risk metrics but sample is short.
+Alpha generation,Not supported,CC-001/FSR-001,No completed stage supports alpha classification.
+Production readiness,Inconclusive,CC-001/FSR-001,Operational deployment was not evaluated.
+

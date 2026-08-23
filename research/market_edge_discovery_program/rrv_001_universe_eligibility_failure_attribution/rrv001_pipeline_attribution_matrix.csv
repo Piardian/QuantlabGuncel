@@ -1,0 +1,7 @@
+category,classification,evidence
+DATA_COVERAGE,PRIMARY,Eligible count below 50 on 36/56 rebalance dates.
+UNIVERSE_CONSTRUCTION,PRIMARY,Current-active reduced 100-symbol universe was not selected for historical 252-day data sufficiency.
+CSM_ELIGIBILITY,PRIMARY,Frozen minimum eligible count blocks ranking when final eligible count <50.
+CSM_RANKING_IMPLEMENTATION,NOT_CAUSAL,Ranking mechanics pass on deterministic dates where eligible_count >=50.
+TSM_GATING,MINOR,TSM rejected 3/117 CSM candidates.
+PORTFOLIO_CONSTRUCTION,NOT_CAUSAL,Holdings are mechanically explained by upstream approved candidate count.

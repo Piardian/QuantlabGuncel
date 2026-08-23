@@ -1,0 +1,17 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "EV-001",
+  "classification": "Partially supported",
+  "workflow": {
+    "portfolio": "equal_weight_top_decile",
+    "benchmark": "equal_weight_eligible_universe",
+    "rebalance_interval_days": 21,
+    "transaction_cost_bps": 10.0
+  },
+  "verdict_details": {
+    "annualized_return_delta": 0.06463951210783425,
+    "return_to_volatility_delta": 0.033336896303297836,
+    "active_year_rate": 0.6666666666666666,
+    "max_drawdown_improved": false
+  }
+}

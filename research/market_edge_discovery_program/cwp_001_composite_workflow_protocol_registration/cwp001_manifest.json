@@ -1,0 +1,25 @@
+{
+  "study_id": "CWP-001",
+  "study_name": "Composite Workflow Protocol Registration",
+  "constructs": [
+    "CSM-001",
+    "TSM-001"
+  ],
+  "stage_type": "Protocol Registration",
+  "status": "Completed",
+  "prior_study": "CIP-001",
+  "prior_conclusion": "Partially Complementary",
+  "purpose": "Preregister the scientific evaluation protocol for a CSM-001 x TSM-001 composite workflow.",
+  "statistical_analysis_performed": false,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "CWS-001",
+  "next_stage_name": "Composite Workflow Scientific Evaluation",
+  "allowed_next_stage_conclusions": [
+    "Workflow Supported",
+    "Workflow Partially Supported",
+    "Workflow Not Supported",
+    "Inconclusive"
+  ]
+}

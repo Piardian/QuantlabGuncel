@@ -1,0 +1,11 @@
+claim,evidence_classification,supporting_stages,summary
+TSM-001 is scientifically researchable,Supported by evidence,"RP-001, LR-001","Research prioritization and literature review supported full investigation."
+TSM-001 has mature literature foundation,Supported by evidence,LR-001,"Time-series momentum has a mature academic and practitioner literature."
+TSM-001 is frozen and reproducible,Supported by evidence,"CD-001, IM-001","The raw 12-1 own-trend state was specified and implemented deterministically."
+TSM-001 is construct-valid,Partially supported,CV-001,"Construct behaved coherently but source panel is not survivorship-free."
+TSM-001 mechanism is own-trend direction state,Supported by evidence,"MI-001, HV-001","Mechanism identification and validation supported signed intermediate-horizon own-trend interpretation."
+TSM-001 predicts future returns,Not supported,PV-001,"No evaluated forecast horizon supported positive future return prediction."
+TSM-001 predicts future realized volatility,Supported by evidence,PV-001,"All evaluated horizons supported future realized volatility information."
+TSM-001 predicts future drawdown risk,Supported by evidence,PV-001,"All evaluated horizons supported future drawdown-risk information."
+TSM-001 has economic utility,Partially supported,EV-001,"Risk workflows reduced risk but did not improve all risk-adjusted utility metrics."
+TSM-001 is production-ready,Not supported,"EV-001, CC-001","No production deployment, cost, turnover or execution validation was performed."

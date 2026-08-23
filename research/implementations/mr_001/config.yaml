@@ -1,0 +1,26 @@
+study_id: MR-001
+construct_name: US Equity Market Regime
+benchmark_ticker: SPY
+input_price_field: Close
+return_definition: log_return
+realized_volatility_window: 20
+state_count: 2
+model_family: GaussianHiddenMarkovModel
+observation_features:
+  - daily_log_return
+  - realized_volatility_20d
+state_labels:
+  expansion: EXPANSION
+  stress: STRESS
+deterministic_initialization: true
+max_iter: 200
+convergence_tolerance: 1.0e-8
+covariance_floor: 1.0e-8
+sticky_transition: 0.95
+output_columns:
+  - posterior_state_0
+  - posterior_state_1
+  - latent_state
+  - regime_label
+  - state_label
+

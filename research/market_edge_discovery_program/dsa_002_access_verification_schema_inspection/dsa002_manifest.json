@@ -1,0 +1,18 @@
+{
+  "program": "DSA-002 Access Verification & Sample Schema Inspection",
+  "status": "Completed",
+  "generated_at_utc": "2026-08-11T13:07:11.365900+00:00",
+  "institutional_stack_access": "UNAVAILABLE",
+  "accessible_stack_access": "UNAVAILABLE",
+  "critical_dba_findings_technically_satisfiable": "0 / 2",
+  "major_dba_findings_technically_satisfiable": "0 / 2",
+  "survivorship_capability": "FAILED",
+  "point_in_time_capability": "FAILED",
+  "identifier_linkage": "FAILED",
+  "license_status": "UNRESOLVED",
+  "performance_evaluation_performed": "NO",
+  "alpha_logic_changed": "NO",
+  "overall_decision": "SOURCE_STACK_UNAVAILABLE",
+  "bfl002_authorized": "NO",
+  "authorized_next_action": "RESEARCH SCOPE REVISION"
+}

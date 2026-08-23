@@ -1,0 +1,4 @@
+evidence_stage,evidence_type,status,reason
+CPP-003,Incremental information,UNAVAILABLE,Common sample N=188 below N>=756 threshold.
+CPP-005,Complementarity and multivariate information,UNAVAILABLE,Common sample N=188 below N>=756 threshold.
+CPP-006,Lead-lag temporal association,UNAVAILABLE,Lag-adjusted common sample N=128 below N>=756 threshold.

@@ -1,0 +1,17 @@
+category,item,classification,evidence_basis,limitation
+Primary Category,Market Breadth / Market Internals Construct,Supported by evidence,"LR-001, CD-001, CV-001","Specific implementation is 200-day moving-average breadth only"
+Secondary Category,Risk Management Construct,Supported by evidence,"PV-001, EV-001","Supported only for predefined risk workflows"
+Secondary Capability,Long-term cross-sectional trend participation sensor,Supported by evidence,"MI-001, HV-001","Construct-internal component is partly definitional"
+Secondary Capability,Internal market confirmation sensor,Supported by evidence,"MI-001, HV-001","Same-day/trailing explanatory evidence only"
+Predictive Capability,Future realized volatility risk,Supported by evidence,"PV-001","SPY market proxy only"
+Predictive Capability,Future trend deterioration risk,Supported by evidence,"PV-001","SPY market proxy only"
+Predictive Capability,Future drawdown risk,Partially supported,"PV-001","Pooled evidence positive but cross-period evidence mixed"
+Predictive Capability,Future return prediction,Not supported,"PV-001","Observed direction did not support preregistered return hypothesis"
+Economic Capability,Risk budgeting,Supported by evidence,"EV-001 UC-1","Fixed exposure map only"
+Economic Capability,Volatility targeting,Supported by evidence,"EV-001 UC-2","Fixed target map only"
+Economic Capability,Trend deterioration risk control,Supported by evidence,"EV-001 UC-3","Strongest predefined economic use case"
+Economic Capability,Portfolio risk control,Partially supported,"EV-001 UC-4","Risk improved but CAGR penalty versus buy-and-hold was material"
+Engineering Maturity,Deterministic implementation,Supported by evidence,"IM-001","Yahoo source revisions may change full-market outputs"
+Scientific Maturity,High,Supported by evidence,"Full lifecycle through EV-001","FSR-001 still required for final synthesis"
+Alpha Classification,Alpha or return-enhancement signal,Not supported,"PV-001, EV-001","No evidence supports alpha classification"
+

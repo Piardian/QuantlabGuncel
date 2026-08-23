@@ -1,0 +1,14 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "CV-001",
+  "classification": "Partially supported",
+  "rows": 96073,
+  "valid_observations": 66112,
+  "unique_tickers": 503,
+  "first_valid_month": "2014-02-28",
+  "last_valid_month": "2025-12-31",
+  "rank_consistency_status": "PASSED",
+  "reproducibility_status": "PASSED",
+  "state_hash": "217cc97a31084547845e2d970467e059ff8df0a161e7db6708950f89537e5bba",
+  "next_stage": "MI-001"
+}

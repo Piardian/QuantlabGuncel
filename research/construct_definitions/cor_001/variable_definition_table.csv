@@ -1,0 +1,18 @@
+variable,include,source_series,frequency,definition,role,notes
+Security close,yes,Daily adjusted close or normalized close,daily,Close price for each universe security,primary input,Used to compute daily log returns
+Daily log return,yes,Security close,daily,ln(close_t / close_t-1),derived input,Primary series used for correlation estimation
+Fixed universe,yes,Universe file,n/a,Predefined US equity research universe,configuration input,Must be fixed before implementation
+Rolling return window,yes,Daily log return panel,daily,Trailing 60 trading days of log returns,estimation input,Used for pairwise correlation matrix
+Pairwise Pearson correlation,yes,Rolling return window,daily,Pearson correlation between each eligible security pair,security-pair measure,Linear realized co-movement estimator
+Average pairwise correlation,yes,Pairwise correlation matrix,daily,Mean of all off-diagonal pairwise correlations where i < j,primary construct output,Measures market-wide realized co-movement
+Correlation z-score,yes,Average pairwise correlation,daily,Trailing 252-valid-observation z-score,normalized output,Higher values indicate unusually high co-movement relative to recent history
+Correlation percentile,yes,Average pairwise correlation,daily,Trailing 252-valid-observation percentile rank,normalized output,Relative state measure from 0 to 1
+Eligible security count,yes,Eligibility flags,daily,Number of securities with complete 60-day return windows,diagnostic output,Minimum 50 required for raw output
+Pair count,yes,Eligible security count,daily,n * (n - 1) / 2 for eligible securities,diagnostic output,Number of pairwise correlations included
+Coverage ratio,yes,Eligible count and universe size,daily,Eligible securities divided by universe size,diagnostic output,Used for validation and data-quality assessment
+Implied correlation,no,Index and constituent options,n/a,Option-implied expected co-movement,excluded,Requires options data and represents a different forward-looking construct
+Cross-asset correlation,no,Asset-class return series,n/a,Correlation between asset classes such as equities and bonds,excluded,Different construct family than equity-market internal co-movement
+Tail dependence,no,Tail observations or copula inputs,n/a,Extreme co-movement measure,excluded,More complex nonlinear dependence construct reserved for future work
+DCC-GARCH correlation,no,Return panel and econometric model,n/a,Model-based conditional correlation,excluded,More complex estimator family not selected for first COR construct
+PCA concentration,no,Correlation or covariance matrix,n/a,Share of variance explained by dominant components,excluded,Systemic concentration construct related but not identical to average correlation
+

@@ -1,0 +1,10 @@
+dimension,status,evidence_basis,limitation
+Scientific relevance,Supported,RP-001 and LR-001 found mature academic support,Does not itself prove current profitability
+Construct definition,Supported,CD-001 froze canonical 12-1 cross-sectional momentum,Only one canonical implementation selected
+Implementation readiness,Supported,IM-001 deterministic implementation and validation passed,Depends on adjusted-close data quality
+Construct validity,Partially supported,CV-001 reproducibility and rank consistency passed,Current-constituent universe is not survivorship-free
+Mechanism validity,Partially supported,MI-001 and HV-001 support persistent relative leadership,External market-direction disentanglement remains partial
+Predictive validity,Supported,PV-001 supported 21d and 126d horizons with 63d partial,Limited to evaluated universe and horizons
+Economic utility,Partially supported,EV-001 showed positive fixed-workflow utility after 10 bps costs,Maximum drawdown was not improved
+Production readiness,Not supported,No live execution or full implementation workflow evaluated,Requires separate production-readiness program
+Scientific maturity,High with limitations,Full lifecycle through EV completed,FSR still required

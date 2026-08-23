@@ -1,0 +1,2 @@
+dataset_id,label,source,feed,adjustment,timeframe,symbol_count_requested,symbol_count_with_rows,row_count,start,end,raw_market_data_stored,metadata_only,performance_evaluation
+EXB001_ALPACA_IEX_DAILY_REDUCED,NON_FORMAL_EXPLORATORY_EVIDENCE,Alpaca Market Data API,iex,raw,1Day,100,100,91986,2021-01-01T00:00:00Z,2026-08-11T23:59:59Z,NO,YES,NO

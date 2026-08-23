@@ -1,0 +1,15 @@
+dimension,classification,evidence_status,summary
+Primary Category,Credit Stress Construct,Supported by evidence,CRD-001 measures US high-yield option-adjusted spread stress.
+Secondary Category,Risk Management Sensor,Partially supported,EV-001 found partially supported economic utility in predefined risk-management workflows.
+Scientific Maturity,Moderate,Partially supported,Lifecycle completed but sample history is short.
+Engineering Readiness,Ready for research use,Supported by evidence,IM-001 verified deterministic implementation and reproducibility from frozen input.
+Construct Validity,Partially supported,Partially supported,CV-001 found schema fidelity and coherence but limited historical coverage.
+Mechanism Validity,Partially supported,Partially supported,MI/HV support high-yield spread stress mechanism within available sample.
+Predictive Capability,Partially supported,Partially supported,PV-001 found partial support overall with mixed hypothesis outcomes.
+Economic Utility,Partially supported,Partially supported,EV-001 found risk-management utility but limited robustness due short sample.
+Alpha Capability,Not supported,Not supported,No lifecycle stage supports alpha generation.
+Return Enhancement,Not supported,Not supported,Not classified as standalone return-enhancement construct.
+Drawdown Prediction,Not supported,Not supported,PV-001 did not support future drawdown-risk hypothesis.
+Credit Spread Widening Prediction,Not supported,Not supported,PV-001 did not support preregistered future spread-widening direction.
+Production Readiness,Not classified,Inconclusive,Operational readiness was not evaluated.
+

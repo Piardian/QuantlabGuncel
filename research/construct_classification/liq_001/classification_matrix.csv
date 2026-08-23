@@ -1,0 +1,12 @@
+dimension,classification,evidence_status,notes
+Primary Category,Liquidity Stress / Risk Control Construct,Supported by evidence,Best supported scientific identity
+Construct Validity,Partially supported,Partially supported,Schema and coherence supported; capped universe limits strength
+Mechanism Validity,Partially supported,Partially supported,Price-impact liquidity stress mechanism supported but daily proxy limits scope
+Hypothesis Validation,Partially supported,Partially supported,Four hypotheses supported and one negative-control hypothesis partially supported
+Predictive Validity,Risk-state predictive construct,Supported by evidence,Future volatility absolute movement and MR-STRESS occurrence supported
+Drawdown Prediction,Partial drawdown-risk signal,Partially supported,Positive but smaller effect size
+Economic Utility,Liquidity-aware risk-control utility,Partially supported,UC-4 supported; UC-1/2/3 partially supported
+Alpha Capability,Not classified as alpha,Not supported,Alpha was not evaluated and cannot be claimed
+Engineering Maturity,Implemented and reproducible,Supported by evidence,Deterministic implementation and repeated hash check
+Scientific Maturity,Medium-High,Supported by evidence,Full lifecycle through EV but capped universe limits final strength
+

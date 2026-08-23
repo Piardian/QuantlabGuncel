@@ -1,0 +1,7 @@
+source_family,access_evidence_checked,result,notes
+WRDS_CRSP_COMPUSTAT,environment variables and local data directories,NOT_AVAILABLE,No WRDS/CRSP/Compustat credential or local source directory detected.
+Nasdaq_Data_Link_Sharadar,environment variables and local data directories,NOT_AVAILABLE,No Nasdaq Data Link or Sharadar credential or local source directory detected.
+Polygon,environment variables and local data directories,NOT_AVAILABLE,No Polygon credential or local source directory detected.
+Tiingo,environment variables and local data directories,NOT_AVAILABLE,No Tiingo credential or local source directory detected.
+Alpaca,environment variables and local data directories,NOT_AVAILABLE,No Alpaca credential or local source directory detected.
+Local_Source_Stack,approved data directory inspection,NOT_AVAILABLE,No approved market/security-master/corporate-action source stack detected.

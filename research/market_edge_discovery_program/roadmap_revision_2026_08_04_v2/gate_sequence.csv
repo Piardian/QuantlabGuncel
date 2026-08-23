@@ -1,0 +1,16 @@
+priority,gate,name,primary_question,decision_type
+1,BFL-001,Baseline Freeze & Research Ledger,What exactly is frozen before validation begins?,Freeze / Blocked
+2,DBA-001,Data & Bias Audit,Can current evidence survive data and bias scrutiny?,Pass / Pass With Limitations / Fail / Inconclusive
+3,RVP-001,Robustness & OOS Validation,Is the result robust or a research-degree artifact?,Supported / Partially Supported / Not Supported / Inconclusive
+4,NOC-001,Cost Model Protocol,Which cost assumptions are frozen before net evaluation?,Protocol Registered / Blocked
+5,NOC-002,Net-of-Cost Evaluation,Does the workflow survive predefined costs?,Supported / Partially Supported / Not Supported / Inconclusive
+6,BMR-001,Gross and Net Benchmark Race,Does complexity add value versus fair benchmarks?,Supported / Partially Supported / Not Supported / Inconclusive
+7,CAP-001,Capacity & Scalability Analysis,At what capital size does feasibility degrade?,Supported / Partially Supported / Not Supported / Inconclusive
+8,PCM-001,Portfolio Construction Protocol,Which sizing policies are frozen?,Protocol Registered / Blocked
+9,PCM-002,Portfolio Construction Evaluation,Which frozen sizing policy is scientifically supportable?,Supported / Partially Supported / Not Supported / Inconclusive
+10,ERS-001,Execution Realism Simulation,Can signals be realistically executed under predefined assumptions?,Supported / Partially Supported / Not Supported / Inconclusive
+11,SHD-001,Shadow Portfolio,Does paper/shadow execution match research assumptions?,Pass / Pass With Limitations / Fail / Inconclusive
+12,OPS-001,Operational Readiness,Can the system operate safely and audibly?,Pass / Pass With Limitations / Fail / Inconclusive
+13,PRM-001,Production Risk Management,Are production risk controls sufficient?,Pass / Pass With Limitations / Fail / Inconclusive
+14,LVP-001,Limited-Capital Live Pilot,Does small-capital live operation behave correctly?,Pass / Pass With Limitations / Fail / Inconclusive
+15,SCL-001,Controlled Scaling,Can capital be scaled under evidence-based constraints?,Pass / Blocked

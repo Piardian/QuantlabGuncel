@@ -1,0 +1,12 @@
+variable,type,definition,availability_requirement
+date,date,Security observation date,Known at observation time
+ticker,string,Security identifier,Known before construct calculation
+adjusted_close,float,Adjusted close price on date t,Known at close on date t
+price_t_minus_21,float,Adjusted close 21 trading days before date t,Historical only
+price_t_minus_252,float,Adjusted close 252 trading days before date t,Historical only
+return_12_1,float,price_t_minus_21 / price_t_minus_252 - 1,Uses historical prices only
+csm001_rank,float,Cross-sectional average rank of return_12_1 on date t,Uses same-date cross-section
+csm001_eligible_count,int,Number of eligible securities on date t,Uses same-date data availability
+csm001_momentum_score,float,(rank - 1) / (eligible_count - 1),Uses same-date rank only
+csm001_top_decile_flag,bool,True when momentum_score >= 0.90,Uses frozen threshold
+csm001_valid_observation,bool,True when security and date satisfy eligibility rules,Uses current and historical availability only

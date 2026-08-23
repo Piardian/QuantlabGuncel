@@ -1,0 +1,8 @@
+blocker_id,blocker_name,required_evidence,status,closed,notes
+PDC-B01,Raw market data source,Authenticated source access and sample OHLCV schema,BLOCKED,NO,No approved local vendor data directory or credential evidence found.
+PDC-B02,Security master source,Permanent identifier plus listing/delisting lifecycle schema,BLOCKED,NO,No source-backed security master sample available.
+PDC-B03,Corporate action source,Split/dividend/merger/ticker-change event schema,BLOCKED,NO,No approved corporate-action source or event sample available.
+PDC-B04,License,Documented permission for local storage and automated research use,BLOCKED,NO,No inspectable license evidence available.
+PDC-B05,Identifier policy,Vendor permanent ID or verified internal fallback tied to source fields,BLOCKED,NO,Identifier policy cannot be frozen without actual source identifier fields.
+PDC-B06,PDC_SCHEMA_V1,Schema frozen against actual source fields,BLOCKED,NO,Only draft schema exists; source fields are unavailable.
+PDC-B07,Full reproducibility dry-run,Source to raw to hash to manifest to normalized to universe snapshot,BLOCKED,NO,Full source-backed dry run cannot run without approved sources.

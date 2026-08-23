@@ -1,0 +1,11 @@
+{
+  "construct_id": "PEAD-001",
+  "stage": "LR-001",
+  "construct_name": "Post-Earnings Announcement Drift",
+  "literature_maturity": "High",
+  "mechanism_clarity": "High",
+  "data_integrity_risk": "Very High",
+  "primary_literature_finding": "PEAD is a mature event-driven anomaly tied to delayed price response after earnings surprise.",
+  "primary_methodological_warning": "Reliable point-in-time earnings event and surprise data are mandatory before construct definition.",
+  "next_stage": "CD-001"
+}

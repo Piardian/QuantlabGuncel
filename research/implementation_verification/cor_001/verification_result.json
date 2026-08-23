@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "deterministic_hash_match": true,
+    "first_valid_eligible_count_expected": true,
+    "first_valid_pair_count_expected": true,
+    "last_pair_count_expected": true,
+    "manual_correlation_mean_match": true,
+    "minimum_eligible_count_enforced": true,
+    "normalization_available_after_warmup": true,
+    "output_columns_match": true,
+    "raw_correlation_in_valid_range": true
+  },
+  "rows": 420,
+  "sha256": "beb1e376a03388b9aa148886fe84fca81e2a09c92836fd48c3b5a2318ee74733",
+  "status": "PASS",
+  "valid_observations": 360
+}

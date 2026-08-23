@@ -1,0 +1,11 @@
+dimension,classification,evidence_status,notes
+Primary Category,Volatility State / Risk Forecasting Construct,Supported by evidence,Best supported scientific identity
+Construct Validity,Supported by evidence,Supported by evidence,Schema warmup percentile bounds and stress alignment supported
+Mechanism Validity,Realized market turbulence construct,Supported by evidence,High states show larger daily overnight intraday and range-based components
+Hypothesis Validation,Mechanism supported,Supported by evidence,All six preregistered explanatory hypotheses supported
+Predictive Validity,Risk-state predictive construct,Supported by evidence,Future realized volatility absolute movement and high-vol occurrence supported
+Drawdown Prediction,Inconclusive drawdown-risk signal,Inconclusive,Future drawdown IC positive but too small for supported classification
+Economic Utility,Volatility-aware risk-control utility,Partially supported,UC-1 and UC-4 supported UC-2 partial UC-3 not supported
+Alpha Capability,Not classified as alpha,Not supported,Alpha was not evaluated and cannot be claimed
+Engineering Maturity,Implemented and reproducible,Supported by evidence,Deterministic implementation and frozen input hash check
+Scientific Maturity,High,Supported by evidence,Full lifecycle through EV with strong CV MI HV PV and partial EV

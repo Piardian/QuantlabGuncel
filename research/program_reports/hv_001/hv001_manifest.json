@@ -1,0 +1,9 @@
+{
+  "study_id": "HV-001",
+  "source_tcm_matrix": "C:\\Users\\piard\\Desktop\\backterster\\research_runs\\2026-07-27_TCM-001_TREND_CONSTRUCT_MAPPING\\trend_construct_matrix.csv",
+  "source_tcm_agreement": "C:\\Users\\piard\\Desktop\\backterster\\research_runs\\2026-07-27_TCM-001_TREND_CONSTRUCT_MAPPING\\agreement_metrics.csv",
+  "source_ci_family_matrix": "C:\\Users\\piard\\Desktop\\backterster\\research_runs\\2026-07-27_CI-001_CONSTRUCT_IDENTIFICATION\\construct_family_matrix.csv",
+  "no_new_backtest": true,
+  "no_parameter_tuning": true,
+  "no_return_or_alpha_analysis": true
+}

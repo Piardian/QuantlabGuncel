@@ -1,0 +1,11 @@
+dimension,assessment,rationale
+Scientific importance,HIGH,Cross-sectional momentum is one of the central empirical regularities in asset pricing and appears in seminal factor-model and anomaly literature.
+Historical development,HIGH,The mechanism has a long research history beginning with foundational relative-strength portfolio evidence and later integration into factor-model and international literature.
+Academic maturity,HIGH,"The literature contains seminal papers, international tests, practitioner variants, open replication resources, and critical meta-research."
+Independent motivation,HIGH,The construct is motivated independently of the existing production strategy and validated risk constructs.
+Practical relevance,HIGH,"Momentum appears in factor models, portfolio construction, practitioner index design, and academic anomaly datasets, while carrying known implementation risks."
+Relationship to existing validated risk constructs,DISTINCT_BUT_UNPROVEN_INCREMENTAL,"CSM is an edge-mechanism candidate rather than a risk-state sensor. CPP did not establish incremental relation versus existing risk constructs, so independence remains future work."
+Expected incremental research value,HIGH,The construct can test whether the MEDP can move from risk-state sensors to a canonical edge-mechanism construct using strict scientific gates.
+Availability of high-quality literature,HIGH,"Multiple seminal, replication, international, and skeptical/meta-research sources are available."
+Availability of public datasets,HIGH,"Price-based cross-sectional returns can be reconstructed from public market data, and Open Asset Pricing provides replicated academic signals/test assets."
+Suitability for rule-based construct development,HIGH,"Cross-sectional ranking/sorting constructs can be specified deterministically, although exact definition must be frozen later in CD, not RP."

@@ -1,0 +1,7 @@
+dimension,evidence_source,status,interpretation
+Scientific workflow,CWF-001,Supported,Nested composite workflow supported
+OOS reproducibility,WOR-002,Reproduced,Nesting reproduced after 2025-12-30
+Economic utility,WEV-002,Partially Supported,Only UC-3 supported
+Cost/slippage robustness,WER-002,Partially Supported,Spreads survived predefined costs but execution remains simplified
+Liquidity/capacity,WLC-002,Partially Supported,Volume coverage strong but stricter large-account interpretation remains limited
+Production readiness,WFSR/WER/WLC,Not Supported,Execution/live/portfolio readiness not established

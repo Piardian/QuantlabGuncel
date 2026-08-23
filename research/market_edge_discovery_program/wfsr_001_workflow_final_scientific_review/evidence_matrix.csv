@@ -1,0 +1,9 @@
+stage,study_name,result,evidence_type,final_inference
+CIP-001,Construct Interaction Study,Partially Complementary,Interaction evidence,CSM and TSM are nested and partially complementary
+CWP-001,Composite Workflow Protocol Registration,Completed,Protocol evidence,Workflow evaluation was preregistered
+CWS-001,Composite Workflow Scientific Evaluation,Workflow Supported,Scientific workflow evidence,Nested workflow is supported
+CWF-001,Final Composite Workflow Review,Scientifically Supported Nested Composite Workflow,Evidence synthesis,Workflow scientific status established
+WOR-001,Workflow OOS Reproducibility Protocol,Completed,Protocol evidence,OOS test was preregistered
+WOR-002,Workflow OOS Reproducibility Audit,Reproduced,OOS evidence,Nested workflow reproduced after 2025-12-30
+WEV-001,Workflow Economic Validation Protocol,Completed,Protocol evidence,Economic validation was preregistered
+WEV-002,Workflow Economic Validation,Economic Utility Partially Supported,Economic evidence,Economic utility supported only in predefined UC-3

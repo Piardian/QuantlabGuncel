@@ -1,0 +1,23 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "CV-001",
+  "start_date": "2010-01-01",
+  "end_date": "2025-12-31",
+  "universe_file": "sp500_current_universe.csv",
+  "configured_universe_count": 503,
+  "downloaded_close_columns": 503,
+  "failed_tickers": [
+    "FDXF",
+    "HONA"
+  ],
+  "state_file": "output/csm_001_cv001/csm001_construct_state.csv",
+  "result_hash": "d10f21273efbf676a33224ff365174434b78e5ba86fd48c7dac9495aad86e26c",
+  "reproducibility_passed": true,
+  "rank_checks": {
+    "sampled_dates_checked": 41,
+    "rank_monotonicity_violations": 0,
+    "score_range_ok": true,
+    "threshold_flags_ok": true,
+    "rank_consistency_status": "PASSED"
+  }
+}

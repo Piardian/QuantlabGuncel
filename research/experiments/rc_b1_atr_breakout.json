@@ -1,0 +1,6 @@
+{
+  "RC-B1-E0_BASELINE": {},
+  "RC-B1-E1_NO_ATR_EXPANSION": {"enable_expansion_filter": false},
+  "RC-B1-E2_NO_BREAKOUT_CONFIRMATION": {"enable_breakout_confirmation": false},
+  "RC-B1-E3_NO_ATR_OR_BREAKOUT": {"enable_expansion_filter": false, "enable_breakout_confirmation": false}
+}

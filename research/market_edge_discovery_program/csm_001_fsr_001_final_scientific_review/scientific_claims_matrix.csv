@@ -1,0 +1,12 @@
+claim,status,evidence_source,scope_limit
+CSM-001 is a justified independent research construct,Supported,RP-001 and LR-001,Does not imply profitability
+CSM-001 uses a canonical literature-aligned definition,Supported,CD-001,Only the selected 12-1 definition is evaluated
+CSM-001 is deterministic and reproducible,Supported,IM-001 and CV-001,Depends on input data reproducibility
+CSM-001 is internally coherent as a rank-based construct,Supported,CV-001,Current-constituent universe only
+CSM-001 represents persistent relative leadership,Supported,MI-001 and HV-001,Mechanism is descriptive
+CSM-001 is fully disentangled from broad market direction,Partially supported,HV-001,No external market-direction construct was included
+CSM-001 contains predictive information,Supported,PV-001,Only predefined horizons and evaluated universe
+CSM-001 provides economic utility,Partially supported,EV-001,One fixed workflow; drawdown not improved
+CSM-001 is production ready,Not supported,CC-001 and FSR-001,Requires separate production-readiness validation
+CSM-001 is universally superior to alternatives,Not supported,No comparative optimization study,Not evaluated
+CSM-001 is robust to survivorship-free historical constituents,Inconclusive,Known limitation across CV/PV/EV,Survivorship-free data unavailable in this lifecycle

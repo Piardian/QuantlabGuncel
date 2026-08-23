@@ -1,0 +1,42 @@
+{
+  "schema_id": "ALP003_CANONICAL_ORDER_INTENT_V1",
+  "type": "object",
+  "required": [
+    "intent_id",
+    "strategy_id",
+    "portfolio_id",
+    "rebalance_id",
+    "symbol",
+    "source_asset_id",
+    "side",
+    "order_type",
+    "time_in_force",
+    "reference_price",
+    "signal_timestamp",
+    "intent_created_at",
+    "client_order_id",
+    "reason",
+    "status"
+  ],
+  "properties": {
+    "intent_id": {"type": "string"},
+    "strategy_id": {"type": "string"},
+    "portfolio_id": {"type": "string"},
+    "rebalance_id": {"type": "string"},
+    "symbol": {"type": "string"},
+    "source_asset_id": {"type": "string"},
+    "side": {"enum": ["buy", "sell"]},
+    "quantity": {"type": ["number", "null"]},
+    "notional": {"type": ["number", "null"]},
+    "order_type": {"enum": ["market", "limit"]},
+    "time_in_force": {"enum": ["day", "gtc", "opg", "cls", "ioc", "fok"]},
+    "reference_price": {"type": "number"},
+    "signal_timestamp": {"type": "string"},
+    "intent_created_at": {"type": "string"},
+    "client_order_id": {"type": "string", "maxLength": 48},
+    "reason": {"type": "string"},
+    "status": {"type": "string"},
+    "sequence": {"type": "integer"}
+  },
+  "alpaca_specific_payload_allowed_in_strategy": false
+}

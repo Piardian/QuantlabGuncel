@@ -1,0 +1,7 @@
+definition,construction,common_use,relationship_to_production
+Cross-sectional relative strength,"Rank each stock's trailing return against all stocks in a fixed universe; select top quantiles or deciles.","Academic cross-sectional momentum and factor indexes","Different: production compares only against SPY and does not cross-sectionally rank."
+Benchmark-relative return,"Stock return minus, or ratio versus, a market or benchmark return.","Relative-performance and benchmark-aware screens","Similar: RS20 RS60 and RS120 are stock return minus SPY return."
+Industry-relative strength,"Stock return relative to sector or industry benchmark or peer ranking.","Sector-neutral research and peer-relative selection","Different: production uses SPY, not sector or industry comparator."
+Percentile or top-decile selection,"Convert a continuous momentum measure to a universe percentile; retain highest-ranked subset.","Academic portfolios and practitioner indexes","Different: production uses fixed thresholds and an OR condition, not percentile selection."
+Risk-adjusted relative strength,"Normalize excess return by volatility or another risk measure before ranking.","Practitioner momentum indexes","Different: production thresholds are not volatility adjusted."
+Multi-horizon composite score,"Combine 6M/12M or other horizons into a continuous score, often with rank and buffer rules.","Practitioner index construction","Partly similar multi-horizon intent, but production is a binary logical gate rather than a composite score."

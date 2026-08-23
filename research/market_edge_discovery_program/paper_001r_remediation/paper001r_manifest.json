@@ -1,0 +1,34 @@
+{
+  "artifacts": [
+    "paper001r_remediation_report.md",
+    "paper001r_remediation_matrix.csv",
+    "paper001r_real_call_graph.md",
+    "paper001r_broker_mutation_call_sites.md",
+    "paper001r_test_results.csv",
+    "paper001r_test_quality_review.md",
+    "paper001r_end_to_end_dry_run.json",
+    "paper001r_readiness_result.json",
+    "paper001r_open_limitations.md",
+    "paper001r_final_decision.md",
+    "paper001r_manifest.json",
+    "paper001r_artifact_hashes.csv"
+  ],
+  "broker_mutation_calls": 0,
+  "canonical_universe_hash": "BC7879B3830C7327EB0A5779625A347C06826C47488F64326C7D0B2884CC741D",
+  "decision": "PAPER001R_REMEDIATION_PARTIAL",
+  "orders_submitted": 0,
+  "paper002_authorized": "NO",
+  "paper_t0_established": "NO",
+  "production_authorized": "NO",
+  "program_id": "PAPER-001R",
+  "real_money_trading_authorized": "NO",
+  "remaining_blockers": [
+    "Current market-data acquisition -> CSM -> TSM signal computation is not yet inside the Paper controller.",
+    "Per-symbol current daily-bar freshness guard is not yet implemented.",
+    "Durable monthly scheduler service is not yet implemented.",
+    "Durable local intent registry for restart-safe duplicate protection is not yet implemented."
+  ],
+  "scientific_t0_established": "NO",
+  "status": "PARTIAL",
+  "strategy_hash": "86EA1C067905B9AD1AAE714019057602B454D578361EC3B15B3A6B14569D32A7"
+}

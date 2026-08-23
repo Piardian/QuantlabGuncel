@@ -1,0 +1,27 @@
+canonical_field,institutional_stack_field,accessible_stack_field,mapping_status,notes
+security_id,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+company_id,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+ticker,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+exchange,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+share_class,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+security_type,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+trade_date,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+raw_close,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+adjusted_close,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+volume,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+shares_outstanding,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+listing_date,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+delisting_date,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+delisting_code,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+active_flag,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+corporate_action_factor,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+universe_effective_from,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+universe_effective_to,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+industry_code,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+industry_valid_from,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+industry_valid_to,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+source_asof_timestamp,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+filing_date,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+announcement_timestamp,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+forecast_timestamp,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.
+revision_timestamp,UNAVAILABLE_NO_LOCAL_SCHEMA,UNAVAILABLE_NO_LOCAL_SCHEMA,UNVERIFIED,No authenticated sample schema or data dictionary was available for inspection.

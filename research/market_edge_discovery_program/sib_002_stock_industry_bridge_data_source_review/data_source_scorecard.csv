@@ -1,0 +1,10 @@
+criterion,CRSP_Compustat_Historical_SIC,Ken_French_49_Definitions,GICS_History,Current_Metadata,Manual_Assignment
+point_in_time_availability,4,5,4,1,1
+stock_level_coverage,5,1,5,3,1
+ken_french_49_compatibility,5,5,2,2,1
+identifier_quality,5,2,4,2,1
+delisting_symbol_history,5,1,3,1,1
+reproducibility,4,5,4,2,1
+licensing_access_feasibility,2,5,2,4,5
+bias_control,4,5,3,1,1
+overall_decision,Preferred conditional candidate,Required taxonomy reference,Secondary candidate,Reject,Reject

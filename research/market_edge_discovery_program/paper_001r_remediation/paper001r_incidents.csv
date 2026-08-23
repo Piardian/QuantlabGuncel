@@ -1,0 +1,7 @@
+timestamp,paper_session_id,severity,component,incident_type,message,action_taken,resolved
+2026-08-14T17:43:51.817105+00:00,PAPER-2026-08-14-DRYRUN,CRITICAL,signal_pipeline,FUTURE_BAR,Current signal pipeline failed.,BLOCK,NO
+2026-08-14T17:43:51.819137+00:00,PAPER-2026-08-14-DRYRUN,CRITICAL,target_portfolio,FUTURE_BAR,Target portfolio invariant failed.,BLOCK,NO
+2026-08-14T17:43:54.937282+00:00,PAPER-2026-08-14-DRYRUN,CRITICAL,signal_pipeline,FUTURE_BAR,Current signal pipeline failed.,BLOCK,NO
+2026-08-14T17:43:54.938356+00:00,PAPER-2026-08-14-DRYRUN,CRITICAL,target_portfolio,FUTURE_BAR,Target portfolio invariant failed.,BLOCK,NO
+2026-08-14T17:44:27.108241+00:00,PAPER-2026-08-14-DRYRUN,CRITICAL,signal_pipeline,FUTURE_BAR,Current signal pipeline failed.,BLOCK,NO
+2026-08-14T17:44:27.109650+00:00,PAPER-2026-08-14-DRYRUN,CRITICAL,target_portfolio,FUTURE_BAR,Target portfolio invariant failed.,BLOCK,NO

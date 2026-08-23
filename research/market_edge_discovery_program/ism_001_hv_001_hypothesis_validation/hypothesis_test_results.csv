@@ -1,0 +1,12 @@
+hypothesis,metric,observations,mean,median,top_minus_middle_mean,above_middle_median_rate,bootstrap_mean_ci_low,bootstrap_mean_ci_high,positive_years,total_years,bottom_minus_middle_mean,below_middle_median_rate,below_middle_years,value,bootstrap_median_ci_low,bootstrap_median_ci_high
+H1,top_decile_formation_return_12_1,5923,0.4664934642458163,0.3987378158248742,0.35225337387930183,0.8938038156339693,0.45656123813548566,0.4761894802653862,96.0,100.0,,,,,,
+H2,bottom_decile_formation_return_12_1,5923,-0.15101611002601997,-0.1187522060629677,,,-0.1565632014529916,-0.1456657518207437,,100.0,-0.2652562003925344,0.9211548201924701,95.0,,,
+H3,top_decile_ever_industry_rate,49,,,,,,,,,,,,1.0,,
+H3,bottom_decile_ever_industry_rate,49,,,,,,,,,,,,1.0,,
+H3,median_unique_states_per_industry,49,,,,,,,,,,,,3.0,,
+H3,top_decile_one_month_retention,1187,,,,,,,,,,,,0.7254139912132477,,
+H3,bottom_decile_one_month_retention,1187,,,,,,,,,,,,0.7335248394727949,,
+H3,max_top_decile_rate_single_industry,49,,,,,,,,,,,,0.23553162853297444,,
+H3,max_bottom_decile_rate_single_industry,49,,,,,,,,,,,,0.3364737550471063,,
+H4,median_monthly_p90_p10_formation_spread,1187,,,,,,,,,,,,0.36429908069709427,0.355058814715251,0.3703462221926256
+H4,median_monthly_top_bottom_mean_spread,1187,,,,,,,,,,,,0.5442089097620706,0.5319464959744,0.5607335832682532

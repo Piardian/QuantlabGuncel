@@ -1,0 +1,12 @@
+{
+  "study_id": "WLC-002",
+  "study_name": "Workflow Liquidity and Capacity Audit",
+  "status": "Completed",
+  "conclusion": "Liquidity Capacity Partially Supported",
+  "scope": "UC-3 only",
+  "selected_observations": 185912,
+  "volume_coverage": 1.0,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false
+}

@@ -1,0 +1,34 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "EV-001",
+  "overall_conclusion": "Supported by evidence",
+  "workflow_classifications": {
+    "STATIC_EQUAL_WEIGHT": "Benchmark",
+    "UC1_TOP_DECILE_LONG_ONLY": "Partially supported",
+    "UC2_TOP_MINUS_BOTTOM_DOLLAR_NEUTRAL": "Supported by evidence",
+    "UC3_50_50_BENCHMARK_TOP_TILT": "Supported by evidence"
+  },
+  "workflow_details": {
+    "UC1_TOP_DECILE_LONG_ONLY": {
+      "annualized_return_delta": 0.04106472877216194,
+      "return_to_volatility_delta": 0.12408518074643071,
+      "max_drawdown_improved": true,
+      "outperform_year_rate": 0.59
+    },
+    "UC2_TOP_MINUS_BOTTOM_DOLLAR_NEUTRAL": {
+      "positive_year_rate": 0.65
+    },
+    "UC3_50_50_BENCHMARK_TOP_TILT": {
+      "annualized_return_delta": 0.022211245278497715,
+      "return_to_volatility_delta": 0.09633421269190878,
+      "max_drawdown_improved": true,
+      "outperform_year_rate": 0.61
+    }
+  },
+  "source_state_file": "output/ism_001/ism001_industry_momentum_state.csv",
+  "monthly_observations": 1186,
+  "first_realized_month": "1927-08-31",
+  "last_realized_month": "2026-05-31",
+  "transaction_cost_bps": 10.0,
+  "next_stage": "CC-001"
+}

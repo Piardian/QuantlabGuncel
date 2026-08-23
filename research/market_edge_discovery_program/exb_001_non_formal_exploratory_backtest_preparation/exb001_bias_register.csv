@@ -1,0 +1,11 @@
+bias_id,bias_name,severity,status,description,mitigation,formal_use_allowed
+EXB-B01,Survivorship bias,CRITICAL,OPEN,Universe is based on currently active Alpaca assets and does not reconstruct historical delisted securities.,Limit evidence to non-formal exploratory use only.,NO
+EXB-B02,Point-in-time universe bias,CRITICAL,OPEN,Historical membership and investability are not fully point-in-time.,Do not claim formal historical validity.,NO
+EXB-B03,Delisting omission,CRITICAL,OPEN,Delisted securities and delisting returns are unavailable in the free stack.,Block production-grade alpha claims.,NO
+EXB-B04,Corporate-action limitation,MAJOR,OPEN,Corporate actions were not entitled in ALP-002 and raw prices are used.,Document raw-adjustment policy and limitation.,NO
+EXB-B05,Ticker history limitation,MAJOR,OPEN,Ticker changes and permanent security identifiers are not fully available.,Use current symbols only for exploratory work.,NO
+EXB-B06,Reduced universe bias,MAJOR,OPEN,Universe is capped at 100 deterministic symbols for exploratory feasibility.,Do not generalize to broad US equity universe.,NO
+EXB-B07,IEX feed limitation,MAJOR,OPEN,Free IEX feed may not represent full consolidated market history.,Restrict interpretation to accessible free feed.,NO
+EXB-B08,Volume missingness,MAJOR,OPEN,Zero or negative volume rows were observed.,Treat zero/negative volume rows as ineligible.,NO
+EXB-B09,License and retention limitation,MAJOR,OPEN,Free access does not establish full production-grade storage and redistribution rights.,Keep formal PDC path blocked.,NO
+EXB-B10,Non-formal evidence boundary,MAJOR,CONTROLLED,All EXB outputs are exploratory and cannot support production claims.,Apply NON_FORMAL_EXPLORATORY_EVIDENCE label.,NO

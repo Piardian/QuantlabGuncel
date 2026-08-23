@@ -1,0 +1,9 @@
+hypothesis,metric,observations,mean,median,positive_rate,bootstrap_mean_ci_low,bootstrap_mean_ci_high,positive_years,total_years,negative_rate,negative_years,value,bootstrap_median_ci_low,bootstrap_median_ci_high
+H1,top_decile_residual_sum_12_1,6679,0.36325126028081295,0.3063929929678964,1.0,0.3578894907984763,0.3688435499030934,12.0,12.0,,,,,
+H2,bottom_decile_residual_sum_12_1,6679,-0.3716616720368884,-0.3318638251855561,,-0.37583799036104115,-0.36707522952302024,,12.0,1.0,12.0,,,
+H3,median_spearman_rsm_vs_raw,143,,,,,,,,,,0.7503972706744247,0.7307762397107221,0.774852171381544
+H3,median_top_decile_jaccard,143,,,,,,,,,,0.3424657534246575,,
+H3,median_bottom_decile_jaccard,143,,,,,,,,,,0.3230769230769231,,
+H4,median_score_vs_unstandardized_spearman,143,,,,,,,,,,0.9795615941077368,,
+H4,median_top_decile_jaccard_standardized_vs_unstandardized,143,,,,,,,,,,0.5932203389830508,,
+H4,median_bottom_decile_jaccard_standardized_vs_unstandardized,143,,,,,,,,,,0.543859649122807,,

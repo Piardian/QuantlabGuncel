@@ -1,0 +1,27 @@
+metric,value,note
+rows_total,4023,All output rows
+valid_observations,3824,Raw BRD-001 valid observations
+normalized_observations,3573,Rows with zscore and percentile
+start_date,2010-01-04,First output date
+end_date,2025-12-30,Last output date
+first_valid_date,2010-10-18,First raw valid BRD-001 date
+first_normalized_date,2011-10-14,First normalized date
+pct_min,0.03541666667,Bounded lower observed value
+pct_max,0.958677686,Bounded upper observed value
+pct_mean,0.6656867758079261,Mean breadth
+pct_median,0.7068965517,Median breadth
+pct_std,0.1845270289110926,Breadth standard deviation
+pct_p05,0.28114911192500003,5th percentile breadth
+pct_p95,0.8987603306,95th percentile breadth
+zscore_min,-5.778662221,Observed zscore min
+zscore_max,2.52128693,Observed zscore max
+percentile_min,0.003968253968,Observed percentile min
+percentile_max,1.0,Observed percentile max
+coverage_min,0.8330019881,Minimum valid-date coverage
+coverage_mean,0.9293766688591265,Average valid-date coverage
+coverage_median,0.9383697813,Median valid-date coverage
+eligible_min,419,Minimum eligible securities on valid dates
+eligible_max,497,Maximum eligible securities on valid dates
+bounds_valid,True,"All raw breadth values within [0,1]"
+percentile_bounds_valid,True,"All percentile values within [0,1]"
+output_sha256,4de3a99bf5e49e2d5e942f2c8a58ee5ef193f006000edffa22f8f4413c338c82,Pipeline output hash

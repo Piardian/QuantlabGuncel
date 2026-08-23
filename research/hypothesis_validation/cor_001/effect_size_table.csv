@@ -1,0 +1,5 @@
+hypothesis,variable,difference_high_minus_low,cohens_d,classification
+H1,spy_realized_vol_20d,0.1539355061903908,1.5476223144035248,Supported by evidence
+H2,spy_drawdown_52w,-0.08083396712263767,-1.6699039862269158,Supported by evidence
+H3,brd001_pct_above_sma200,-0.28148007858296065,-1.7484628987236939,Supported by evidence
+H4,cor001_avg_pairwise_corr_60d,0.23985252151105171,2.6335658074204606,Supported by evidence

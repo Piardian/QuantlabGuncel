@@ -1,0 +1,13 @@
+# CSM-001 / RP-001 Limitations
+
+| risk | severity | control |
+| --- | --- | --- |
+| Popularity bias | MEDIUM | RP decision uses evidence maturity and constructability, not popularity or historical performance alone. |
+| Parameter fishing later | HIGH | RP explicitly forbids lookback/ranking/parameter selection; CD must freeze definitions before validation. |
+| Long-short literature overgeneralized to long-only construct | HIGH | LR-001 must separate canonical evidence from any future long-only operationalization. |
+| Data snooping / factor zoo risk | HIGH | Harvey-Liu-Zhu and McLean-Pontiff style skepticism must be embedded in later validation standards. |
+| Implementation data leakage | HIGH | Point-in-time universe, delisting, corporate actions, and decision-date availability must be handled in CD/IM. |
+
+## Stage Limitation
+
+RP-001 is a prioritization gate only. It does not validate predictive information or economic value.

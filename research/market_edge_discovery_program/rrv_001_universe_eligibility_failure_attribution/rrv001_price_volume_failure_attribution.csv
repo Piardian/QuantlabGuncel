@@ -1,0 +1,6 @@
+failure_reason,total_symbol_rebalance_count
+eligible,2689
+missing_or_invalid_current_price,1658
+missing_or_invalid_current_volume,771
+missing_or_invalid_t_minus_21_price,254
+missing_or_invalid_t_minus_252_price,228

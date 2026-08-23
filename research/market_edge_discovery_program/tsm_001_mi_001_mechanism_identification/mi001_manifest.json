@@ -1,0 +1,14 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "MI-001",
+  "source_state_file": "output/tsm_001_cv001/tsm001_construct_state.csv",
+  "observations": 1768840,
+  "unique_tickers": 499,
+  "first_date": "2011-01-03",
+  "last_date": "2025-12-30",
+  "positive_state_share": 0.7227589832884829,
+  "negative_state_share": 0.27716921824472535,
+  "positive_median_duration": 4.0,
+  "negative_median_duration": 3.0,
+  "conclusion": "Supported by evidence"
+}

@@ -1,0 +1,12 @@
+variable_name,required,definition,point_in_time_requirement
+security_id,true,"Permanent security identifier or ticker mapping","Must identify tradable security at accounting availability date"
+ticker,true,"Ticker symbol","Must be valid for availability date"
+fiscal_period_end,true,"Fiscal period end date","Used to anchor accounting observation"
+filing_date,false,"Actual filing/report date if available","If present, must be the historical filing date"
+revenue,true,"Reported revenue or sales","Must be accounting value available at or after filing/publication"
+cost_of_goods_sold,true,"Reported cost of goods sold","Must be accounting value available at or after filing/publication"
+total_assets,true,"Reported total assets","Must be accounting value available at or after filing/publication"
+accounting_availability_date,true,"Date construct becomes usable","Filing date + next trading day, or fiscal_period_end + 180 calendar days"
+gross_profit,true,"revenue - cost_of_goods_sold","Calculated from available accounting data"
+gross_profitability,true,"gross_profit / total_assets","Calculated only after accounting availability date"
+prof001_state,true,"PROFITABLE, UNPROFITABLE, NEUTRAL or INVALID","Available only after accounting availability date"

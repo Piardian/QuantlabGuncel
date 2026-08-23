@@ -1,0 +1,12 @@
+{
+  "study_id": "WPC-002",
+  "study_name": "Workflow Portfolio Construction Validation",
+  "status": "Completed",
+  "conclusion": "Portfolio Construction Supported",
+  "rebalance_periods": 179,
+  "accounting_checks_passed": true,
+  "gross_mean_spread": 0.005946163918105332,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "cost_adjusted_accounting_performed": false
+}

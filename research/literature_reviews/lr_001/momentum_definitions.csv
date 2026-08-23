@@ -1,0 +1,8 @@
+definition,construction,typical_horizon,literature_status,notes
+Cross-sectional momentum,"Rank a universe by prior return; long winners and short losers, commonly quantile portfolios.","3-12 months formation and roughly 3-12 months holding","Strong evidence","Canonical Jegadeesh-Titman family; results depend on universe, weighting, skip period, costs and rebalance design."
+12-1 momentum,"Rank on trailing 12-month return while omitting the most recent month.","12 months less 1 month","Strong evidence","A common academic implementation intended to reduce short-horizon reversal contamination."
+6-1 or 6-month momentum,"Rank on approximately six-month prior return, often with a one-month skip in academic variants.","6 months","Strong to moderate evidence","Frequent alternative to 12-1; exact construction is not universal."
+Time-series momentum,"For each asset, take exposure from the sign of its own past excess return rather than cross-sectional rank.","1-12 months","Strong evidence in diversified futures; equity-specific scope differs","Not the same construct as stock cross-sectional momentum."
+Residual momentum,"Rank factor-adjusted or residual returns rather than raw returns.","Often 6-12 months","Moderate evidence","Designed to separate raw momentum from common factor exposures; requires a factor model."
+Industry momentum,"Rank industries or use industry-relative returns.","Often 6-12 months","Moderate and context-dependent evidence","Different from stock-versus-benchmark relative return."
+Risk-adjusted momentum,"Scale return momentum by volatility or use risk-adjusted scores.","Often 6 and 12 months","Practitioner and implementation evidence","Common in index methodologies; not identical to canonical academic winner-minus-loser portfolios."

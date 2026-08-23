@@ -1,0 +1,3 @@
+source_id,source_name,source_role,zero_cost_status,access_type,actual_access_tested,result,notes
+FREE-S01,Alpaca Basic/free access,market_data_assets_corporate_actions,PUBLICLY_ADVERTISED_FREE,AUTHENTICATED_API,NO,FAILED_AUTH_REQUIRED,No Alpaca credential/account evidence available in environment.
+FREE-S02,Nasdaq Trader Symbol Directory,symbol_directory_security_reference,FREE_PUBLIC_WEB_FILE,PUBLIC_FILE,YES,PARTIAL_PUBLIC_REFERENCE_SOURCE,nasdaqlisted.txt and otherlisted.txt retrievable; not sufficient for OHLCV/corporate actions.

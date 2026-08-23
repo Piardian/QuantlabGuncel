@@ -1,0 +1,13 @@
+{
+  "hypothesis_level": {
+    "H1": "Supported by evidence",
+    "H2": "Partially supported",
+    "H3": "Supported by evidence",
+    "H4": "Supported by evidence"
+  },
+  "inconclusive_tests": 0,
+  "not_supported_tests": 0,
+  "partially_supported_tests": 2,
+  "rows_analyzed": 3712,
+  "supported_tests": 6
+}

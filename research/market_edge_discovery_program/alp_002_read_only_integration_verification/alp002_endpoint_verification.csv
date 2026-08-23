@@ -1,0 +1,8 @@
+endpoint,method,http_result,verification_result,record_count,secret_written,mutation_call,notes
+/v2/account,GET,PASS,PASS,1,NO,NO,safe account metadata only
+/v2/assets,GET,PASS,PASS,14226,NO,NO,active us_equity list
+/v2/assets/{symbol},GET,PASS,PASS,1,NO,NO,AAPL
+/v2/calendar,GET,PASS,PASS,5,NO,NO,frozen date range
+/v2/stocks/bars,GET,PASS,PASS,10,NO,NO,non-formal integration schema/count only
+/v2/positions,GET,PASS,PASS,0,NO,NO,zero positions acceptable
+/v2/corporate_actions,GET,HTTP_404,NOT_ENTITLED,1,NO,NO,optional/non-blocking; paper endpoint returned 404

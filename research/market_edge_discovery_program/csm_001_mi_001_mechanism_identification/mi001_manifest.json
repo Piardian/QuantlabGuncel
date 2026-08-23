@@ -1,0 +1,13 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "MI-001",
+  "source_state_file": "output/csm_001_cv001/csm001_construct_state.csv",
+  "valid_observations": 1768841,
+  "unique_tickers": 499,
+  "first_valid_date": "2011-01-03",
+  "last_valid_date": "2025-12-30",
+  "top_decile_rate": 0.10097685433569213,
+  "median_rank_persistence_21d": 0.899816734706864,
+  "median_rank_persistence_63d": 0.7162824873007934,
+  "classification": "cross-sectional relative leadership / intermediate-horizon winner-state construct"
+}

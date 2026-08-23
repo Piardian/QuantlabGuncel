@@ -1,0 +1,14 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "IM-001",
+  "status": "Successfully implemented",
+  "validation_status": "PASSED",
+  "deterministic_hash": "e3b1f6348935adb092e299fc54cd41b3bf309af282e6ab177dcbb40fd33244d9",
+  "frozen_parameter_guards": {
+    "formation_anchor_trading_days": 252,
+    "skip_period_trading_days": 21,
+    "direction_threshold": 0.0,
+    "volatility_scaling": "excluded"
+  },
+  "next_stage": "CV-001"
+}

@@ -1,0 +1,5 @@
+hypothesis,target_family,evaluated_horizons,supported_horizons,partially_supported_horizons,classification
+H1,future_realized_vol,"5,20,60",3,0,Supported by evidence
+H2,future_drawdown_risk,"5,20,60",3,0,Supported by evidence
+H3,future_liq_stress,"5,20,60",3,0,Supported by evidence
+H4,future_credit_stress,"5,20",2,0,Partially supported

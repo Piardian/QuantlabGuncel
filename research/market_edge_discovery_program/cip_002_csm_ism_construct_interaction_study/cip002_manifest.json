@@ -1,0 +1,13 @@
+{
+  "study_id": "CIP-002",
+  "study_name": "CSM-001 x ISM-001 Construct Interaction Study",
+  "status": "Completed",
+  "overall_conclusion": "Inconclusive",
+  "reason": "Frozen CSM-001 and ISM-001 artifacts do not share a common observation unit. ISM-001 is industry-month level and explicitly does not assign industries to individual securities.",
+  "new_construct_created": false,
+  "constructs_modified": false,
+  "parameters_optimized": false,
+  "trading_strategy_built": false,
+  "production_recommendation_performed": false,
+  "required_mapping_available": false
+}

@@ -1,0 +1,5 @@
+construct_id: FUND-001
+cp_series: DCPF3M
+tbill_series: DTB3
+normalization_window: 252
+output_dir: output/fund_001_validation

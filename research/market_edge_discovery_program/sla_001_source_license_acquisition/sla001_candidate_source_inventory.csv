@@ -1,0 +1,7 @@
+source_id,vendor,dataset_or_product,source_roles_considered,evidence_level,public_docs_url,local_access_evidence,decision
+SLA-S01,Databento,"Corporate Actions, Security Master, Equities Data","market_data;security_master;corporate_actions","PUBLIC_DOCUMENTATION_ONLY",https://databento.com/corporate-actions,NONE,UNAVAILABLE
+SLA-S02,Nasdaq Data Link / Sharadar,"Sharadar SEP/SFA/Core US Equities","market_data;security_master;corporate_actions","PUBLIC_DOCUMENTATION_ONLY",https://data.nasdaq.com/databases/SEP,NONE,UNAVAILABLE
+SLA-S03,Norgate Data,"US Equities Data","market_data;security_lifecycle;corporate_actions_partial","PUBLIC_DOCUMENTATION_ONLY",https://norgatedata.com/,NONE,UNAVAILABLE
+SLA-S04,Tiingo,"End-of-Day Stock Price API","market_data;corporate_actions_partial","PUBLIC_DOCUMENTATION_ONLY",https://www.tiingo.com/products/end-of-day-stock-price-data,NONE,UNAVAILABLE
+SLA-S05,Polygon / Massive,"Stocks API","market_data;reference_data;corporate_actions_partial","PUBLIC_DOCUMENTATION_ONLY",https://massive.com/legal/terms,NONE,UNAVAILABLE
+SLA-S06,WRDS / CRSP / Compustat,"Institutional Research Data Stack","market_data;security_master;corporate_actions","PRIOR_DSA_CANDIDATE_NO_ACCESS",LOCAL_PRIOR_DSA,NONE,UNAVAILABLE

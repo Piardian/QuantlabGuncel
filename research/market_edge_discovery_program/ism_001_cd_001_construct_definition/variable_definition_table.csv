@@ -1,0 +1,12 @@
+variable_name,required,definition,availability_requirement
+month,true,Month-end observation date,Must align with monthly industry returns
+industry_id,true,Stable industry portfolio identifier,Ken French 49 industry portfolio label
+industry_name,true,Human-readable industry name,Ken French 49 industry portfolio label
+industry_return,true,Monthly value-weighted industry portfolio return,Public Ken French industry portfolio data
+industry_return_12_1,true,Compounded return from t-12 through t-2,Uses historical industry returns only
+ism_rank,true,Cross-sectional rank of industry_return_12_1,Calculated within valid industries for the month
+ism_eligible_count,true,Number of valid industries in month,Must be at least 30 for a valid month
+ism_score,true,Percentile rank of industry_return_12_1,Bounded between 0 and 1
+ism_state,true,TOP_DECILE BOTTOM_DECILE MIDDLE or INVALID,Construct output
+ism_valid_observation,true,Boolean validity flag,True only when all required history exists and month passes minimum industry count
+

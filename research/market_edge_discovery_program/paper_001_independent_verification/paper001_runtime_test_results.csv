@@ -1,0 +1,17 @@
+Test,Command,Observed Result,Status,Broker Mutation Calls,Notes
+ALP-003 regression,"python scripts/alpaca_broker_adapter_tests.py","22 total, 22 passed; account/positions/open-orders/asset/calendar read PASS",PASS,0,Read-only Alpaca state accessed; no order mutation
+PAPER safety direct,"python scripts/paper_safety_tests.py","ModuleNotFoundError: No module named 'engine'",FAIL,0,Direct test command not reproducible without PYTHONPATH
+PAPER safety with PYTHONPATH,"$env:PYTHONPATH=(Get-Location).Path; python scripts/paper_safety_tests.py","Ran 7 tests in 0.001s OK",PASS,0,Only 7 unittest tests, not claimed 12/12
+Target portfolio synthetic 25 approved,"inline venv Python using scripts.exb003_prepare_frozen_250.target_portfolios","250 rows; 25 nonzero; sum 1.0; nonselected_nonzero 0",PASS,0,Offline function test only
+Target portfolio synthetic zero approved,"inline venv Python using target_portfolios","250 rows; 0 nonzero; sum 0.0",PASS,0,Cash behavior verified
+Target portfolio synthetic one approved,"inline venv Python using target_portfolios","250 rows; 1 nonzero; sum 1.0",PASS,0,Offline function test only
+Target portfolio TSM rejection,"inline venv Python using target_portfolios","250 rows; 0 nonzero; sum 0.0",PASS,0,TSM reject blocks target
+Target portfolio duplicate symbols,"inline venv Python using target_portfolios","3 rows; 2 nonzero; sum 2.0",FAIL,0,Duplicate symbol list not blocked
+Universe hash existing,"inline Python PaperSafetyManager.verify_universe_hash","existing membership True",PASS,0,Accepts canonical/current file
+Universe hash tampered,"inline Python PaperSafetyManager.verify_universe_hash","tampered membership False",PASS,0,Tamper rejected
+Universe hash missing,"inline Python PaperSafetyManager.verify_universe_hash","missing membership False",PASS,0,Missing file rejected
+Live environment guard,"inline Python PaperSafetyManager.verify_environment","paper True; live False",PASS,0,Offline only
+Kill switch truth table,"inline Python PaperSafetyManager.check_kill_switch","FALSE/FALSE block; TRUE/FALSE block; FALSE/TRUE block; TRUE/TRUE true in PAPER",PASS,0,Submission not tested
+String false guard,"inline Python PaperSafetyManager.check_kill_switch","'false'/'false' returned False",PASS,0,No string truthiness bug in this method
+Buying power NaN,"inline Python PaperSafetyManager.check_buying_power","NaN cases False",PASS,0,No full account aggregation tested
+Artifact hash verification,"inline Python over paper001_artifact_hashes.csv","claimed DUMMY != actual hashes",FAIL,0,Final artifact integrity claim unsupported

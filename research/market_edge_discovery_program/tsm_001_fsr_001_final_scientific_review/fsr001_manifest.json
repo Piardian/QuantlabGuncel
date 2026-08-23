@@ -1,0 +1,14 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "FSR-001",
+  "status": "Completed Construct",
+  "primary_category": "Risk-State / Own-Trend Construct",
+  "scientific_maturity": "Moderate-High",
+  "evidence_strength": "Moderate",
+  "mechanism_validity": "Supported by evidence",
+  "predictive_returns": "Not supported",
+  "predictive_volatility": "Supported by evidence",
+  "predictive_drawdown": "Supported by evidence",
+  "economic_utility": "Partially supported",
+  "production_readiness": "Not supported"
+}

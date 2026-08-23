@@ -1,0 +1,8 @@
+source_id,source_name,active_security_coverage,inactive_delisted_coverage,delisting_dates,delisting_returns_or_terminal_treatment,corporate_actions,survivorship_decision
+SRC-001,CRSP US Stock Databases,YES,YES,YES/PARTIAL,YES/PARTIAL,YES,Strong candidate for survivorship-aware US equity price/security master research
+SRC-002,Compustat Point in Time / Preliminary History / Unrestated Quarterly,YES,PARTIAL,NO,NO,PARTIAL,Strong for PIT fundamentals when paired with CRSP/CCM
+SRC-003,CRSP/Compustat Merged Database (CCM),YES,NO,NO,NO,NO,Essential bridge to avoid naive ticker/CUSIP historical joins
+SRC-004,I/B/E/S on WRDS,YES,NO,NO,NO,NO,Depends on link to CRSP/Compustat and historical IBES coverage
+SRC-005,GICS History,YES,PARTIAL,NO,NO,NO,Strong candidate for historical stock-to-industry bridge when licensed
+SRC-006,Sharadar Core US Equities / Nasdaq Data Link,YES,YES,YES/PARTIAL,NO,PARTIAL,Potentially acceptable for accessible US equities research but below CRSP/Compustat/IBES institutional standard
+SRC-007,Current Yahoo/current metadata/manual mappings,CURRENT_ONLY,NO,NO,NO,NO,Survivorship-biased for historical research

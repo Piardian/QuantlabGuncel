@@ -1,0 +1,14 @@
+{
+  "construct_id": "CSM-001",
+  "stage": "IM-001",
+  "status": "Successfully implemented",
+  "validation_status": "PASSED",
+  "deterministic_hash": "947b47a93527c0384dcfc75750d2cad2227dee03368c8e4d78b2e32dbf5d556c",
+  "frozen_parameter_guards": {
+    "formation_anchor_trading_days": 252,
+    "skip_period_trading_days": 21,
+    "top_decile_threshold": 0.9,
+    "minimum_eligible_count": 50
+  },
+  "next_stage": "CV-001"
+}

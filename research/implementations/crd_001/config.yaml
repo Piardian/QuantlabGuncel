@@ -1,0 +1,6 @@
+construct_id: CRD-001
+source_series: BAMLH0A0HYM2
+normalization_window: 252
+max_forward_fill_calendar_days: 5
+output_dir: output/crd_001_validation
+

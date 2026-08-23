@@ -1,0 +1,5 @@
+workflow_state,conflict_region,observations,coverage,ticker_count,year_count,minimum_sample_adequate
+CSM_HIGH_x_TSM_HIGH,False,178612,0.10097691142217498,481,15,True
+CSM_HIGH_x_TSM_LOW,True,0,0.0,0,0,False
+CSM_NOT_HIGH_x_TSM_HIGH,True,1099833,0.6217820718663079,498,15,True
+CSM_NOT_HIGH_x_TSM_LOW,False,490395,0.27724101671151713,498,15,True

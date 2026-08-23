@@ -1,0 +1,2 @@
+capture_label,security_id,ticker,exchange,security_type,active_status,source_timestamp_utc,ingestion_timestamp_utc,schema_version
+NON_FORMAL_TEST_CAPTURE,TESTSRC:NYSE:TEST:COMMON:2026-08-11,TEST,NYSE,COMMON_STOCK,ACTIVE,2026-08-11T21:30:00Z,2026-08-11T13:42:00.100279+00:00,PDC_SCHEMA_V1_DRAFT

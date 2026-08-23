@@ -1,0 +1,23 @@
+test_name,expected,observed,pass,notes
+broker_environment_paper,PASS,https://paper-api.alpaca.markets,YES,
+account_read,PASS,PASS,YES,
+positions_read,PASS,PASS,YES,
+open_orders_read,PASS,PASS,YES,
+asset_read,PASS,PASS,YES,
+calendar_read,PASS,PASS,YES,
+valid_buy_intent,SUBMISSION_BLOCKED_ALP003,SUBMISSION_BLOCKED_ALP003,YES,
+valid_sell_intent,SUBMISSION_BLOCKED_ALP003,SUBMISSION_BLOCKED_ALP003,YES,
+duplicate_intent,REJECTED_DUPLICATE,REJECTED_DUPLICATE,YES,
+zero_quantity,REJECTED_INVALID,REJECTED_INVALID,YES,INVALID_QUANTITY
+negative_quantity,REJECTED_INVALID,REJECTED_INVALID,YES,INVALID_QUANTITY
+malformed_intent,REJECTED_INVALID,REJECTED_INVALID,YES,INVALID_SIDE
+unknown_symbol,REJECTED_INVALID,REJECTED_INVALID,YES,UNKNOWN_ASSET
+non_tradable_asset,REJECTED_INVALID,REJECTED_INVALID,YES,ASSET_NOT_TRADABLE
+stale_intent,REJECTED_STALE_INTENT,REJECTED_STALE_INTENT,YES,STALE_INTENT
+market_closed,REJECTED_MARKET_SESSION,REJECTED_MARKET_SESSION,YES,MARKET_SESSION_NOT_ELIGIBLE
+position_reconciliation_match,MATCH,MATCH,YES,
+position_reconciliation_mismatch,QUANTITY_MISMATCH,QUANTITY_MISMATCH,YES,
+zero_position_reconciliation,MATCH_OR_EMPTY,"{""__EMPTY__"": ""MATCH""}",YES,
+order_reconciliation_intent_only,INTENT_ONLY,INTENT_ONLY,YES,
+kill_switch_rejection,BLOCKED,BLOCKED,YES,
+live_environment_rejection,BLOCKED,BLOCKED,YES,

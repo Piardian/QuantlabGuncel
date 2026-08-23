@@ -1,0 +1,18 @@
+{
+  "study_id": "DRM-001",
+  "study_name": "Data Remediation Plan",
+  "program": "Market Edge Discovery Program",
+  "status": "Completed",
+  "conclusion": "Remediation Plan Registered",
+  "parent_baseline": "CSMxTSM_GROSS_RESEARCH_BASELINE_V1",
+  "triggering_audit": "DBA-001",
+  "triggering_audit_conclusion": "Audit Failed",
+  "strategy_rejected": false,
+  "historical_performance_evidence_rejected_pending_remediation": true,
+  "alpha_logic_change_allowed": false,
+  "performance_peeking_allowed": false,
+  "baseline_v1_preserved": true,
+  "next_authorized_stage": "Controlled data/bias remediation followed by BFL-002",
+  "rvp_authorized": false,
+  "production_authorized": false
+}

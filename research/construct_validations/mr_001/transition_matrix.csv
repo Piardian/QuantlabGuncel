@@ -1,0 +1,6 @@
+from_state,to_state,transition_probability,available,notes
+EXPANSION,EXPANSION,,no,Requires fitted HMM state sequence
+EXPANSION,STRESS,,no,Requires fitted HMM state sequence
+STRESS,EXPANSION,,no,Requires fitted HMM state sequence
+STRESS,STRESS,,no,Requires fitted HMM state sequence
+

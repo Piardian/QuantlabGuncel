@@ -1,0 +1,14 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "HV-001",
+  "overall_conclusion": "Supported by evidence",
+  "hypothesis_classifications": {
+    "H1": "Supported by evidence",
+    "H2": "Supported by evidence",
+    "H3": "Supported by evidence",
+    "H4": "Supported by evidence"
+  },
+  "valid_observations": 66112,
+  "unique_tickers": 493,
+  "next_stage": "PV-001"
+}

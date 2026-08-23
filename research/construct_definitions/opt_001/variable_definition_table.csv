@@ -1,0 +1,6 @@
+variable_name,role,source,fred_series,frequency,formula,units,interpretation,missing_rule
+opt001_vix_close,input_primary,FRED / Chicago Board Options Exchange,VIXCLS,Daily,raw value,Index points,Cboe VIX daily close; option-implied near-term S&P 500 volatility,Missing if source value unavailable or non-positive
+opt001_zscore_252d,normalized_state,Derived,N/A,Daily,(opt001_vix_close - trailing_252_valid_mean) / trailing_252_valid_std,Standard deviations,Implied volatility state relative to trailing one-year history,Missing until 252 valid observations and if rolling std is zero
+opt001_percentile_252d,normalized_state,Derived,N/A,Daily,percentile_rank(opt001_vix_close within trailing 252 valid observations),Percentile,Higher percentile means higher implied volatility state versus trailing history,Missing until 252 valid observations
+opt001_valid_observation_count_252d,diagnostic,Derived,N/A,Daily,count valid VIX observations in trailing window,Count,Lookback sufficiency diagnostic,Always reported when date exists
+opt001_data_quality_flag,diagnostic,Derived,N/A,Daily,rule-based flag,Category,Data quality status,Always reported

@@ -1,0 +1,27 @@
+{
+  "program_id": "ALP-001",
+  "program_name": "Alpaca Paper Access",
+  "stage_type": "OWNER_ACCESS_GATE",
+  "paper_endpoint": "https://paper-api.alpaca.markets",
+  "credential_available": "YES",
+  "authenticated_account_request": "PASS",
+  "account_verified": "YES_ACTIVE",
+  "account_status": "ACTIVE",
+  "trading_blocked": false,
+  "transfers_blocked": false,
+  "account_blocked": false,
+  "alpha_logic_changed": "NO",
+  "performance_evaluation_performed": "NO",
+  "performance_peeking_detected": "NO",
+  "scientific_t0_established": "NO",
+  "overall_decision": "ALPACA_ACCESS_VERIFIED",
+  "alp002_authorized": "YES",
+  "exb001_authorized": "NO",
+  "paper001_authorized": "NO",
+  "production_authorized": "NO",
+  "authorized_next_action": "ALP-002_READ_ONLY_INTEGRATION"
+  ,
+  "security_incident": "ALP001-SEC-001",
+  "security_incident_status": "OPEN_OWNER_ROTATION_RECOMMENDED",
+  "verification_helper": "scripts/alpaca_verify_account.py"
+}

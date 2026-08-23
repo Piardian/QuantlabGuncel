@@ -1,0 +1,5 @@
+interaction_state,status,observation_count,evaluable,reason
+CSM_HIGH_x_ISM_HIGH,NOT_EVALUATED,,False,No frozen ticker-to-industry mapping exists
+CSM_HIGH_x_ISM_LOW,NOT_EVALUATED,,False,No frozen ticker-to-industry mapping exists
+CSM_LOW_x_ISM_HIGH,NOT_EVALUATED,,False,No frozen ticker-to-industry mapping exists
+CSM_LOW_x_ISM_LOW,NOT_EVALUATED,,False,No frozen ticker-to-industry mapping exists

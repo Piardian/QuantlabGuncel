@@ -1,0 +1,8 @@
+audit_domain,status
+Universe integrity,FAIL
+Survivorship integrity,FAIL
+Point-in-time integrity,PARTIAL
+Execution timing integrity,PASS
+Corporate actions integrity,PARTIAL
+Liquidity/tradability integrity,PARTIAL
+Data integrity,PARTIAL

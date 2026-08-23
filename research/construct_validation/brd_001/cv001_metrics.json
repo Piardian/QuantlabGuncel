@@ -1,0 +1,26 @@
+{
+  "bounds_valid": true,
+  "coverage_mean": 0.9293766688591265,
+  "coverage_min": 0.8330019881,
+  "eligible_max": 497,
+  "eligible_min": 419,
+  "end_date": "2025-12-30",
+  "failed_yahoo_symbols_observed": [
+    "BRK.B",
+    "HONA",
+    "BF.B",
+    "FDXF"
+  ],
+  "first_normalized_date": "2011-10-14",
+  "first_valid_date": "2010-10-18",
+  "normalized_observations": 3573,
+  "output_sha256": "4de3a99bf5e49e2d5e942f2c8a58ee5ef193f006000edffa22f8f4413c338c82",
+  "pct_max": 0.958677686,
+  "pct_mean": 0.6656867758079261,
+  "pct_median": 0.7068965517,
+  "pct_min": 0.03541666667,
+  "percentile_bounds_valid": true,
+  "rows_total": 4023,
+  "start_date": "2010-01-04",
+  "valid_observations": 3824
+}

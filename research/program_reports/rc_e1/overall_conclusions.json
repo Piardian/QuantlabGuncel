@@ -1,0 +1,36 @@
+{
+  "experiment_id": "RC-E1",
+  "supported_hypotheses": [],
+  "not_supported_hypotheses": [
+    "EMA200 Price has measurable and consistent positive contribution within the evaluated production architecture.",
+    "EMA200 Slope has measurable and consistent positive contribution within the evaluated production architecture.",
+    "ATR Expansion has measurable and consistent positive contribution within the evaluated production architecture.",
+    "The current Breakout Confirmation implementation has measurable and consistent positive contribution within the evaluated production architecture.",
+    "EMA200 Price and EMA200 Slope have economically meaningful performance-quality interaction within the evaluated production architecture.",
+    "ATR Expansion and Breakout Confirmation have economically meaningful performance-quality interaction within the evaluated production architecture."
+  ],
+  "inconclusive_hypotheses": [
+    "Relative Strength has independent contribution within the evaluated production architecture.",
+    "Leadership Quality has independent contribution within the evaluated production architecture.",
+    "Production-selected entry feature associations are generally reproducible out of sample."
+  ],
+  "internal_consistency": "The completed RC-A through RC-D findings are mutually consistent when experimental filter effects, observational selected-trade associations, and limited OOS reproducibility are kept distinct.",
+  "principal_validity_threats": [
+    "Current-constituent universe survivorship bias",
+    "Independent single-symbol rather than shared-portfolio simulation",
+    "Modeled execution, commission, and slippage assumptions",
+    "Selection bias in RC-C",
+    "One partial-year OOS window with insufficient symbol-level sample sizes",
+    "Multiple hypothesis testing",
+    "No paper-trading or live validation"
+  ],
+  "required_evidence_before_scientifically_justified_production_redesign": [
+    "A preregistered, scoped hypothesis with a controlled experimental design",
+    "Independent multi-period out-of-sample replication",
+    "Adequate symbol-level and time-period sample coverage",
+    "A shared-capital portfolio simulation with documented execution assumptions",
+    "Robustness to realistic transaction costs and slippage",
+    "Paper-trading evidence and, separately, live-execution validation"
+  ],
+  "scope": "Evidence synthesis only. No causal, universal, production-performance, or redesign recommendation is made."
+}

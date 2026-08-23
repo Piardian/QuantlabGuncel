@@ -1,0 +1,5 @@
+use_case,policy,classification
+UC-1,VOL001_RISK_BUDGET,Supported by evidence
+UC-2,VOL001_VOL_TARGET,Partially supported
+UC-3,VOL001_DERISKING,Not supported
+UC-4,VOL001_PORTFOLIO_RISK_CONTROL,Supported by evidence

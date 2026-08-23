@@ -1,0 +1,12 @@
+variable,include,source_series,frequency,definition,role,notes
+SPY close,yes,SPY daily close,daily,Adjusted daily close used to compute returns,primary input,Market proxy
+Daily log return,yes,SPY close,daily,ln(SPY_t / SPY_{t-1}),primary input,State-defining variable
+20-day realized volatility,yes,SPY returns,daily,Annualized standard deviation of last 20 daily log returns,primary input,State-defining variable
+Posterior state probability,yes,HMM output,daily,P(S_t=k | X_1...X_t),output,Used for regime assignment
+Regime label,yes,HMM output,daily,Argmax posterior state assignment,output,Expansion or Stress
+Breadth,no,not used,n/a,n/a,excluded,Supported in literature but omitted for reproducibility
+Liquidity,no,not used,n/a,n/a,excluded,Supported in literature but omitted for reproducibility
+Credit stress,no,not used,n/a,n/a,excluded,Broadens construct beyond the selected definition
+Macro variables,no,not used,n/a,n/a,excluded,More data-intensive and less standardized
+Cross-asset correlation,no,not used,n/a,n/a,excluded,Useful in literature but not needed for this construct
+Sector leadership,no,not used,n/a,n/a,excluded,Too specific for the official regime construct

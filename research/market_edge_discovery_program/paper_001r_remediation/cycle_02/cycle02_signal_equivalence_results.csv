@@ -1,0 +1,7 @@
+check,result,evidence
+frozen_csm_import_connected,PASS,Paper controller imports CSM001MomentumModel from research/implementations/csm_001.
+frozen_tsm_import_connected,PASS,Paper controller imports TSM001MomentumModel from research/implementations/tsm_001 with feature_pipeline cache isolation.
+csm_threshold_invariant,PASS,Controller blocks CSM_THRESHOLD_INVARIANT_FAILURE; live readiness incidents empty; signal tests pass.
+current_bar_boundary,PASS,Incomplete current-session daily bar is excluded; true future-dated bar blocks.
+candidate_target_equivalence,PASS,paper_signal_pipeline_tests validates target generation from current CSM candidates and TSM approvals.
+snapshot_free_equivalence_path,PASS,Production test config uses target_path=None; readiness/E2E generated targets from Alpaca daily bars.

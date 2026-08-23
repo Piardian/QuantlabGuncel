@@ -1,0 +1,17 @@
+{
+  "study_id": "BFL-001",
+  "study_name": "Baseline Freeze & Research Ledger",
+  "status": "Completed",
+  "conclusion": "Baseline Frozen",
+  "baseline_name": "CSMxTSM_GROSS_RESEARCH_BASELINE_V1",
+  "current_classification": "Provisionally research-supported momentum leadership workflow + risk construct library",
+  "primary_workflow": "CSM-001 x TSM-001",
+  "artifacts_registered": 18,
+  "missing_artifacts": 0,
+  "constructs_modified": false,
+  "workflow_modified": false,
+  "optimization_performed": false,
+  "performance_test_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "DBA-001 Data & Bias Audit"
+}

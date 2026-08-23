@@ -1,0 +1,21 @@
+{
+  "study_id": "WOR-001",
+  "study_name": "Workflow Out-of-Sample Reproducibility Protocol",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "stage_type": "Protocol Registration",
+  "prior_final_review": "CWF-001",
+  "prior_final_classification": "Scientifically Supported Nested Composite Workflow",
+  "statistical_analysis_performed": false,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "WOR-002",
+  "oos_start_after": "2025-12-30",
+  "allowed_next_stage_conclusions": [
+    "Reproduced",
+    "Partially Reproduced",
+    "Not Reproduced",
+    "Inconclusive"
+  ]
+}

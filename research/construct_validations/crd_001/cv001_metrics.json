@@ -1,0 +1,17 @@
+{
+  "construct_id": "CRD-001",
+  "final_conclusion": "Partially supported",
+  "rows": 781,
+  "start_date": "2023-07-31",
+  "end_date": "2026-07-27",
+  "raw_observations": 781,
+  "normalized_observations": 530,
+  "source_missing_flags": 0,
+  "raw_mean": 3.172842509603073,
+  "raw_min": 2.59,
+  "raw_max": 4.61,
+  "zscore_mean": -0.4856423970012558,
+  "zscore_std": 1.0669312209693285,
+  "deterministic_repeated_transform": true,
+  "primary_limitation": "Current FRED graph download covers 2023-07-31 through 2026-07-27, limiting long-horizon and crisis-period validation."
+}

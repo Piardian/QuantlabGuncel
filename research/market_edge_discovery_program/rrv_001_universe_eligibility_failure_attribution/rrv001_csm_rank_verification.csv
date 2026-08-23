@@ -1,0 +1,4 @@
+rebalance_signal_date,eligible_count,return_12_1_non_null,rank_min,rank_max,count_ge_090,nan_score_count,ranking_mechanics
+2024-12-31,54,54,0.0,1.0,6,46,PASS
+2025-11-28,51,51,0.0,1.0,6,49,PASS
+2026-08-11,55,55,0.0,1.0,6,45,PASS

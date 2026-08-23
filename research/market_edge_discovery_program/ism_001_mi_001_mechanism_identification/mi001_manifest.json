@@ -1,0 +1,12 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "MI-001",
+  "classification": "Mechanism identified",
+  "primary_mechanism": "Industry-level cross-sectional intermediate-horizon leadership / laggard state",
+  "valid_observations": 55285,
+  "unique_industries": 49,
+  "median_monthly_p90_p10_formation_return_spread": 0.36429908069709427,
+  "top_decile_retention": 0.7254139912132477,
+  "bottom_decile_retention": 0.7335248394727949,
+  "next_stage": "HV-001"
+}

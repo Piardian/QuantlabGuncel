@@ -1,0 +1,4 @@
+state,run_count,unique_tickers,mean_duration_trading_days,median_duration_trading_days,p10_duration_trading_days,p90_duration_trading_days,max_duration_trading_days,mean_run_tsm_return_12_1
+NEGATIVE,22980,498,21.33455178416014,3.0,1.0,51.0,720,-0.038991978473871085
+NEUTRAL,126,67,1.007936507936508,1.0,1.0,1.0,2,0.0
+POSITIVE,23178,499,55.157692639572005,4.0,1.0,169.0,2095,0.06865564135845648

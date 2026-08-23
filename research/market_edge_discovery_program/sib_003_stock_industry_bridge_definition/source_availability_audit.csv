@@ -1,0 +1,7 @@
+required_source,status,found_path,usable_for_bridge,notes
+Ken_French_49_industry_returns,FOUND,data/ism_001/ken_french_49_industry_value_weighted_monthly.csv,False,Industry returns exist but do not assign tickers to industries
+Point_in_time_stock_level_SIC,NOT_FOUND,,False,Required for preferred SIC-to-FF49 bridge
+CRSP_Compustat_security_master,NOT_FOUND,,False,No licensed historical security master present
+Point_in_time_GICS_history,NOT_FOUND,,False,Secondary candidate unavailable and would require translation validation
+Ticker_to_FF49_bridge,NOT_FOUND,,False,No frozen mapping artifact exists
+Current_metadata,AVAILABLE_IN_PRINCIPLE_NOT_USED,,False,Rejected by SIB-001/SIB-002 due look-ahead risk

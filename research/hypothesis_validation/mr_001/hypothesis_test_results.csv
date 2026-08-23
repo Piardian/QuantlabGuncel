@@ -1,0 +1,8 @@
+hypothesis,comparison,statistic_name,statistic_value,p_value,classification
+H1,STRESS vs EXPANSION,volatility_mean_ratio,2.586913435114799,,Supported by evidence
+H1,STRESS vs EXPANSION,volatility_mean_difference,0.17748524714361716,,Supported by evidence
+H2,STRESS vs EXPANSION,drawdown_mean_difference,-0.10759079033205307,,Supported by evidence
+H2,STRESS vs EXPANSION,worst_drawdown_difference,-0.1992783026243302,,Supported by evidence
+H3,STRESS vs EXPANSION,posterior_state_separation_mean_max,0.018426296650731665,,Supported by evidence
+H4,EXPANSION vs STRESS,posterior_state_separation_mean_max,0.018426296650731665,,Supported by evidence
+

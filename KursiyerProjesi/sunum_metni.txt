@@ -1,0 +1,140 @@
+================================================================================
+           KURSİYER PROJESİ — SUNUM METNİ
+================================================================================
+
+Hocam merhaba, ben bu projemde Java'da kalıtım (inheritance) konusunu 
+bir kurs yönetim sistemi üzerinden uyguladım. Şimdi projeyi adım adım 
+anlatmak istiyorum.
+
+--------------------------------------------------------------------------------
+1. PROJENİN AMACI
+--------------------------------------------------------------------------------
+
+Projemde farklı eğitim seviyelerindeki kursiyerlerin kurs ücretlerini 
+hesaplayan bir sistem tasarladım. Üç farklı kursiyer türü var:
+
+   - İlkokul Öğrencisi
+   - Lise Öğrencisi
+   - Yetişkin Öğrenci
+
+Her birinin alabileceği kurs farklı ve her birine farklı oranda 
+indirim uygulanıyor.
+
+--------------------------------------------------------------------------------
+2. SINIF YAPISI (Kursiyer.java — Ana Sınıf)
+--------------------------------------------------------------------------------
+
+İlk olarak ana sınıfımız olan Kursiyer sınıfını oluşturdum.
+Bu sınıfta kursiyerin adı, yaşı, kurs adı, eğitim seviyesi, 
+kurs ücreti ve indirim oranı gibi ortak alanlar tanımladım.
+
+İki tane metot yazdım:
+
+   • odenecekTutar() → Kurs ücretinden indirimi düşerek 
+     ödenecek tutarı hesaplıyor. Formülü şu şekilde:
+     
+        ödenecek = kursÜcreti - (kursÜcreti * indirimOranı)
+     
+     Mesela 1000 TL'lik bir kursa yüzde 50 indirim uygulanırsa 
+     500 TL çıkıyor.
+
+   • kursiyerBilgileri() → Kursiyerin tüm bilgilerini ve hesaplanan 
+     ödenecek tutarı tek bir String olarak döndürüyor.
+
+--------------------------------------------------------------------------------
+3. ALT SINIFLAR (Kalıtım / Inheritance)
+--------------------------------------------------------------------------------
+
+Ana sınıftan üç tane alt sınıf türettim. Hepsi "extends Kursiyer" 
+ile ana sınıftan miras alıyor:
+
+   a) IlkokulOgrencisi:
+      - Kurs adı: "Temel Eğitim"
+      - Eğitim seviyesi: "İlkokul"
+      - İndirim oranı: %50 (en yüksek indirim)
+      - Neden %50? Çünkü ilkokul çağındaki öğrencilere teşvik 
+        amaçlı daha fazla indirim uygulanıyor.
+
+   b) LiseOgrencisi:
+      - Kurs adı: "Akademik Destek"
+      - Eğitim seviyesi: "Lise"
+      - İndirim oranı: %30
+      - Lise öğrencilerine orta düzey bir indirim tanımladım.
+
+   c) YetiskinOgrenci:
+      - Kurs adı: "Mesleki Gelişim"
+      - Eğitim seviyesi: "Yetişkin"
+      - İndirim oranı: %10 (en düşük indirim)
+      - Yetişkinler çalışan bireyler olduğu için indirim oranı 
+        daha düşük tutuldu.
+
+Her alt sınıfın constructor'ında kullanıcıdan gelen ad, yaş ve 
+kurs ücreti bilgileri this anahtar kelimesiyle atanıyor, 
+sabit değerler ise doğrudan yazılıyor.
+
+--------------------------------------------------------------------------------
+4. MAIN SINIFI (Kullanıcı Girişi — Scanner)
+--------------------------------------------------------------------------------
+
+Main sınıfında Scanner kullanarak kullanıcıdan bilgileri alıyorum:
+
+   1. Önce kursiyerin adını soruyorum (nextLine ile)
+   2. Sonra yaşını soruyorum (nextInt ile)
+   3. Kurs ücretini soruyorum (nextDouble ile)
+   4. Son olarak kursiyer türünü seçtiriyorum:
+      - 1 girerse → İlkokul Öğrencisi oluşturuluyor
+      - 2 girerse → Lise Öğrencisi oluşturuluyor
+      - 3 girerse → Yetişkin Öğrenci oluşturuluyor
+      - Başka bir şey girerse → "Hatalı seçim" uyarısı veriyor
+
+Seçime göre ilgili alt sınıftan bir nesne oluşturuluyor ve 
+kursiyerBilgileri() metodu çağrılarak tüm bilgiler ekrana yazdırılıyor.
+
+--------------------------------------------------------------------------------
+5. ÖRNEK ÇALIŞTIRMA
+--------------------------------------------------------------------------------
+
+Programı çalıştırdığımızda şöyle bir akış oluyor:
+
+   > Kursiyer Adını Giriniz:
+   Ali
+   > Kursiyer Yaşını Giriniz:
+   9
+   > Kurs Ücretini Giriniz:
+   1000
+   > Kursiyer Türünü Seçiniz:
+   > 1- İlkokul Öğrencisi
+   > 2- Lise Öğrencisi
+   > 3- Yetişkin Öğrenci
+   1
+
+   Çıktı:
+   Ad: Ali, Yaş: 9, Seviye: İlkokul, Kurs: Temel Eğitim, 
+   Ücret: 1000.0, İndirim: %50.0, Ödenecek Tutar: 500.0
+
+--------------------------------------------------------------------------------
+6. KULLANILAN KAVRAMLAR
+--------------------------------------------------------------------------------
+
+Bu projede şu Java kavramlarını kullandım:
+
+   ✓ Kalıtım (Inheritance)  → Alt sınıflar ana sınıftan türetildi
+   ✓ extends anahtar kelimesi → Her alt sınıf Kursiyer'den miras alıyor
+   ✓ Constructor (Yapıcı metot) → Her alt sınıfta parametre alan constructor var
+   ✓ Metot tanımlama → odenecekTutar() ve kursiyerBilgileri()
+   ✓ return ile değer döndürme → Metotlar String ve double döndürüyor
+   ✓ Scanner sınıfı → Kullanıcıdan veri alma
+   ✓ if-else yapısı → Seçime göre farklı nesne oluşturma
+
+--------------------------------------------------------------------------------
+7. SONUÇ
+--------------------------------------------------------------------------------
+
+Projemde inheritance kavramını gerçek hayattan bir örnek üzerinde 
+gösterdim. Ana sınıftaki ortak alanlar ve metotlar bir kez yazıldı, 
+alt sınıflar sadece kendilerine özel değerleri tanımladı. 
+Bu sayede kod tekrarı önlenmiş oldu.
+
+Teşekkür ederim, sorularınız varsa yanıtlamak isterim.
+
+================================================================================

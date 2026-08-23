@@ -1,0 +1,2 @@
+csm_rows,tsm_rows,price_rows,price_columns,tickers,first_date,last_date,csm_valid_rate,tsm_valid_rate,csm_high_rate_valid,tsm_positive_rate_valid,price_missing_rate,duplicate_price_dates
+2023569,2023569,4023,503,503,2010-01-04,2025-12-30,0.8741194394656174,0.874118945289239,0.10097685433569213,0.7227589832884829,0.063607418378123,0

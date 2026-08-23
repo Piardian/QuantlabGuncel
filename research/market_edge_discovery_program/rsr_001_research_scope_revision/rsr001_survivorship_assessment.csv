@@ -1,0 +1,6 @@
+scope_id,contains_dead_securities,delistings_preserved,current_survivors_backfilled,survivorship_status,evidence
+RSR-A,NO/UNKNOWN,NO,YES,FAIL,Later start date does not fix missing delisted securities or PIT membership.
+RSR-B,NO/UNKNOWN,NO,YES,FAIL,A current known list cannot become historical membership.
+RSR-C,NO/UNKNOWN,NO,NO_FOR_FUTURE_ONLY,FAIL,No local security master exists.
+RSR-D,FUTURE_ONLY_IF_CAPTURED,TO_BE_CAPTURED,NO_FOR_FUTURE_ONLY,PARTIAL,No retrospective historical validation; evidence accumulates only after T0.
+RSR-E,NO/UNKNOWN,NO,YES,FAIL,"Only for hypothesis generation, debugging, pipeline testing and lineage."

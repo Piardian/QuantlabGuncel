@@ -1,0 +1,5 @@
+hypothesis,supported_metrics,partial_metrics,not_supported_metrics,inconclusive_metrics,classification
+H1,6,0,0,0,Supported by evidence
+H2,6,0,0,0,Supported by evidence
+H3,3,0,0,0,Supported by evidence
+H4,0,3,0,0,Inconclusive

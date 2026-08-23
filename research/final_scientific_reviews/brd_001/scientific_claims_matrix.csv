@@ -1,0 +1,18 @@
+claim_id,claim,classification,evidence_basis,scope_limit
+C1,Market Breadth is a recognized market-internals construct,Supported by evidence,"RP-001; LR-001","Literature support is stronger in practitioner literature than standardized academic definitions"
+C2,BRD-001 is precisely defined as 200-day moving-average breadth,Supported by evidence,"CD-001","Only this exact frozen construct is covered"
+C3,BRD-001 has deterministic implementation fidelity,Supported by evidence,"IM-001","Full-market output may change if Yahoo revises data"
+C4,BRD-001 produces bounded coherent breadth values,Supported by evidence,"CV-001","Fixed current universe limitation remains"
+C5,BRD-001 represents long-term cross-sectional trend participation,Supported by evidence,"MI-001; HV-001","Partly construct-internal because states use BRD-001 values"
+C6,BRD-001 represents internal market confirmation,Supported by evidence,"MI-001; HV-001","Same-day/trailing explanatory evidence"
+C7,BRD-001 predicts future realized volatility risk,Supported by evidence,"PV-001","SPY market proxy only; no economic claim from PV"
+C8,BRD-001 predicts future trend deterioration risk,Supported by evidence,"PV-001","SPY market proxy only; no economic claim from PV"
+C9,BRD-001 predicts future drawdown risk,Partially supported,"PV-001","Pooled evidence positive but cross-period evidence mixed"
+C10,BRD-001 predicts higher future returns,Not supported,"PV-001","Observed association did not support preregistered direction"
+C11,BRD-001 provides economic utility for risk budgeting,Supported by evidence,"EV-001 UC-1","Fixed non-optimized workflow only"
+C12,BRD-001 provides economic utility for volatility targeting,Supported by evidence,"EV-001 UC-2","Fixed non-optimized workflow only"
+C13,BRD-001 provides economic utility for trend deterioration risk control,Supported by evidence,"EV-001 UC-3","Strongest EV use case"
+C14,BRD-001 provides economic utility for portfolio risk control versus buy-and-hold,Partially supported,"EV-001 UC-4","Risk improved but CAGR penalty was material"
+C15,BRD-001 is an alpha or return-enhancement signal,Not supported,"PV-001; EV-001","No lifecycle evidence supports alpha classification"
+C16,BRD-001 is production-deployment ready,Inconclusive,"CC-001","Operational deployment was not evaluated"
+

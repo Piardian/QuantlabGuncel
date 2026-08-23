@@ -1,0 +1,4 @@
+account_size,liquidity_proxy_available,capacity_proxy_available,classification,reason
+100000,False,False,Inconclusive,Selected-name volume/dollar-volume panel unavailable for WER-002.
+1000000,False,False,Inconclusive,Selected-name volume/dollar-volume panel unavailable for WER-002.
+10000000,False,False,Inconclusive,Selected-name volume/dollar-volume panel unavailable for WER-002.

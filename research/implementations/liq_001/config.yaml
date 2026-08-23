@@ -1,0 +1,11 @@
+construct_id: LIQ-001
+start: 2010-01-01
+end: 2026-01-01
+timeframe: 1d
+universe_path: sp500_current_universe.csv
+max_symbols: 80
+smoothing_window: 20
+zscore_window: 252
+min_eligible_securities: 50
+output_dir: output/liq_001_validation
+

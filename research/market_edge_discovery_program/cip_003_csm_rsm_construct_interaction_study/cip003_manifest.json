@@ -1,0 +1,15 @@
+{
+  "study_id": "CIP-003",
+  "study_name": "CSM-001 x RSM-001 Construct Interaction Study",
+  "status": "Completed",
+  "overall_conclusion": "Mostly Redundant",
+  "common_observations": 66112,
+  "jaccard_similarity": 0.2838766692851532,
+  "score_spearman": 0.6573359885816463,
+  "csm_future_1m_spearman": -0.0026619496012136312,
+  "rsm_future_1m_spearman": -0.006494465266101362,
+  "constructs_modified": false,
+  "optimization_performed": false,
+  "trading_strategy_built": false,
+  "production_recommendation_performed": false
+}

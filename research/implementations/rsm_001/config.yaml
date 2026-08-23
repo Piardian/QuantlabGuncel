@@ -1,0 +1,21 @@
+construct_id: RSM-001
+construct_name: Fama-French 3-Factor Standardized 12-1 Residual Momentum Rank
+return_frequency: Monthly
+factor_model: Fama-French 3-factor
+required_factor_columns:
+  - MKT_RF
+  - SMB
+  - HML
+  - RF
+regression_window_months: 36
+minimum_observations: 24
+formation_window: 12-1
+formation_start_lag_months: 12
+formation_end_lag_months: 2
+residual_vol_window_months: 36
+top_decile_threshold: 0.90
+bottom_decile_threshold: 0.10
+monthly_returns_path: data/rsm_001/monthly_returns.csv
+factor_returns_path: data/rsm_001/fama_french_3_factor_monthly.csv
+output_path: output/rsm_001/rsm001_residual_momentum_state.csv
+

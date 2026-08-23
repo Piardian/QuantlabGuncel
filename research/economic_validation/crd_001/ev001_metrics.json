@@ -1,0 +1,11 @@
+{
+  "construct_id": "CRD-001",
+  "overall_classification": "Partially supported",
+  "supported_use_cases": 3,
+  "partially_supported_use_cases": 1,
+  "not_supported_use_cases": 0,
+  "analysis_rows": 508,
+  "analysis_start": "2024-07-17",
+  "analysis_end": "2026-07-27",
+  "primary_limitation": "Short sample limits robustness of economic utility assessment."
+}

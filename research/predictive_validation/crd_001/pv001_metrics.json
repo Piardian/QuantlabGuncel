@@ -1,0 +1,18 @@
+{
+  "construct_id": "CRD-001",
+  "overall_classification": "Partially supported",
+  "supported_hypotheses": 1,
+  "partially_supported_hypotheses": 1,
+  "not_supported_hypotheses": 2,
+  "inconclusive_hypotheses": 0,
+  "analysis_rows": 509,
+  "analysis_start": "2024-07-16",
+  "analysis_end": "2026-07-27",
+  "horizons": [
+    5,
+    20,
+    60
+  ],
+  "primary_predictor": "crd001_percentile_252d",
+  "primary_limitation": "Short 2024-2026 effective predictive sample limits cross-period and long-horizon validation."
+}

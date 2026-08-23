@@ -1,0 +1,4 @@
+ism_state,episodes,mean_duration_months,median_duration_months,p90_duration_months,max_duration_months
+BOTTOM_DECILE,1582,3.7439949431099873,2.0,10.0,34
+MIDDLE,3227,13.461109389525875,6.0,32.0,361
+TOP_DECILE,1630,3.6337423312883437,2.0,9.0,35

@@ -1,0 +1,12 @@
+{
+  "experiment_id": "example_ablate_breakout_v1",
+  "description": "Research-only single-component ablation example.",
+  "strategy_version": "leadership_expansion_v1",
+  "version": "1",
+  "research_notes": "Example manifest only; no backtest is run by this command.",
+  "component_overrides": {
+    "enable_breakout_confirmation": false
+  },
+  "expected_baseline": false,
+  "random_seed": null
+}

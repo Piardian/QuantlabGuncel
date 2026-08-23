@@ -1,0 +1,12 @@
+test,status,detail
+normal_input,PASS,"{""rows"": 640, ""valid"": 136}"
+insufficient_history,PASS,"{""rows"": 251, ""valid"": 0}"
+missing_observation,PASS,"{""rows"": 320, ""valid"": 66}"
+constant_price_series,PASS,"{""states"": [""NEUTRAL""], ""valid"": 68}"
+nan_input,PASS,"{""rows"": 320, ""valid"": 0}"
+duplicate_timestamps,PASS,"{""rows"": 319, ""unique_dates"": 319}"
+unsorted_dates,PASS,"{""monotonic"": true, ""rows"": 320}"
+multiple_securities,PASS,"{""tickers"": [""DOWN"", ""FLAT"", ""UP""]}"
+boundary_lookback,PASS,"{""first_valid"": ""2020-12-18"", ""rows"": 253, ""valid"": 1}"
+deterministic_replay,PASS,"{""hash"": ""F73CB24962037650B67611F0DAFABFE3FA5D9CDD288ED59D1770EA9EFF5BF819""}"
+golden_case,PASS,"{""expected_return_12_1"": 2.31, ""observed_return_12_1"": 2.31, ""state"": ""POSITIVE""}"

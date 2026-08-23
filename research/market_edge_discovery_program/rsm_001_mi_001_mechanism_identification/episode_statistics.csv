@@ -1,0 +1,4 @@
+rsm_state,episodes,mean_duration_months,median_duration_months,p90_duration_months,max_duration_months
+BOTTOM_DECILE,2151,3.105067410506741,2.0,7.0,26
+MIDDLE,4626,11.40380458279291,7.0,27.0,111
+TOP_DECILE,2179,3.065167508031207,2.0,7.0,19

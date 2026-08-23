@@ -1,0 +1,12 @@
+{
+  "construct_id": "TSM-001",
+  "stage": "RP-001",
+  "construct_name": "Time-Series Momentum",
+  "decision": "GO",
+  "scientific_importance": "High",
+  "literature_maturity": "High",
+  "construct_independence": "High",
+  "constructability": "High",
+  "expected_research_value": "High",
+  "next_stage": "LR-001"
+}

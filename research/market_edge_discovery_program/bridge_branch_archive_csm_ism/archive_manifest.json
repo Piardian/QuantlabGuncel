@@ -1,0 +1,12 @@
+{
+  "archive_id": "bridge_branch_archive_csm_ism",
+  "branch": "CSM-001 x ISM-001 stock-to-industry bridge",
+  "status": "Blocked",
+  "final_reason": "No valid point-in-time stock-level industry classification source is available in the repository.",
+  "new_analysis_performed": false,
+  "bridge_implemented": false,
+  "constructs_modified": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "resume_stage": "SIB-003-R Bridge Definition Restart after valid data acquisition"
+}

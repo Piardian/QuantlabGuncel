@@ -1,0 +1,14 @@
+{
+  "construct_id": "ISM-001",
+  "stage": "PV-001",
+  "overall_conclusion": "Supported by evidence",
+  "horizon_classifications": {
+    "1": "Supported by evidence",
+    "3": "Supported by evidence",
+    "6": "Supported by evidence",
+    "12": "Supported by evidence"
+  },
+  "valid_rows_with_any_future_outcome": 55233,
+  "unique_industries": 49,
+  "next_stage": "EV-001"
+}

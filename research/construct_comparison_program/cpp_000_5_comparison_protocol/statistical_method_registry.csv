@@ -1,0 +1,15 @@
+method_family,method,status,notes
+Data alignment,Exact date intersection,confirmatory,Primary sample alignment method for common-sample analyses.
+Data alignment,Pairwise maximum available sample,confirmatory,Allowed only for pairwise dependence; must be labeled separately from common sample.
+Transformation,Use frozen construct output plus preregistered standardized z-score for comparability,confirmatory,Standardization may not alter construct definitions.
+Dependence,Pearson correlation,confirmatory,Linear dependence.
+Dependence,Spearman rank correlation,confirmatory,Monotonic dependence.
+Dependence,Kendall tau,confirmatory_if_available,Rank robustness; may be skipped for dependency/performance constraints if documented.
+Dependence,Mutual information,confirmatory,Nonlinear information dependence; estimator fixed in CPP-001 implementation plan.
+Dependence,Distance correlation,confirmatory_if_available,Nonlinear dependence if available without introducing fragile dependencies.
+Conditional,Partial correlation,confirmatory,Relationship between two constructs conditional on remaining constructs.
+Incremental,Nested model delta metric,confirmatory,Delta R2/log-loss/Brier according to target type; no trading target.
+Multivariate,PCA/factor loading,confirmatory,"Information structure and clustering, not construct replacement."
+Lead-lag,Cross-correlation over fixed lags,confirmatory,"Temporal association only, not causality."
+Robustness,Rolling window stability,confirmatory,"Windows preregistered: 252, 756, and 1260 observations where available."
+Multiple testing,Benjamini-Hochberg FDR q=0.05,confirmatory,Primary correction method.

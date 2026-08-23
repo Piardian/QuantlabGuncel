@@ -1,0 +1,13 @@
+{
+  "construct_id": "RSM-001",
+  "stage": "RP-001",
+  "construct_name": "Residual Momentum",
+  "decision": "GO",
+  "scientific_importance": "High",
+  "literature_maturity": "Moderate-High",
+  "construct_independence": "Moderate-High",
+  "expected_research_value": "High",
+  "data_feasibility_risk": "Moderate",
+  "primary_risk": "Residualization model and regression-window discretion",
+  "next_stage": "LR-001"
+}

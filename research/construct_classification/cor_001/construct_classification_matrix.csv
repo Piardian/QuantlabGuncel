@@ -1,0 +1,17 @@
+dimension,classification,evidence_status,notes
+Primary category,Market Correlation / Co-Movement Construct,Supported by evidence,Measures average pairwise realized correlation across a fixed US equity universe
+Secondary category,Risk Management Construct,Supported by evidence,Economic utility supported in predefined risk-management workflows
+Construct validity,Valid market-correlation construct,Supported by evidence,CV-001 found bounded interpretable temporally varying values with sufficient coverage
+Mechanism validity,Market-wide synchronization / common co-movement stress,Supported by evidence,MI-001 and HV-001 supported the mechanism
+Predictive realized volatility,Future volatility risk signal,Supported by evidence,PV-001 supported 20d and 60d realized volatility hypotheses
+Predictive breadth deterioration,Future breadth deterioration risk signal,Supported by evidence,PV-001 supported 20d and 60d breadth deterioration hypotheses
+Predictive correlation persistence,Future correlation persistence signal,Supported by evidence,PV-001 showed strongest evidence for persistence
+Predictive drawdown risk,Weak drawdown risk signal,Partially supported,PV-001 pooled direction supported but cross-period stability weak
+Economic utility,Diversification-risk budgeting and volatility targeting,Supported by evidence,UC-1 and UC-2 supported in EV-001
+Economic stress control,Correlation stress risk control,Partially supported,UC-3 full-sample favorable but weak cross-period robustness
+Portfolio de-risking support,Risk reduction with return penalty,Partially supported,UC-4 reduced risk but had material CAGR penalty
+Alpha signal,Not classified as alpha,Not supported,No evidence supports alpha generation
+Return enhancement,Not classified as return-enhancement construct,Not supported,EV-001 utility is risk management not return enhancement
+Production deployment,Not approved for deployment,Not supported,Operational review and live or paper validation remain required
+Scientific maturity,High,Supported by evidence,Full lifecycle completed through EV-001 with coherent evidence
+

@@ -1,0 +1,6 @@
+source_family,point_in_time_potential,stock_level_coverage,ken_french_49_compatibility,identifier_quality,licensing_risk,bias_risk,decision,notes
+CRSP_Compustat_Historical_SIC,High,High,High via SIC-to-FF49 mapping,High,High,Medium,Preferred conditional candidate,Requires licensed access and precise historical SIC policy
+Ken_French_49_Definitions,High taxonomy support,Not stock-level alone,Native taxonomy,Medium,Low,Low,Required mapping layer,Defines FF49 SIC buckets but does not provide CSM ticker membership
+GICS_History,High,High,Low without translation,High,High,Medium,Secondary candidate,Point-in-time but not native to Ken French 49
+Current_Metadata,Low,Medium,Low,Low,Low,High,Reject,Creates current-classification look-ahead risk
+Manual_Assignment,Low,Low,Low,Low,Low,High,Reject,Non-reproducible and discretionary

@@ -1,0 +1,21 @@
+{
+  "study_id": "WEV-001",
+  "study_name": "Workflow Economic Validation Protocol",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "stage_type": "Protocol Registration",
+  "prior_oos_study": "WOR-002",
+  "prior_oos_conclusion": "Reproduced",
+  "statistical_analysis_performed": false,
+  "economic_analysis_performed": false,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "WEV-002",
+  "allowed_next_stage_conclusions": [
+    "Economic Utility Supported",
+    "Economic Utility Partially Supported",
+    "Economic Utility Not Supported",
+    "Inconclusive"
+  ]
+}

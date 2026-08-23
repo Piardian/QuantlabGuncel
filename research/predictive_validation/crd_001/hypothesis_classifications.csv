@@ -1,0 +1,5 @@
+hypothesis,classification,direction_count,ci_support_count,auc_support_count
+H1_future_market_realized_volatility,Partially supported,2,2,2
+H2_future_drawdown_risk,Not supported,0,0,0
+H3_future_credit_spread_widening,Not supported,0,0,0
+H4_future_equity_market_returns,Supported by evidence,3,3,2

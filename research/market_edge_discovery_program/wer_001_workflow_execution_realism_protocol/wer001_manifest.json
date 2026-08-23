@@ -1,0 +1,21 @@
+{
+  "study_id": "WER-001",
+  "study_name": "Workflow Execution Realism Protocol",
+  "workflow": "CSM-001 x TSM-001",
+  "status": "Completed",
+  "stage_type": "Protocol Registration",
+  "prior_final_review": "WFSR-001",
+  "prior_economic_conclusion": "Economic Utility Partially Supported",
+  "scope": "UC-3 only",
+  "empirical_analysis_performed": false,
+  "construct_modification_performed": false,
+  "optimization_performed": false,
+  "production_recommendation_performed": false,
+  "authorized_next_stage": "WER-002",
+  "allowed_next_stage_conclusions": [
+    "Execution Realism Supported",
+    "Execution Realism Partially Supported",
+    "Execution Realism Not Supported",
+    "Inconclusive"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "study_id": "DBA-001",
+  "study_name": "Data & Bias Audit",
+  "status": "Completed",
+  "conclusion": "Audit Failed",
+  "baseline": "CSMxTSM_GROSS_RESEARCH_BASELINE_V1",
+  "critical_findings": 2,
+  "major_findings": 2,
+  "minor_findings": 2,
+  "informational_findings": 1,
+  "baseline_reproducible": true,
+  "point_in_time_integrity": "PARTIAL",
+  "survivorship_integrity": "FAIL",
+  "execution_timing_integrity": "PASS",
+  "baseline_revision_required": true,
+  "constructs_modified": false,
+  "workflow_modified": false,
+  "performance_test_performed": false,
+  "optimization_performed": false,
+  "authorized_next_gate": "BFL-002 / Baseline V2 remediation required before RVP-001"
+}

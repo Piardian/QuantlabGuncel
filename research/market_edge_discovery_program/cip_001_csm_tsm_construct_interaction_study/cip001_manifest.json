@@ -1,0 +1,40 @@
+{
+  "study_id": "CIP-001",
+  "study_name": "CSM-001 x TSM-001 Construct Interaction Study",
+  "frozen_inputs": {
+    "csm_state": "output\\csm_001_cv001\\csm001_construct_state.csv",
+    "tsm_state": "output\\tsm_001_cv001\\tsm001_construct_state.csv",
+    "csm_fsr_manifest": "research\\market_edge_discovery_program\\csm_001_fsr_001_final_scientific_review\\fsr001_manifest.json",
+    "tsm_fsr_manifest": "research\\market_edge_discovery_program\\tsm_001_fsr_001_final_scientific_review\\fsr001_manifest.json"
+  },
+  "sample": {
+    "observations": 1768840,
+    "start_date": "2011-01-03",
+    "end_date": "2025-12-30",
+    "tickers": 499,
+    "years": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ]
+  },
+  "overall_conclusion": "Partially Complementary",
+  "non_goals_enforced": [
+    "No construct modification",
+    "No parameter optimization",
+    "No trading strategy construction",
+    "No production deployment recommendation"
+  ]
+}

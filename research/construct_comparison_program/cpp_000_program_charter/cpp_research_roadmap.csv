@@ -1,0 +1,13 @@
+phase,name,purpose
+CPP-000,Program Charter & Frozen Evidence Registry,Freeze program scope and evidence sources before any comparison.
+CPP-000.5,Comparison Protocol Registration,"Pre-register statistical methods, thresholds, missing-data policy, robustness rules, and interpretation standards."
+CPP-001,Data Inventory & Alignment Audit,"Audit construct output availability, common sample, missingness, and date alignment."
+CPP-002,Pairwise Dependence Mapping,"Measure pairwise linear, rank, and nonlinear dependence across frozen construct outputs."
+CPP-003,Incremental Information Analysis,Test whether each construct adds information beyond other constructs under preregistered models.
+CPP-003.5,Robustness & Sensitivity Analysis,"Evaluate stability across windows, periods, common/max samples, and bootstrap procedures."
+CPP-004,Redundancy & Orthogonality Classification,"Classify construct relationships as redundant, partially redundant, complementary, orthogonal, or inconclusive."
+CPP-005,Complementarity & Multivariate Information Analysis,Evaluate multivariate information structure and construct combinations without trading interpretation.
+CPP-006,Hierarchical / Lead-Lag Relationship Study,Analyze temporal ordering and upstream/downstream associations without causal claims.
+CPP-007,Information Architecture Synthesis,Build evidence-weighted construct ecosystem taxonomy from completed comparison evidence.
+CPP-007.5,Scientific Interpretation Review,"Audit interpretation quality, literature consistency, over-claiming, and causal-language violations."
+CPP-008,Final Construct Ecosystem Review,Produce the final Construct Information Matrix and ecosystem architecture.

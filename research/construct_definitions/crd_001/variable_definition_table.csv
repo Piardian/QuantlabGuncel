@@ -1,0 +1,19 @@
+variable,include,source_series,frequency,definition,role,notes
+High-yield OAS,yes,BAMLH0A0HYM2,daily,ICE BofA US High Yield Option-Adjusted Spread,primary input,Public FRED series used as frozen CRD-001 source
+CRD-001 raw spread,yes,BAMLH0A0HYM2,daily,Raw high-yield option-adjusted spread in percentage points,core output,Higher values indicate wider high-yield credit spreads
+Trailing observation window,yes,CRD-001 raw spread,daily,Trailing 252 valid observations,normalization window,Used only for descriptive state normalization
+CRD-001 z-score,yes,CRD-001 raw spread,daily,Trailing 252-valid-observation z-score,state output,No trading threshold implied
+CRD-001 percentile,yes,CRD-001 raw spread,daily,Percentile rank of current raw spread within trailing 252 valid observations,state output,Range 0 to 1
+Valid observation count,yes,CRD-001 raw spread,daily,Number of valid raw spread observations in trailing 252-observation normalization window,diagnostic output,Used for data-quality checks
+Days since last observation,yes,BAMLH0A0HYM2,daily,Calendar days since most recent non-missing source observation,diagnostic output,Forward-fill allowed only up to 5 calendar days
+Data quality flag,yes,BAMLH0A0HYM2,daily,VALID RAW_ONLY NORMALIZED_INVALID or SOURCE_MISSING,diagnostic output,Serializes implementation status for each date
+Investment-grade OAS,no,ICE BofA IG OAS,daily,Investment-grade corporate option-adjusted spread,excluded,Separate credit-quality segment from selected high-yield construct
+Baa-Treasury spread,no,BAA10Y,daily or monthly depending source,Moody's Baa yield relative to Treasury yield,excluded,Long-history alternative not selected as primary construct
+Baa-Aaa spread,no,Moody's Baa and Aaa yields,daily or monthly depending source,Lower-grade investment spread minus higher-grade investment spread,excluded,Rating-tier construct not selected
+CDS spreads,no,CDS index data,daily,Credit default swap spread measures,excluded,Data availability and contract conventions differ from selected public OAS construct
+Excess bond premium,no,Model-estimated spread component,varies,Non-default component of corporate bond spreads,excluded,Model-dependent construct reserved for separate study
+Default rates,no,Issuer default data,monthly or quarterly,Realized corporate default frequency,excluded,Outcome-like credit cycle measure rather than current spread stress proxy
+Financial stress index,no,Composite institutional index,weekly or daily,Broad financial stress composite containing credit and non-credit components,excluded,Mixes credit with volatility liquidity funding and safe-asset constructs
+Equity volatility,no,SPY or index volatility,daily,Realized or implied equity volatility,excluded,Separate VOL construct family
+Market liquidity,no,Liquidity indicators,varies,Trading cost or funding liquidity measures,excluded,Separate LIQ construct family
+
