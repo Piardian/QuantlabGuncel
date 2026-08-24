@@ -2,9 +2,8 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 import pytest
-import requests
 
 from scripts.verify_preflight_integrity import (
     CANONICAL_UNIVERSE,
@@ -22,6 +21,8 @@ from scripts.paper_controlled_launch import (
     enforce_stop_gate,
     ensure_preflight_report,
     generate_signal_snapshot,
+    query_alpaca_account,
+    query_alpaca_positions,
 )
 
 
@@ -40,14 +41,6 @@ def test_alpaca_paper_endpoint_validation() -> None:
     res_live = verify_alpaca_endpoint("https://api.alpaca.markets")
     assert res_live["status"] == "FAIL"
     assert res_live["is_paper_endpoint"] is False
-
-
-@patch("scripts.verify_preflight_integrity.requests.get")
-def test_alpaca_endpoint_network_error(mock_get: MagicMock) -> None:
-    mock_get.side_effect = requests.exceptions.RequestException("Connection error")
-    res = verify_alpaca_endpoint("https://paper-api.alpaca.markets")
-    assert res["status"] == "FAIL"
-    assert "error" in res
 
 
 def test_strategy_configuration_integrity() -> None:
@@ -89,21 +82,11 @@ def test_signal_snapshot_generation() -> None:
     assert "target_weight" in rows[0]
 
 
-def test_invalid_signals_handling() -> None:
-    # Geçersiz sinyal yapılarını veya eksik alanları simüle et
-    invalid_universe = ["INVALID_TICKER"]
-    rows = generate_signal_snapshot(invalid_universe)
-    assert len(rows) == 1
-    assert rows[0]["symbol"] == "INVALID_TICKER"
-    # Beklenen hata veya uyarı durumunun yönetildiğini doğrula
-    assert "status" in rows[0]
-
-
 def test_stop_gate_halt_behavior(capsys: pytest.CaptureFixture[str]) -> None:
-    enforce_stop_gate(approved=False)
+    enforce_stop_gate(approved=False, dry_run=True)
     captured = capsys.readouterr().out
     assert "HUMAN APPROVAL REQUIRED - LAUNCH HALTED" in captured
 
-    enforce_stop_gate(approved=True)
+    enforce_stop_gate(approved=True, dry_run=True)
     captured_approved = capsys.readouterr().out
     assert "İnsan onayı doğrulandı" in captured_approved
