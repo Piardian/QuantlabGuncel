@@ -1,0 +1,12 @@
+{
+  "program_id": "PAPER-002",
+  "description": "Canonical universe hash mapping for paper controlled launch",
+  "universe_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "symbols": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "AMZN",
+    "NVDA"
+  ]
+}
