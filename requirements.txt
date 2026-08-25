@@ -2,3 +2,6 @@ backtrader==1.9.78.123
 matplotlib>=3.8
 pandas>=2.2
 yfinance>=0.2.54
+requests>=2.31.0
+python-dotenv>=1.0.0
+numpy>=1.26.0
