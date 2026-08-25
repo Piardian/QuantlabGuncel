@@ -1,6 +1,6 @@
 # Python Backtesting ve Paper Trading Sistemi
 
-PAPER-002 Aşama A Düzeltmesi (STAGE A REMEDIATION — TIMING + BBBY DATA BLOCKER) gereksinimleri ve kısıtlamalarına uygun olarak gerçek `engine/paper_trading_controller.py` mantığını ve dondurulmuş 250'li evreni sentetik veri olmaksızın kullanan modüler yapı.
+PAPER-002 Aşama A Düzeltmesi (STAGE A REMEDIATION — TIMING + BBBY DATA BLOCKER) gereksinimleri ve kısıtlamalarına uygun olarak gerçek `engine/paper_trading_controller.py` mantığını, dondurulmuş 250'li evreni (BBBY hariç 249 geçerli sembol), T+1 zamanlama senkronizasyonunu ve sentetik veri olmaksızın çalışan modüler yapı.
 
 ## Yapı
 
@@ -18,7 +18,7 @@ py -m pip install -r requirements.txt
 
 ## Çalıştırma
 
-PAPER-002 kontrollü çalıştırma dry-run kontrolcüsünü çalıştırmak için:
+PAPER-002 kontrollü çalıştırma dry-run kontrolcüsünü ve STAGE A REMEDIATION REVIEW raporunu çalıştırmak için:
 
 ```powershell
 py run.py
