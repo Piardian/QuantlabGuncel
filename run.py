@@ -10,7 +10,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from engine.paper_trading_controller import PaperTradingController, PaperControllerConfig, result_to_dict
 
 def main() -> int:
-    print("PAPER-002 Aşaması: Gerçek Alpaca Paper Altyapısı ve Dondurulmuş 250'li Evren ile Kontrollü Çalıştırma Başlatılıyor...")
+    print("PAPER-002 Aşaması (STAGE A REMEDIATION — TIMING + BBBY DATA BLOCKER): Kontrollü Çalıştırma Başlatılıyor...")
     
     config = PaperControllerConfig()
     controller = PaperTradingController(config=config)
@@ -30,7 +30,7 @@ def main() -> int:
         print("Sistem kontrollü canlı kâğıt ticareti (paper trading) için tamamen hazır.")
         return 0
     else:
-        print("Sistem güvenlik korumaları veya zamanlama kuralları gereği bloklandı veya dry-run modunda.")
+        print("Sistem güvenlik korumaları, zamanlama kuralları veya veri engelleyiciler gereği bloklandı.")
         return 0
 
 if __name__ == "__main__":
