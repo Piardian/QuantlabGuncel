@@ -5,16 +5,23 @@ from dataclasses import asdict
 from pathlib import Path
 
 import backtrader as bt
+from fastapi import FastAPI
+
+import sys
 
 from config.settings import DEFAULT_CONFIG_PATH, BacktestConfig, load_config
 from data.yahoo_data import MarketDataRequest, YahooFinanceDataSource
 from engine.backtest_engine import BacktestEngine, BacktestRunResult
+from routers import router as api_router
 from strategies.leadership_expansion_v1 import LeadershipExpansionV1Strategy
 from strategies.mean_reversion_v1 import MeanReversionV1Strategy
 from strategies.relative_strength_pullback_v1 import RelativeStrengthPullbackV1Strategy
 from strategies.simple_trend import SimpleTrendStrategy
 from strategies.sma_crossover import SmaCrossoverStrategy
 from strategies.stock_v131.strategy import TrendFlowingStockV131Strategy
+
+app = FastAPI(title="Professional Stock Market Backtesting & PAPER-002 API", version="1.0.0")
+app.include_router(api_router)
 
 
 STRATEGY_REGISTRY = {
@@ -81,7 +88,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--enable-pullback-filter", type=bool, help="Toggle EMA20 pullback filter")
     parser.add_argument("--enable-momentum-trigger", type=bool, help="Toggle bullish momentum trigger")
     parser.add_argument("--enable-leadership-quality", type=bool, help="Toggle RS20/RS120 leadership quality filter")
-    return parser.parse_args()
+    return parser.parse_known_args()
 
 
 def merge_config(base_config: BacktestConfig, args: argparse.Namespace) -> BacktestConfig:
@@ -248,7 +255,7 @@ def build_resample_rules(config: BacktestConfig) -> list[dict[str, int]]:
 
 
 def main() -> None:
-    args = parse_args()
+    args, unknown = parse_args()
     base_config = load_config(args.config)
     config = merge_config(base_config, args)
 
@@ -298,4 +305,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "serve":
+        import uvicorn
+        uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    else:
+        main()
