@@ -12,6 +12,7 @@ import sys
 from config.settings import DEFAULT_CONFIG_PATH, BacktestConfig, load_config
 from data.yahoo_data import MarketDataRequest, YahooFinanceDataSource
 from engine.backtest_engine import BacktestEngine, BacktestRunResult
+from engine.paper_trading_controller import PaperControllerConfig, PaperTradingController
 from routers import router as api_router
 from strategies.leadership_expansion_v1 import LeadershipExpansionV1Strategy
 from strategies.mean_reversion_v1 import MeanReversionV1Strategy
@@ -88,13 +89,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--enable-pullback-filter", type=bool, help="Toggle EMA20 pullback filter")
     parser.add_argument("--enable-momentum-trigger", type=bool, help="Toggle bullish momentum trigger")
     parser.add_argument("--enable-leadership-quality", type=bool, help="Toggle RS20/RS120 leadership quality filter")
+    parser.add_argument("--paper-controller", action="store_true", help="Run paper trading controller dry-run diagnostics")
     return parser.parse_known_args()
 
 
 def merge_config(base_config: BacktestConfig, args: argparse.Namespace) -> BacktestConfig:
     values = asdict(base_config)
     for field_name, field_value in vars(args).items():
-        if field_name == "config" or field_value is None:
+        if field_name in {"config", "paper_controller"} or field_value is None:
             continue
         if field_name == "no_plot":
             if field_value:
@@ -102,8 +104,8 @@ def merge_config(base_config: BacktestConfig, args: argparse.Namespace) -> Backt
             continue
         values[field_name] = field_value
 
-    timeframe = values["timeframe"]
-    if timeframe not in SUPPORTED_TIMEFRAMES:
+    timeframe = values.get("timeframe")
+    if timeframe and timeframe not in SUPPORTED_TIMEFRAMES:
         raise ValueError(
             f"Unsupported timeframe '{timeframe}'. "
             f"Use one of: {', '.join(sorted(SUPPORTED_TIMEFRAMES))}."
@@ -256,6 +258,18 @@ def build_resample_rules(config: BacktestConfig) -> list[dict[str, int]]:
 
 def main() -> None:
     args, unknown = parse_args()
+    
+    if getattr(args, "paper_controller", False):
+        controller = PaperTradingController(config=PaperControllerConfig(trading_enabled=False, paper_execution_enabled=False))
+        result = controller.run_dry_run()
+        print(f"Paper Controller Dry-Run executed.")
+        print(f"Session ID: {result.paper_session_id}")
+        print(f"Readiness State: {result.readiness_state}")
+        print(f"Block Reason: {result.block_reason}")
+        print(f"Eligible Count: {result.eligible_count}")
+        print(f"Incidents: {result.incidents}")
+        return
+
     base_config = load_config(args.config)
     config = merge_config(base_config, args)
 
