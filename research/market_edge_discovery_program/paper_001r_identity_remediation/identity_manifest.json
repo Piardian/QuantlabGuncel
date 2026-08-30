@@ -1,0 +1,22 @@
+{
+  "program_id": "PAPER-001R",
+  "program_title": "Frozen Security Continuity & Corporate-Action Mapping Remediation",
+  "timestamp_utc": "2026-08-25T19:50:00Z",
+  "status": "VERIFIED_COMPLETED",
+  "environment": "PAPER",
+  "strategy_id": "CSM001xTSM001",
+  "strategy_hash": "45AF89FFDE96FA8B9A6DEBC3065EE6BC39E0DA2A494493AC107B53BF8F3993E3",
+  "universe_id": "FUF001_FREE_US_EQUITY_250_V1",
+  "universe_hash": "BC7879B3830C7327EB0A5779625A347C06826C47488F64326C7D0B2884CC741D",
+  "identity_registry_hash": "E77980C024FC670712964BCDC5FD4937050CB198E24368365E20A6F1EC21C724",
+  "tests_run": 102,
+  "tests_passed": 102,
+  "tests_failed": 0,
+  "broker_mutations": 0,
+  "orders_submitted": 0,
+  "orders_cancelled": 0,
+  "orders_replaced": 0,
+  "positions_closed": 0,
+  "paper_t0_established": "NO",
+  "scientific_t0_established": "NO"
+}

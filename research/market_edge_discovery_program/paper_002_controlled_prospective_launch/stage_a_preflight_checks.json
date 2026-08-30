@@ -1,0 +1,45 @@
+{
+  "broker_mutation_calls": 0,
+  "checks": {
+    "alpaca_endpoint_check": {
+      "credentials_configured": true,
+      "is_paper_endpoint": true,
+      "live_endpoint_blocked": true,
+      "paper_base_url": "https://paper-api.alpaca.markets",
+      "status": "PASS"
+    },
+    "canonical_universe_check": {
+      "expected_universe_hash_sha256": "BC7879B3830C7327EB0A5779625A347C06826C47488F64326C7D0B2884CC741D",
+      "membership_path": "C:\\Users\\piard\\Desktop\\backterster\\research\\market_edge_discovery_program\\fuf_001_free_exploratory_universe_freeze\\fuf001_frozen_membership.csv",
+      "status": "PASS",
+      "universe_hash_sha256": "BC7879B3830C7327EB0A5779625A347C06826C47488F64326C7D0B2884CC741D",
+      "universe_size": 250
+    },
+    "risk_guards_check": {
+      "errors": [],
+      "parameters": {
+        "max_daily_order_count": 50,
+        "max_gross_exposure": 1.1,
+        "max_order_notional": 100000.0,
+        "max_single_position_weight": 0.2
+      },
+      "status": "PASS"
+    },
+    "strategy_configuration_check": {
+      "csm_001": {
+        "verified": true
+      },
+      "expected_strategy_hash": "86EA1C067905B9AD1AAE714019057602B454D578361EC3B15B3A6B14569D32A7",
+      "status": "PASS",
+      "strategy_hash": "86EA1C067905B9AD1AAE714019057602B454D578361EC3B15B3A6B14569D32A7",
+      "strategy_id": "CSM001xTSM001",
+      "tsm_001": {
+        "verified": true
+      }
+    }
+  },
+  "overall_status": "PASS",
+  "program_id": "PAPER-002",
+  "stage": "STAGE_A_PREFLIGHT_INTEGRITY",
+  "timestamp_utc": "2026-08-25T16:02:19.501397+00:00"
+}

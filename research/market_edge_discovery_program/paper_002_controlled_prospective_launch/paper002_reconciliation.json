@@ -1,0 +1,11 @@
+{
+  "broker_mutation_calls": 0,
+  "open_order_count": 0,
+  "order_reconciliation_state": "PASS",
+  "orders_cancelled": 0,
+  "orders_replaced": 0,
+  "orders_submitted": 0,
+  "position_count": 0,
+  "position_reconciliation_state": "PASS",
+  "positions_closed": 0
+}

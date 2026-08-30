@@ -36,3 +36,4 @@ external_review_package.zip
 # OS/editor noise
 .DS_Store
 Thumbs.db
+.aider*

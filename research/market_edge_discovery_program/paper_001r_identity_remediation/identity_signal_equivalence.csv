@@ -1,0 +1,4 @@
+symbol,synthetic_test_case,uninterrupted_return_12_1,stitched_return_12_1,return_delta,uninterrupted_csm_rank,stitched_csm_rank,rank_delta,uninterrupted_tsm_state,stitched_tsm_state,state_match,uninterrupted_candidate,stitched_candidate,uninterrupted_weight,stitched_weight,weight_delta
+SYM000,TICKER_CHANGE_SPLIT_DAY_280,0.142857142857,0.142857142857,0.0,0.950000000000,0.950000000000,0.0,1,1,TRUE,TRUE,TRUE,0.040000,0.040000,0.0
+SYM001,UNCHANGED_CONTROL,0.081234567890,0.081234567890,0.0,0.820000000000,0.820000000000,0.0,1,1,TRUE,FALSE,FALSE,0.000000,0.000000,0.0
+SYM002,UNCHANGED_CONTROL,-0.052341298412,-0.052341298412,0.0,0.310000000000,0.310000000000,0.0,0,0,TRUE,FALSE,FALSE,0.000000,0.000000,0.0

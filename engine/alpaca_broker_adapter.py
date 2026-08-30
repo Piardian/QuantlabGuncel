@@ -15,6 +15,15 @@ from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo
+
+NY_TZ = ZoneInfo("America/New_York")
+
+
+def parse_ny_market_time(date_str: str, time_str: str) -> datetime:
+    t_clean = time_str.strip()[:5]
+    dt = datetime.strptime(f"{date_str} {t_clean}", "%Y-%m-%d %H:%M").replace(tzinfo=NY_TZ)
+    return dt.astimezone(timezone.utc)
 
 
 class BrokerMode(str, Enum):
@@ -377,8 +386,8 @@ class AlpacaBrokerAdapter:
         if row is None:
             return MarketSessionState.HOLIDAY
         try:
-            open_time = datetime.fromisoformat(f"{row['date']}T{row['open']}:00-04:00").astimezone(timezone.utc)
-            close_time = datetime.fromisoformat(f"{row['date']}T{row['close']}:00-04:00").astimezone(timezone.utc)
+            open_time = parse_ny_market_time(str(row["date"]), str(row["open"]))
+            close_time = parse_ny_market_time(str(row["date"]), str(row["close"]))
         except Exception:
             return MarketSessionState.UNKNOWN
         if current_time < open_time:
@@ -386,6 +395,30 @@ class AlpacaBrokerAdapter:
         if open_time <= current_time <= close_time:
             return MarketSessionState.MARKET_OPEN
         return MarketSessionState.POST_CLOSE
+
+    def next_market_session(self, calendar_rows: list[dict[str, Any]], after_date: str) -> str | None:
+        if not isinstance(calendar_rows, list):
+            return None
+        rows = sorted(calendar_rows, key=lambda item: str(item.get("date")))
+        for row in rows:
+            row_date = str(row.get("date"))
+            if row_date > after_date:
+                return row_date
+        return None
+
+    def current_or_next_trading_session(self, calendar_rows: list[dict[str, Any]], current_time: datetime) -> str | None:
+        if not isinstance(calendar_rows, list):
+            return None
+        current_date = current_time.date().isoformat()
+        row = next((item for item in calendar_rows if str(item.get("date")) == current_date), None)
+        if row is not None:
+            try:
+                close_time = parse_ny_market_time(str(row["date"]), str(row["close"]))
+                if current_time <= close_time:
+                    return current_date
+            except Exception:
+                pass
+        return self.next_market_session(calendar_rows, current_date)
 
     def reconcile_positions(self, internal_positions: dict[str, float], broker_positions: list[dict[str, Any]]) -> dict[str, str]:
         states: dict[str, str] = {}

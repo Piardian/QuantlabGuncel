@@ -52,13 +52,12 @@ class FakeAdapter(AlpacaBrokerAdapter):
         return "PASS", self._orders
 
     def get_calendar(self, start: str, end: str):
-        return "PASS", [
-            {"date": "2026-08-13", "open": "09:30", "close": "16:00"},
-            {"date": "2026-08-14", "open": "09:30", "close": "16:00"},
-        ]
+        dates = pd.bdate_range(start=start, end=end)
+        return "PASS", [{"date": d.date().isoformat(), "open": "09:30", "close": "16:00"} for d in dates]
 
     def get_daily_bars(self, symbols: list[str], start: str, end: str, *, feed: str = "iex", adjustment: str = "all"):
-        dates = pd.bdate_range(end="2026-08-14", periods=300)
+        end_date = end if end else "2026-08-14"
+        dates = pd.bdate_range(end=end_date, periods=275)
         bars: dict[str, list[dict]] = {}
         for idx, symbol in enumerate(symbols):
             symbol_dates = dates[:-1] if symbol == self._stale_symbol else dates
@@ -85,6 +84,8 @@ class TestPaper001R(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.tempdir.cleanup()
+        import gc
+        gc.collect()
 
     def controller(self, adapter: FakeAdapter | None = None, config: PaperControllerConfig | None = None) -> PaperTradingController:
         return PaperTradingController(config or self.config, adapter=adapter or FakeAdapter(audit_log_path=self.tmp / "order_audit.csv"))
@@ -133,11 +134,21 @@ class TestPaper001R(unittest.TestCase):
         self.assertNotEqual(compute_strategy_hash(), compute_strategy_hash(cfg))
 
     def test_normal_controller_dry_run(self) -> None:
-        result = self.controller().run_dry_run(now=datetime(2026, 8, 14, 21, 0, tzinfo=timezone.utc))
-        self.assertEqual(result.readiness_state, "READY_FOR_CONTROLLED_PAPER_LAUNCH")
-        self.assertFalse(result.submission_authorized)
-        self.assertEqual(result.block_reason, "DRY_RUN_BLOCK_EXECUTION_FLAGS_FALSE")
-        self.assertEqual(result.broker_mutation_calls, 0)
+        result_mid = self.controller().run_dry_run(now=datetime(2026, 8, 14, 21, 0, tzinfo=timezone.utc))
+        self.assertEqual(result_mid.identity_readiness_state, "PASS")
+        self.assertFalse(result_mid.monthly_rebalance_due)
+        self.assertEqual(result_mid.readiness_state, "WAITING_FOR_SCHEDULED_REBALANCE")
+        self.assertFalse(result_mid.submission_authorized)
+        self.assertEqual(result_mid.block_reason, "WAITING_FOR_SCHEDULED_MONTHLY_REBALANCE")
+        self.assertEqual(result_mid.broker_mutation_calls, 0)
+
+        result_end = self.controller().run_dry_run(now=datetime(2026, 9, 1, 14, 0, tzinfo=timezone.utc))
+        self.assertEqual(result_end.identity_readiness_state, "PASS")
+        self.assertTrue(result_end.monthly_rebalance_due)
+        self.assertEqual(result_end.readiness_state, "READY_FOR_CONTROLLED_PAPER_LAUNCH")
+        self.assertFalse(result_end.submission_authorized)
+        self.assertEqual(result_end.block_reason, "DRY_RUN_BLOCK_EXECUTION_FLAGS_FALSE")
+        self.assertEqual(result_end.broker_mutation_calls, 0)
 
     def test_candidate_counts_match_targets(self) -> None:
         result = self.controller().run_dry_run(now=datetime(2026, 8, 14, 21, 0, tzinfo=timezone.utc))
