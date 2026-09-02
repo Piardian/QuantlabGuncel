@@ -5,14 +5,14 @@ import importlib
 import json
 import os
 import sys
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 
-from engine.alpaca_broker_adapter import AlpacaBrokerAdapter, MarketSessionState, OrderIntent, parse_ny_market_time
+from engine.alpaca_broker_adapter import AlpacaBrokerAdapter, BrokerMode, MarketSessionState, OrderIntent, parse_ny_market_time
 from engine.paper_risk_guards import (
     EXPECTED_STRATEGY_HASH,
     EXPECTED_UNIVERSE_HASH,
@@ -196,7 +196,13 @@ class PaperTradingController:
         self.adapter = adapter
         self.identity_resolver = resolver or SecurityIdentityResolver(self.config.identity_registry_path)
 
-    def run_dry_run(self, *, now: datetime | None = None) -> ControllerResult:
+    def run_dry_run(
+        self,
+        *,
+        now: datetime | None = None,
+        broker: AlpacaBrokerAdapter | None = None,
+        target_signal_session: str | None = None,
+    ) -> ControllerResult:
         now = now or datetime.now(timezone.utc)
         session_id = self.paper_session_id(now)
         rebalance_id = self.latest_rebalance_id()
@@ -231,9 +237,9 @@ class PaperTradingController:
         if duplicate_members:
             incident("CRITICAL", "universe", "DUPLICATE_SYMBOL_DETECTED", ",".join(duplicate_members), "BLOCK")
 
-        broker = self.adapter or AlpacaBrokerAdapter.from_environment(audit_log_path=self.config.broker_audit_log_path)
+        broker = broker or self.adapter or AlpacaBrokerAdapter.from_environment(audit_log_path=self.config.broker_audit_log_path)
         calendar_status, calendar_payload = self.load_calendar(broker, now)
-        signal_session = self.latest_completed_session(calendar_payload, now) if calendar_status == "PASS" else None
+        signal_session = target_signal_session or (self.latest_completed_session(calendar_payload, now) if calendar_status == "PASS" else None)
         if signal_session is None:
             incident("HIGH", "calendar", "SCHEDULER_FAILURE", calendar_status, "BLOCK")
         rebalance_id = signal_session or rebalance_id
@@ -443,6 +449,86 @@ class PaperTradingController:
             open_order_count=len(open_orders) if isinstance(open_orders, list) else 0,
         )
 
+    def execute_paper_rebalance(
+        self,
+        now: datetime | None = None,
+        target_signal_session: str | None = None,
+    ) -> tuple[ControllerResult, list[dict[str, Any]]]:
+        now = now or datetime.now(timezone.utc)
+        self.config = replace(self.config, trading_enabled=True, paper_execution_enabled=True)
+
+        broker = self.adapter or AlpacaBrokerAdapter.from_environment(
+            audit_log_path=self.config.broker_audit_log_path,
+            broker_mode=BrokerMode.PAPER_MUTATION,
+            trading_enabled=True,
+        )
+
+        calendar_status, calendar_payload = self.load_calendar(broker, now)
+        signal_session = target_signal_session or (
+            self.latest_completed_monthly_signal_session(calendar_payload, now) if calendar_status == "PASS" else None
+        )
+
+        res = self.run_dry_run(now=now, broker=broker, target_signal_session=signal_session)
+        if not res.submission_authorized:
+            return res, []
+
+        membership = self.load_membership()
+        calendar_status, calendar_payload = self.load_calendar(broker, now)
+        target_check = self.build_current_signal_target(
+            broker,
+            membership,
+            res.signal_as_of_session,
+            now=now,
+            calendar_payload=calendar_payload if calendar_status == "PASS" else None,
+        )
+        target_weights = target_check.get("target_weights", {})
+        acc_status, account = broker.get_account()
+        equity = self.account_equity(account)
+        intents = self.build_order_intents(
+            broker,
+            target_weights,
+            target_check.get("latest_prices", {}),
+            res.rebalance_id,
+            now,
+            resolutions=target_check.get("resolutions", {}),
+        )
+
+        submission_results: list[dict[str, Any]] = []
+        for intent in intents:
+            status, payload = broker.submit_order(intent)
+            submission_results.append({
+                "intent_id": intent.intent_id,
+                "client_order_id": intent.client_order_id,
+                "symbol": intent.symbol,
+                "notional": intent.notional,
+                "submission_status": status,
+                "broker_order_id": (payload or {}).get("id", ""),
+                "broker_order_status": (payload or {}).get("status", ""),
+                "created_at": (payload or {}).get("created_at", datetime.now(timezone.utc).isoformat()),
+            })
+
+        orders_ok = len([r for r in submission_results if r["submission_status"] == "PASS"])
+        res.orders_submitted = orders_ok
+        res.paper_t0_established = "ESTABLISHED" if orders_ok > 0 else "NOT_ESTABLISHED"
+        res.broker_mutation_calls = broker.broker_mutation_calls
+
+        try:
+            from telegram_notifier import TelegramNotifier
+            notifier = TelegramNotifier()
+            if notifier.enabled and orders_ok > 0:
+                notifier.send_csm_tsm_execution_report(
+                    buys=orders_ok,
+                    sells=0,
+                    open_orders=orders_ok,
+                    positions=0,
+                    account_equity=equity,
+                    execution_state="COMPLETE" if orders_ok == len(intents) else "PARTIAL",
+                )
+        except Exception:
+            pass
+
+        return res, submission_results
+
     def paper_session_id(self, now: datetime) -> str:
         return f"PAPER-{now.astimezone(timezone.utc).date().isoformat()}-DRYRUN"
 
@@ -489,6 +575,29 @@ class PaperTradingController:
             if close_time <= now:
                 completed.append(str(row["date"]))
         return completed[-1] if completed else None
+
+    def latest_completed_monthly_signal_session(self, calendar_payload: Any, now: datetime) -> str | None:
+        if not isinstance(calendar_payload, list):
+            return None
+        completed_sessions = []
+        rows = sorted(calendar_payload, key=lambda item: str(item.get("date")))
+        for row in rows:
+            try:
+                close_time = parse_ny_market_time(str(row["date"]), str(row["close"]))
+            except Exception:
+                continue
+            if close_time <= now:
+                completed_sessions.append(str(row["date"]))
+
+        months = sorted(list({s[:7] for s in completed_sessions}))
+        month_ends = []
+        for m in months:
+            all_month_sessions = [str(r["date"]) for r in rows if str(r.get("date", "")).startswith(m)]
+            max_in_month = max(all_month_sessions) if all_month_sessions else None
+            if max_in_month and max_in_month in completed_sessions:
+                month_ends.append(max_in_month)
+
+        return month_ends[-1] if month_ends else (completed_sessions[-1] if completed_sessions else None)
 
     def earliest_permitted_execution_session(self, calendar_payload: Any, signal_session: str) -> str | None:
         if not isinstance(calendar_payload, list) or not signal_session:

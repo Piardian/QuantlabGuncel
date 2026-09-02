@@ -28,6 +28,7 @@ def parse_ny_market_time(date_str: str, time_str: str) -> datetime:
 
 class BrokerMode(str, Enum):
     DRY_RUN = "DRY_RUN"
+    PAPER_MUTATION = "PAPER_MUTATION"
 
 
 class MarketSessionState(str, Enum):
@@ -178,6 +179,41 @@ class AlpacaReadOnlyTransport:
                 return "NETWORK_FAIL", {"error": str(exc)}
         return "FAIL", {"error": "unreachable"}
 
+    def post_json(self, base_url: str, path: str, payload: dict[str, Any]) -> tuple[str, Any]:
+        data = json.dumps(payload).encode("utf-8")
+        headers = dict(self.headers)
+        headers["Content-Type"] = "application/json"
+        request = Request(f"{base_url}{path}", data=data, headers=headers, method="POST")
+        for attempt in range(1, 4):
+            try:
+                with urlopen(request, timeout=30) as response:
+                    body = response.read().decode("utf-8")
+                    return "PASS", json.loads(body) if body else None
+            except HTTPError as exc:
+                body = exc.read().decode("utf-8") if exc.fp else ""
+                try:
+                    error_data = json.loads(body) if body else {"error": exc.reason}
+                except Exception:
+                    error_data = {"error": exc.reason, "raw": body}
+                return f"HTTP_{exc.code}", error_data
+            except (URLError, TimeoutError) as exc:
+                if attempt < 3:
+                    time.sleep(attempt)
+                    continue
+                return "NETWORK_FAIL", {"error": str(exc)}
+        return "FAIL", {"error": "unreachable"}
+
+    def delete_json(self, base_url: str, path: str) -> tuple[str, Any]:
+        request = Request(f"{base_url}{path}", headers=self.headers, method="DELETE")
+        try:
+            with urlopen(request, timeout=30) as response:
+                body = response.read().decode("utf-8")
+                return "PASS", json.loads(body) if body else None
+        except HTTPError as exc:
+            return f"HTTP_{exc.code}", {"error": exc.reason}
+        except (URLError, TimeoutError) as exc:
+            return "NETWORK_FAIL", {"error": str(exc)}
+
 
 class AlpacaBrokerAdapter:
     """Dry-run Alpaca Paper adapter for canonical order intents.
@@ -220,14 +256,26 @@ class AlpacaBrokerAdapter:
                     writer.writeheader()
 
     @classmethod
-    def from_environment(cls, audit_log_path: Path | None = None) -> "AlpacaBrokerAdapter":
+    def from_environment(
+        cls,
+        audit_log_path: Path | None = None,
+        *,
+        broker_mode: BrokerMode | None = None,
+        trading_enabled: bool | None = None,
+    ) -> "AlpacaBrokerAdapter":
         repo_root = Path(__file__).resolve().parents[1]
         load_local_env(repo_root / ".env")
+        env_trading = os.environ.get("TRADING_ENABLED", "").strip().upper() in {"1", "TRUE", "YES"}
+        env_paper_exec = os.environ.get("PAPER_EXECUTION_ENABLED", "").strip().upper() in {"1", "TRUE", "YES"}
+        is_trading = (env_trading and env_paper_exec) if trading_enabled is None else trading_enabled
+        mode = (BrokerMode.PAPER_MUTATION if is_trading else BrokerMode.DRY_RUN) if broker_mode is None else broker_mode
         return cls(
             paper_base_url=os.environ.get("APCA_API_BASE_URL", "https://paper-api.alpaca.markets"),
             data_base_url=os.environ.get("APCA_DATA_BASE_URL", "https://data.alpaca.markets"),
             key_id=require_env("APCA_API_KEY_ID"),
             secret_key=require_env("APCA_API_SECRET_KEY"),
+            broker_mode=mode,
+            trading_enabled=is_trading,
             audit_log_path=audit_log_path,
         )
 
@@ -456,14 +504,46 @@ class AlpacaBrokerAdapter:
             }.get(status, ReconciliationState.UNKNOWN.value)
         return states
 
-    def submit_order(self, *_: Any, **__: Any) -> None:
-        raise BrokerMutationDisabled("submit_order disabled in ALP-003")
+    def submit_order(self, intent: OrderIntent) -> tuple[str, Any]:
+        if self.paper_base_url.rstrip("/") != "https://paper-api.alpaca.markets":
+            raise RuntimeError("CRITICAL_SAFETY_VIOLATION: Non-paper base URL detected during order submission")
+        if not self.trading_enabled:
+            raise BrokerMutationDisabled("submit_order disabled: trading_enabled is False")
+        if self.broker_mode != BrokerMode.PAPER_MUTATION:
+            raise BrokerMutationDisabled(f"submit_order disabled: broker_mode is {self.broker_mode}")
+
+        self.broker_mutation_calls += 1
+
+        payload: dict[str, Any] = {
+            "symbol": intent.symbol.upper(),
+            "side": intent.side.lower(),
+            "type": intent.order_type.lower(),
+            "time_in_force": intent.time_in_force.lower(),
+            "client_order_id": intent.client_order_id[:48],
+        }
+        if intent.notional is not None and float(intent.notional) > 0:
+            payload["notional"] = str(round(float(intent.notional), 2))
+        elif intent.quantity is not None and float(intent.quantity) > 0:
+            payload["qty"] = str(intent.quantity)
+        else:
+            raise ValueError(f"OrderIntent {intent.intent_id} has invalid notional/quantity")
+
+        status, response = self.transport.post_json(self.paper_base_url, "/v2/orders", payload)
+        recon_state = ReconciliationState.BROKER_ACCEPTED.value if status == "PASS" else ReconciliationState.REJECTED.value
+        err_code = "" if status == "PASS" else str((response or {}).get("error") or status)
+        self._write_audit_event(intent, "SUBMITTED" if status == "PASS" else "SUBMISSION_FAILED", recon_state, err_code)
+        return status, response
 
     def replace_order(self, *_: Any, **__: Any) -> None:
-        raise BrokerMutationDisabled("replace_order disabled in ALP-003")
+        raise BrokerMutationDisabled("replace_order disabled: only new market/day orders permitted")
 
-    def cancel_order(self, *_: Any, **__: Any) -> None:
-        raise BrokerMutationDisabled("cancel_order disabled in ALP-003")
+    def cancel_order(self, order_id: str) -> tuple[str, Any]:
+        if self.paper_base_url.rstrip("/") != "https://paper-api.alpaca.markets":
+            raise RuntimeError("CRITICAL_SAFETY_VIOLATION: Non-paper base URL detected during order cancellation")
+        if not self.trading_enabled or self.broker_mode != BrokerMode.PAPER_MUTATION:
+            raise BrokerMutationDisabled("cancel_order disabled: trading not authorized")
+        self.broker_mutation_calls += 1
+        return self.transport.delete_json(self.paper_base_url, f"/v2/orders/{order_id}")
 
     def _write_audit_event(self, intent: OrderIntent, validation_result: str, reconciliation_state: str, error_code: str) -> None:
         if not self.audit_log_path:
