@@ -57,7 +57,7 @@ def run_telegram_status(now: datetime | None = None, *, send_message: bool = Tru
                 target_weight=result.target_weight_sum,
                 identity_state=result.identity_readiness_state,
                 data_state=result.freshness_state,
-                earliest_execution=result.earliest_legitimate_execution_session,
+                earliest_execution=result.earliest_permitted_execution_session or result.execution_session,
                 orders_submitted=result.orders_submitted,
                 status="SIGNAL_READY_WAITING_FOR_T+1",
             )
