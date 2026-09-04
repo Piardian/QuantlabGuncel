@@ -39,6 +39,10 @@ def run_telegram_status(now: datetime | None = None, *, send_message: bool = Tru
     notifier = TelegramNotifier()
     msg_sent = False
 
+    calendar_status, calendar_payload = controller.load_calendar(broker, now)
+    latest_completed = controller.latest_completed_session(calendar_payload, now) if calendar_status == "PASS" else ""
+    is_rebalance_signal_day = controller.is_monthly_rebalance_signal_session(calendar_payload, latest_completed) if calendar_status == "PASS" else False
+
     if send_message and notifier.enabled:
         if result.readiness_state == "BLOCKED" and result.incidents:
             msg_sent = notifier.send_csm_tsm_block_alert(
@@ -47,7 +51,7 @@ def run_telegram_status(now: datetime | None = None, *, send_message: bool = Tru
                 block_reason=result.block_reason,
                 incidents=result.incidents,
             )
-        elif result.monthly_rebalance_due:
+        elif is_rebalance_signal_day:
             msg_sent = notifier.send_csm_tsm_monthly_signal(
                 signal_session=result.signal_as_of_session,
                 eligible_count=result.eligible_count,
@@ -68,11 +72,11 @@ def run_telegram_status(now: datetime | None = None, *, send_message: bool = Tru
                 positions_count=positions_count,
                 open_orders_count=open_orders_count,
                 system_state="PASS" if result.identity_readiness_state == "PASS" else "FAIL",
-                controller_state=result.readiness_state,
-                rebalance_due=result.monthly_rebalance_due,
+                controller_state="ACTIVE_HOLDING" if positions_count > 0 else result.readiness_state,
+                rebalance_due=False,
                 next_signal=result.next_legitimate_signal_session,
                 earliest_execution=result.earliest_legitimate_execution_session,
-                action_today="NONE",
+                action_today="HOLDING (25 POSITIONS ACTIVE)" if positions_count > 0 else "NONE",
             )
 
     return {

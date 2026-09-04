@@ -239,7 +239,17 @@ class PaperTradingController:
 
         broker = broker or self.adapter or AlpacaBrokerAdapter.from_environment(audit_log_path=self.config.broker_audit_log_path)
         calendar_status, calendar_payload = self.load_calendar(broker, now)
-        signal_session = target_signal_session or (self.latest_completed_session(calendar_payload, now) if calendar_status == "PASS" else None)
+        if target_signal_session:
+            signal_session = target_signal_session
+        elif calendar_status == "PASS":
+            latest_completed = self.latest_completed_session(calendar_payload, now)
+            if latest_completed and self.is_monthly_rebalance_signal_session(calendar_payload, latest_completed):
+                signal_session = latest_completed
+            else:
+                signal_session = self.latest_completed_monthly_signal_session(calendar_payload, now) or latest_completed
+        else:
+            signal_session = None
+
         if signal_session is None:
             incident("HIGH", "calendar", "SCHEDULER_FAILURE", calendar_status, "BLOCK")
         rebalance_id = signal_session or rebalance_id
@@ -293,12 +303,20 @@ class PaperTradingController:
 
         target_weights = target_check["target_weights"]
         target_symbols = sorted([symbol for symbol, weight in target_weights.items() if weight > 0])
-        internal_positions = {symbol: 0.0 for symbol in target_symbols}
-        position_recon = broker.reconcile_positions(internal_positions, current_positions if isinstance(current_positions, list) else [])
-        position_state = "PASS" if all(state in {"MATCH", "MISSING_BROKER"} for state in position_recon.values()) else "BLOCK"
+        target_symbols_set = {s.upper() for s in target_symbols}
+        broker_positions_list = current_positions if isinstance(current_positions, list) else []
+        broker_symbols = {str(pos.get("symbol", "")).upper() for pos in broker_positions_list if float(pos.get("qty", 0) or 0) != 0}
+        unexpected_broker_positions = broker_symbols - target_symbols_set
+
+        internal_positions = {
+            symbol: float(next((p.get("qty", 0) for p in broker_positions_list if str(p.get("symbol", "")).upper() == symbol), 0.0))
+            for symbol in target_symbols
+        }
+        position_recon = broker.reconcile_positions(internal_positions, broker_positions_list)
+        position_state = "PASS" if (not unexpected_broker_positions and all(state in {"MATCH", "MISSING_BROKER"} for state in position_recon.values())) else "BLOCK"
         audit("RECONCILIATION_CHECK", "positions", position_state, json.dumps(position_recon, sort_keys=True))
         if position_state != "PASS":
-            incident("HIGH", "reconciliation", "POSITION_MISMATCH", "Unexpected broker position state.", "BLOCK")
+            incident("HIGH", "reconciliation", "POSITION_MISMATCH", f"Unexpected positions: {list(unexpected_broker_positions)}", "BLOCK")
 
         equity = self.account_equity(account)
         latest_prices = target_check["latest_prices"]
@@ -826,13 +844,26 @@ class PaperTradingController:
         return "PASS", {"bars": combined}
 
     def parse_bar_payload(self, payload: Any) -> pd.DataFrame:
-        rows: list[dict[str, Any]] = []
         raw = payload.get("bars", {}) if isinstance(payload, dict) else {}
-        if isinstance(raw, dict):
-            for symbol, bars in raw.items():
-                for bar in bars or []:
-                    rows.append({"symbol": str(symbol).upper(), "date": str(bar.get("t", ""))[:10], "close": float(bar.get("c", float("nan"))), "volume": float(bar.get("v", 0) or 0)})
-        return pd.DataFrame(rows, columns=["symbol", "date", "close", "volume"]).dropna(subset=["symbol", "date", "close"])
+        if not isinstance(raw, dict) or not raw:
+            return pd.DataFrame(columns=["symbol", "date", "close", "volume"])
+        symbols: list[str] = []
+        dates: list[str] = []
+        closes: list[float] = []
+        volumes: list[float] = []
+        for symbol, bars in raw.items():
+            s = str(symbol).upper()
+            for bar in bars or []:
+                symbols.append(s)
+                dates.append(str(bar.get("t", ""))[:10])
+                closes.append(float(bar.get("c", float("nan"))))
+                volumes.append(float(bar.get("v", 0) or 0))
+        return pd.DataFrame({
+            "symbol": symbols,
+            "date": dates,
+            "close": closes,
+            "volume": volumes,
+        }).dropna(subset=["symbol", "date", "close"])
 
     def import_frozen_models(self):
         csm_dir = REPO_ROOT / "research" / "implementations" / "csm_001"
