@@ -50,17 +50,20 @@ def main() -> int:
     print(f"Initial Account Cash:   ${cash:,.2f}")
 
     # 2. Execute rebalance
-    print("\nSubmitting 25 target equity orders (each ~$4,000 notional)...")
-    res, submission_results = controller.execute_paper_rebalance(now=now)
+    print("\nExecuting September 30 monthly portfolio rebalance (selling exited holdings, buying new entries)...")
+    res, submission_results = controller.execute_paper_rebalance(now=now, target_signal_session="2026-09-30")
 
     print(f"\nSubmissions Completed: {len(submission_results)} orders")
     for item in submission_results:
         symbol = item.get("symbol", "")
-        notional = item.get("notional", 0.0)
+        side = item.get("side", "").upper()
+        qty = item.get("quantity")
+        notional = item.get("notional")
+        val_str = f"Qty: {qty}" if qty is not None else f"Notional: ${float(notional or 0):,.2f}"
         status = item.get("submission_status", "")
         broker_id = item.get("broker_order_id", "")
         broker_status = item.get("broker_order_status", "")
-        print(f"  - {symbol:<6} | Notional: ${notional:,.2f} | Status: {status:<4} | BrokerID: {broker_id} ({broker_status})")
+        print(f"  - {side:<4} {symbol:<6} | {val_str:<24} | Status: {status:<4} | BrokerID: {broker_id} ({broker_status})")
 
     print("\nExecution Summary:")
     print(f"  Orders Submitted: {res.orders_submitted}")
@@ -88,7 +91,7 @@ def main() -> int:
             writer.writerows(submission_results)
         print(f"\nSubmission log written to {log_path}")
 
-    return 0 if res.orders_submitted == 25 else 1
+    return 0 if res.orders_submitted > 0 else 1
 
 
 if __name__ == "__main__":

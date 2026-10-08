@@ -43,15 +43,35 @@ def run_telegram_status(now: datetime | None = None, *, send_message: bool = Tru
     latest_completed = controller.latest_completed_session(calendar_payload, now) if calendar_status == "PASS" else ""
     is_rebalance_signal_day = controller.is_monthly_rebalance_signal_session(calendar_payload, latest_completed) if calendar_status == "PASS" else False
 
+    # Autonomous Rebalance Check:
+    # When a scheduled monthly rebalance is due, execute it autonomously on Alpaca Paper without manual waiting.
+    autonomous_enabled = os.environ.get("AUTONOMOUS_TRADING_ENABLED", "1").strip().upper() in {"1", "TRUE", "YES"}
+    rebalance_executed = False
+
+    if autonomous_enabled and result.monthly_rebalance_due and result.submission_authorized:
+        exec_res, submission_results = controller.execute_paper_rebalance(now=now, target_signal_session=result.signal_as_of_session)
+        if exec_res.orders_submitted > 0:
+            rebalance_executed = True
+            result = exec_res
+            acc_status, account = broker.get_account()
+            pos_status, positions = broker.get_positions()
+            ord_status, orders = broker.get_open_orders()
+            equity = float(account.get("equity", equity)) if isinstance(account, dict) else equity
+            cash = float(account.get("cash", cash)) if isinstance(account, dict) else cash
+            positions_count = len(positions) if isinstance(positions, list) else positions_count
+            open_orders_count = len(orders) if isinstance(orders, list) else open_orders_count
+
     if send_message and notifier.enabled:
-        if result.readiness_state == "BLOCKED" and result.incidents:
+        if rebalance_executed:
+            msg_sent = True
+        elif result.readiness_state == "BLOCKED" and result.incidents:
             msg_sent = notifier.send_csm_tsm_block_alert(
                 alert_type="PRECHECK_BLOCK",
                 state=result.readiness_state,
                 block_reason=result.block_reason,
                 incidents=result.incidents,
             )
-        elif is_rebalance_signal_day:
+        elif is_rebalance_signal_day and positions_count == 0:
             msg_sent = notifier.send_csm_tsm_monthly_signal(
                 signal_session=result.signal_as_of_session,
                 eligible_count=result.eligible_count,

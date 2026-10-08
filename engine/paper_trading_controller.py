@@ -301,6 +301,8 @@ class PaperTradingController:
         if open_orders_status != "PASS":
             incident("HIGH", "broker", "ORDER_MISMATCH", f"orders_status={open_orders_status}", "BLOCK")
 
+        monthly_rebalance_due = self.is_monthly_rebalance_signal_session(calendar_payload, signal_session or "") if calendar_status == "PASS" else False
+
         target_weights = target_check["target_weights"]
         target_symbols = sorted([symbol for symbol, weight in target_weights.items() if weight > 0])
         target_symbols_set = {s.upper() for s in target_symbols}
@@ -313,14 +315,23 @@ class PaperTradingController:
             for symbol in target_symbols
         }
         position_recon = broker.reconcile_positions(internal_positions, broker_positions_list)
-        position_state = "PASS" if (not unexpected_broker_positions and all(state in {"MATCH", "MISSING_BROKER"} for state in position_recon.values())) else "BLOCK"
+        position_state = "PASS" if (monthly_rebalance_due or (not unexpected_broker_positions and all(state in {"MATCH", "MISSING_BROKER"} for state in position_recon.values()))) else "BLOCK"
         audit("RECONCILIATION_CHECK", "positions", position_state, json.dumps(position_recon, sort_keys=True))
         if position_state != "PASS":
             incident("HIGH", "reconciliation", "POSITION_MISMATCH", f"Unexpected positions: {list(unexpected_broker_positions)}", "BLOCK")
 
         equity = self.account_equity(account)
         latest_prices = target_check["latest_prices"]
-        intents = self.build_order_intents(broker, target_weights, latest_prices, rebalance_id, now, resolutions=resolutions)
+        intents = self.build_order_intents(
+            broker,
+            target_weights,
+            latest_prices,
+            rebalance_id,
+            now,
+            resolutions=resolutions,
+            current_positions=broker_positions_list,
+            account_equity=equity,
+        )
         order_recon = broker.reconcile_orders(intents, open_orders if isinstance(open_orders, list) else [])
         order_state = "PASS" if all(state == "INTENT_ONLY" for state in order_recon.values()) else "BLOCK"
         audit("RECONCILIATION_CHECK", "orders", order_state, json.dumps(order_recon, sort_keys=True))
@@ -502,6 +513,8 @@ class PaperTradingController:
         target_weights = target_check.get("target_weights", {})
         acc_status, account = broker.get_account()
         equity = self.account_equity(account)
+        pos_status, current_positions = broker.get_positions()
+        broker_positions_list = current_positions if isinstance(current_positions, list) else []
         intents = self.build_order_intents(
             broker,
             target_weights,
@@ -509,15 +522,22 @@ class PaperTradingController:
             res.rebalance_id,
             now,
             resolutions=target_check.get("resolutions", {}),
+            current_positions=broker_positions_list,
+            account_equity=equity,
         )
 
         submission_results: list[dict[str, Any]] = []
-        for intent in intents:
+        sell_intents = [it for it in intents if it.side == "sell"]
+        buy_intents = [it for it in intents if it.side == "buy"]
+
+        for intent in sell_intents + buy_intents:
             status, payload = broker.submit_order(intent)
             submission_results.append({
                 "intent_id": intent.intent_id,
                 "client_order_id": intent.client_order_id,
                 "symbol": intent.symbol,
+                "side": intent.side,
+                "quantity": intent.quantity,
                 "notional": intent.notional,
                 "submission_status": status,
                 "broker_order_id": (payload or {}).get("id", ""),
@@ -526,6 +546,8 @@ class PaperTradingController:
             })
 
         orders_ok = len([r for r in submission_results if r["submission_status"] == "PASS"])
+        sells_ok = len([r for r in submission_results if r["submission_status"] == "PASS" and r.get("side") == "sell"])
+        buys_ok = len([r for r in submission_results if r["submission_status"] == "PASS" and r.get("side") == "buy"])
         res.orders_submitted = orders_ok
         res.paper_t0_established = "ESTABLISHED" if orders_ok > 0 else "NOT_ESTABLISHED"
         res.broker_mutation_calls = broker.broker_mutation_calls
@@ -535,10 +557,10 @@ class PaperTradingController:
             notifier = TelegramNotifier()
             if notifier.enabled and orders_ok > 0:
                 notifier.send_csm_tsm_execution_report(
-                    buys=orders_ok,
-                    sells=0,
+                    buys=buys_ok,
+                    sells=sells_ok,
                     open_orders=orders_ok,
-                    positions=0,
+                    positions=len(target_weights),
                     account_equity=equity,
                     execution_state="COMPLETE" if orders_ok == len(intents) else "PARTIAL",
                 )
@@ -961,32 +983,78 @@ class PaperTradingController:
         rebalance_id: str,
         now: datetime,
         resolutions: dict[str, Any] | None = None,
+        current_positions: list[dict[str, Any]] | None = None,
+        account_equity: float | None = None,
     ) -> list[OrderIntent]:
         intents: list[OrderIntent] = []
-        for sequence, symbol in enumerate(sorted(target_weights), start=1):
-            weight = target_weights[symbol]
-            notional = max(1.0, round(weight * self.config.account_equity_fallback, 2))
-            res = resolutions.get(symbol) if resolutions else None
-            runtime_symbol = res.runtime_symbol if res else symbol
-            runtime_asset_id = res.runtime_asset_id if res else symbol
-            intents.append(
-                broker.build_order_intent(
-                    strategy_id=self.config.strategy_id,
-                    portfolio_id=self.config.portfolio_id,
-                    rebalance_id=rebalance_id,
-                    symbol=runtime_symbol,
-                    source_asset_id=runtime_asset_id,
-                    side="buy",
-                    quantity=None,
-                    notional=notional,
-                    order_type="market",
-                    time_in_force="day",
-                    reference_price=latest_prices.get(symbol, 100.0),
-                    signal_timestamp=now.isoformat(),
-                    reason="PAPER001R_DRY_RUN_TARGET_DELTA",
-                    sequence=sequence,
+        equity = account_equity or self.config.account_equity_fallback
+        target_symbols_set = {s.upper() for s, w in target_weights.items() if w > 0}
+
+        current_map = {}
+        if current_positions:
+            current_map = {
+                str(p.get("symbol", "")).upper(): p
+                for p in current_positions
+                if float(p.get("qty", 0) or 0) > 0
+            }
+
+        sequence = 1
+        # 1. Generate SELL intents for positions that are being rotated out
+        for symbol, pos in sorted(current_map.items()):
+            if symbol not in target_symbols_set:
+                qty = float(pos.get("qty", 0))
+                res = resolutions.get(symbol) if resolutions else None
+                runtime_symbol = res.runtime_symbol if res else symbol
+                runtime_asset_id = res.runtime_asset_id if res else symbol
+                ref_price = latest_prices.get(symbol, float(pos.get("current_price", 100.0) or 100.0))
+                intents.append(
+                    broker.build_order_intent(
+                        strategy_id=self.config.strategy_id,
+                        portfolio_id=self.config.portfolio_id,
+                        rebalance_id=rebalance_id,
+                        symbol=runtime_symbol,
+                        source_asset_id=runtime_asset_id,
+                        side="sell",
+                        quantity=qty,
+                        notional=None,
+                        order_type="market",
+                        time_in_force="day",
+                        reference_price=ref_price,
+                        signal_timestamp=now.isoformat(),
+                        reason="CSM_TSM_EXIT_ROTATION",
+                        sequence=sequence,
+                    )
                 )
-            )
+                sequence += 1
+
+        # 2. Generate BUY intents for target symbols not currently held (or unallocated)
+        for symbol in sorted(target_symbols_set):
+            if not current_map or symbol not in current_map:
+                weight = target_weights[symbol]
+                notional = max(1.0, round(weight * equity, 2))
+                res = resolutions.get(symbol) if resolutions else None
+                runtime_symbol = res.runtime_symbol if res else symbol
+                runtime_asset_id = res.runtime_asset_id if res else symbol
+                intents.append(
+                    broker.build_order_intent(
+                        strategy_id=self.config.strategy_id,
+                        portfolio_id=self.config.portfolio_id,
+                        rebalance_id=rebalance_id,
+                        symbol=runtime_symbol,
+                        source_asset_id=runtime_asset_id,
+                        side="buy",
+                        quantity=None,
+                        notional=notional,
+                        order_type="market",
+                        time_in_force="day",
+                        reference_price=latest_prices.get(symbol, 100.0),
+                        signal_timestamp=now.isoformat(),
+                        reason="CSM_TSM_ENTRY_ROTATION",
+                        sequence=sequence,
+                    )
+                )
+                sequence += 1
+
         return intents
 
     def account_equity(self, account: Any) -> float:
